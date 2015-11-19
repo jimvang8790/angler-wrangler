@@ -8,6 +8,10 @@ module.exports = function(grunt){
             app: {
                 src: 'client/scripts/app.js',
                 dest: 'server/public/assets/scripts/app.min.js'
+            },
+            user: {
+                src: 'client/scripts/user.js',
+                dest: 'server/public/assets/scripts/user.min.js'
             }
         },
         copy: {
