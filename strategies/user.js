@@ -20,15 +20,18 @@ passport.use('local', new localStrategy({
 
         User.findOne({username: username}, function (err, user) {
             if (err) throw err;
-            if (!user) return done(null, false, {message: 'Incorrect username and password'});
-            user.comparePassword(password, function (err, isMatch) {
-                if (err) throw err;
-                if (isMatch) {
-                    return done(null, user);
-                } else {
-                    done(null, false, {message: 'Incorrect username and password'});
-                }
-            });
+            if (!user) {
+                return done(null, false, {message: 'Incorrect username and password'});
+            } else {
+                user.comparePassword(password, function (err, isMatch) {
+                    if (err) throw err;
+                    if (isMatch) {
+                        return done(null, user);
+                    } else {
+                        done(null, false, {message: 'Incorrect username and password'});
+                    }
+                });
+            }
         });
 }));
 
