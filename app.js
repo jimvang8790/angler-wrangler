@@ -34,6 +34,14 @@ app.use('/register', register);
 app.use('/user', user);
 app.use('/', index);
 
+// Serve back static files
+app.use(express.static('public'));
+app.use(express.static('public/views'));
+app.use(express.static('public/assets'));
+app.use(express.static('public/assets/scripts'));
+app.use(express.static('public/assets/styles'));
+app.use(express.static('public/vendors'));
+
 // Mongo Connection //
 var mongoURI = "mongodb://localhost:27017/user_passport_session";
 //var mongoURI = "";

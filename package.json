@@ -1,15 +1,16 @@
 {
-  "name": "express_router_lecture_gamma",
+  "name": "express_router_lecture_iota_angular",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server/app.js"
+    "start": "node app.js"
   },
-  "author": "Scott Bromander",
+  "author": "Scott Bromander, Kris Szafranski",
   "license": "ISC",
   "dependencies": {
+    "angular": "^1.5.0",
     "bcrypt": "^0.8.5",
     "body-parser": "^1.13.3",
     "bootstrap": "^3.3.5",
