@@ -1,4 +1,4 @@
-var express = require("express");
+var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 
@@ -12,7 +12,7 @@ var index = require('./routes/index');
 
 
 // App Set //
-app.set("port", (process.env.PORT || 5000));
+app.set('port', (process.env.PORT || 4242));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
@@ -23,7 +23,7 @@ app.use(session({
    key: 'user',
    resave: 'true',
    saveUninitialized: false,
-   cookie: {maxage: 600000, secure: false}
+   cookie: {maxage: 60000, secure: false}
 }));
 
 app.use(passport.initialize());
