@@ -23,15 +23,17 @@ passport.use('local', new localStrategy({
             if(err) throw err;
             if(!user) {
                 // user not found
-                return done(null, false, {message: 'Incorrect username or password'});
+                return done(null, false, {message: 'Incorrect credentials.'});
             } else {
-                // found user!
+                // found user! Now check their given password against the one stored in the DB
                 user.comparePassword(password, function(err, isMatch) {
                     if(err) throw err;
                     if(isMatch) {
+                        // all good, populate user object on req
                         return(done(null, user));
                     } else {
-                        done(null, false, {message: 'Incorrect password'});
+                        // no good.
+                        done(null, false, {message: 'Incorrect credentials.'});
                     }
                 })
             }
