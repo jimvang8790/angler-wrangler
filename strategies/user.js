@@ -2,37 +2,41 @@ var passport = require('passport');
 var localStrategy = require('passport-local').Strategy;
 var User = require('../models/user');
 
-passport.serializeUser(function(user, done){
+passport.serializeUser(function(user, done) {
     done(null, user.id);
 });
 
-passport.deserializeUser(function(id, done){
-    User.findById(id, function(err, user){
+passport.deserializeUser(function(id, done) {
+    User.findById(id, function(err, user) {
         if(err) done(err);
         done(null, user);
     });
 });
 
+// Does actual work of logging in
 passport.use('local', new localStrategy({
     passReqToCallback: true,
     usernameField: 'username'
     }, function(req, username, password, done) {
-
-        User.findOne({username: username}, function (err, user) {
-            if (err) throw err;
-            if (!user) {
-                return done(null, false, {message: 'Incorrect username and password'});
+        // mongoose stuff
+        User.findOne({username: username}, function(err, user) {
+            if(err) throw err;
+            if(!user) {
+                // user not found
+                return done(null, false, {message: 'Incorrect username or password'});
             } else {
-                user.comparePassword(password, function (err, isMatch) {
-                    if (err) throw err;
-                    if (isMatch) {
-                        return done(null, user);
+                // found user!
+                user.comparePassword(password, function(err, isMatch) {
+                    if(err) throw err;
+                    if(isMatch) {
+                        return(done(null, user));
                     } else {
-                        done(null, false, {message: 'Incorrect username and password'});
+                        done(null, false, {message: 'Incorrect password'});
                     }
-                });
+                })
             }
         });
-}));
+    }
+));
 
 module.exports = passport;

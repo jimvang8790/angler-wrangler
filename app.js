@@ -1,18 +1,16 @@
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
-
 var mongoose = require('mongoose');
+
 var passport = require('./strategies/user');
 var session = require('express-session');
 
-var register = require('./routes/register');
-var user = require('./routes/user');
+// Route includes
 var index = require('./routes/index');
+var user = require('./routes/user');
+var register = require('./routes/register');
 
-
-// App Set //
-app.set('port', (process.env.PORT || 4242));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
@@ -26,8 +24,10 @@ app.use(session({
    cookie: {maxage: 60000, secure: false}
 }));
 
+// start up passport sessions
 app.use(passport.initialize());
 app.use(passport.session());
+
 
 // Routes
 app.use('/register', register);
@@ -55,6 +55,9 @@ mongoDB.on('error', function(err){
 mongoDB.once('open', function(){
    console.log("Connected to Mongo, meow!");
 });
+
+// App Set //
+app.set('port', (process.env.PORT || 5000));
 
 // Listen //
 app.listen(app.get("port"), function(){
