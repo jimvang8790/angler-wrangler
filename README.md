@@ -4,3 +4,4 @@ Download and run 'npm install' before the lecture as prep. In this lecture, we w
 ##Branches
 * master: Original lecture code with jQuery, alt static file serving, Grunt, Mongoose/Mongo
 * angular-complete: Angular and MongoDB version as shown to Iota cohort.
+* sql_strategy: Replaces MongoDB with PostGRES for storage of user data. Maintains bcrypt functionality.
