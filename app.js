@@ -2,6 +2,7 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
+var path = require('path');
 
 var passport = require('./strategies/userStrategy');
 var session = require('express-session');
@@ -14,6 +15,9 @@ var register = require('./routes/register');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
+
+// Serve back static files
+app.use(express.static(path.join(__dirname, './public')));
 
 // Passport Session Configuration //
 app.use(session({
@@ -31,20 +35,10 @@ app.use(passport.session());
 // Routes
 app.use('/register', register);
 app.use('/user', user);
-app.use('/', index);
-
-// Serve back static files
-app.use(express.static('public'));
-app.use(express.static('public/views'));
-app.use(express.static('public/assets'));
-app.use(express.static('public/assets/scripts'));
-app.use(express.static('public/assets/styles'));
-app.use(express.static('public/vendors'));
+app.use('/*', index);
 
 // Mongo Connection //
 var mongoURI = "mongodb://localhost:27017/user_passport_session";
-//var mongoURI = "";
-
 var mongoDB = mongoose.connect(mongoURI).connection;
 
 mongoDB.on('error', function(err){
