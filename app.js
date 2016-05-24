@@ -3,7 +3,7 @@ var app = express();
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 
-var passport = require('./strategies/user');
+var passport = require('./strategies/userStrategy');
 var session = require('express-session');
 
 // Route includes
@@ -21,13 +21,12 @@ app.use(session({
    key: 'user',
    resave: 'true',
    saveUninitialized: false,
-   cookie: {maxage: 60000, secure: false}
+   cookie: { maxage: 60000, secure: false }
 }));
 
 // start up passport sessions
 app.use(passport.initialize());
 app.use(passport.session());
-
 
 // Routes
 app.use('/register', register);
@@ -49,7 +48,9 @@ var mongoURI = "mongodb://localhost:27017/user_passport_session";
 var mongoDB = mongoose.connect(mongoURI).connection;
 
 mongoDB.on('error', function(err){
-   if(err) console.log("MONGO ERROR: ", err);
+   if(err) {
+     console.log("MONGO ERROR: ", err);
+   }
 });
 
 mongoDB.once('open', function(){

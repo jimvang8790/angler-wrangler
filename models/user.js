@@ -23,7 +23,9 @@ UserSchema.pre('save', function(next) {
         }
 
         bcrypt.hash(user.password, salt, function(err, hash) {
-            if(err) return next(err);
+            if(err) {
+              return next(err);
+            }
 
             user.password = hash;
             next();
@@ -32,10 +34,13 @@ UserSchema.pre('save', function(next) {
 });
 
 // Used by login methods to compare login form password to DB password
-UserSchema.methods.comparePassword = function(candidatePassword, cb) {
+UserSchema.methods.comparePassword = function(candidatePassword, callback) {
     bcrypt.compare(candidatePassword, this.password, function(err, isMatch) {
-        if(err) return cb(err);
-        cb(null, isMatch);
+        if(err) {
+          return callback(err);
+        }
+
+        callback(null, isMatch);
     });
 };
 

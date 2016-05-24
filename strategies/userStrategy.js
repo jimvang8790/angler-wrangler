@@ -8,7 +8,10 @@ passport.serializeUser(function(user, done) {
 
 passport.deserializeUser(function(id, done) {
     User.findById(id, function(err, user) {
-        if(err) done(err);
+        if(err) {
+          done(err);
+        }
+
         done(null, user);
     });
 });
@@ -20,17 +23,23 @@ passport.use('local', new localStrategy({
     }, function(req, username, password, done) {
         // mongoose stuff
         User.findOne({username: username}, function(err, user) {
-            if(err) throw err;
+            if(err) {
+              throw err;
+            }
+
             if(!user) {
                 // user not found
                 return done(null, false, {message: 'Incorrect credentials.'});
             } else {
                 // found user! Now check their given password against the one stored in the DB
                 user.comparePassword(password, function(err, isMatch) {
-                    if(err) throw err;
+                    if(err) {
+                      throw err;
+                    }
+                    
                     if(isMatch) {
-                        // all good, populate user object on req
-                        return(done(null, user));
+                      // all good, populate user object on req
+                      return(done(null, user));
                     } else {
                         // no good.
                         done(null, false, {message: 'Incorrect credentials.'});
