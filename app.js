@@ -16,9 +16,6 @@ var register = require('./routes/register');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-// Catch direct requests and make sure the user can view this page
-app.use('/views/user.html', user);
-
 // Serve back static files
 app.use(express.static(path.join(__dirname, './public')));
 
