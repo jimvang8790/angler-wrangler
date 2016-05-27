@@ -41,7 +41,7 @@ app.use('/user', user);
 app.use('/*', index);
 
 // Mongo Connection //
-var mongoURI = "mongodb://localhost:27017/user_passport_session";
+var mongoURI = "mongodb://localhost:27017/mu-passport";
 var mongoDB = mongoose.connect(mongoURI).connection;
 
 mongoDB.on('error', function(err){
