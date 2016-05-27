@@ -8,5 +8,5 @@ Download and run 'npm install' before the lecture as prep. In this lecture, we w
 * `master`: Original lecture code with jQuery, alt static file serving, Grunt, Mongoose/Mongo
 * `angular-complete`: Angular and MongoDB version as shown to Iota cohort.
 * `sql_strategy`: Replaces MongoDB with PostGRES for storage of user data. Maintains bcrypt functionality.
-* `angular-controlled-login-intro`: Introduces Angular as the login handler. All server communication is handled in an Angular Controller and updates the route/page based on success or failure. Intended for an alternate intro lecture to Passport (as seen in angular-complete and sql_strategy).
-* `angular-ctrl-with-routes`: Like `angular-controlled-login-intro` but is built using client-side routing with `ngRoute` instead of full HTML pages.
+* `angular-controlled-login-intro`: Introduces Angular as the login handler. All server communication is handled in an Angular Controller and updates the route/page based on success or failure. Intended for an alternate intro lecture to Passport (as seen in angular-complete and sql_strategy). Uses MongoDB.
+* `angular-ctrl-with-routes`: Like `angular-controlled-login-intro` but is built using client-side routing with ngRoute instead of full HTML pages. Uses MongoDB.
