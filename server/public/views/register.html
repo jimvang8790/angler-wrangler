@@ -1,36 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Express / Passport</title>
-
-    <link rel="stylesheet" href="/vendors/bootstrap.min.css">
-    <link rel="stylesheet" href="/assets/styles/style.css">
-
-    <script type="text/javascript" src="/vendors/angular.min.js"></script>
-    <script type="text/javascript" src="/assets/scripts/app.js"></script>
-</head>
-<body ng-app="myApp">
-    <div class="instructions">
-        <div class="container">
-            <h1 class="lead">Register New User</h1>
-        </div>
+<div class="container">
+  <h1 class="lead">Register User</h1>
+  <h1 class="lead alert alert-danger" role="alert" ng-if="message != ''">{{message}}</h2>
+  <form ng-submit="registerUser()">
+    <div>
+        <label for="username">Username:</label>
+        <input type="text" ng-model="user.username" />
     </div>
-
-    <div class="container">
-        <!-- Set action and method -->
-        <form action="/register" method="post">
-            <div>
-                <label for="username">Username:</label>
-                <input type="text" name="username" id="username">
-            </div>
-
-            <div>
-                <label for="password">Password:</label>
-                <input type="password" name="password" id="password">
-            </div>
-
-            <input type="submit" value="Register"/>
-        </form>
+    <div>
+        <label for="password">Password:</label>
+        <input type="password" ng-model="user.password" />
     </div>
-</body>
-</html>
+    <input class="btn btn-default" type="submit" name="submit" value="Register" />
+    <a href="#home">Cancel</a>
+  </form>
+
+</div>

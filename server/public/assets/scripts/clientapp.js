@@ -7,6 +7,10 @@ myApp.config(['$routeProvider', function($routeProvider) {
       templateUrl: '/views/home.html',
       controller: "LoginController"
     })
+    .when('/register', {
+      templateUrl: '/views/register.html',
+      controller: "LoginController"
+    })
     .when('/user', {
       templateUrl: '/views/user.html',
       controller: "UserController"
