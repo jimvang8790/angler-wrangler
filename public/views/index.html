@@ -6,31 +6,16 @@
         <link rel="stylesheet" href="/assets/styles/style.css">
 
         <script type="text/javascript" src="/vendors/angular.min.js"></script>
+        <script type="text/javascript" src="/vendors/angular-route.min.js"></script>
         <script type="text/javascript" src="/assets/scripts/clientapp.js"></script>
+        <script type="text/javascript" src="/assets/scripts/controllers/loginController.js"></script>
+        <script type="text/javascript" src="/assets/scripts/controllers/userController.js"></script>
     </head>
 
     <body ng-app="myApp">
-        <div class="instructions">
-            <div class="container">
-                <h1 class="lead">Passport Login</h1>
-            </div>
-        </div>
-        <div class="container" ng-controller="LoginController">
-            <h2 ng-if="message != ''">{{message}}</h2>
-            <form ng-submit="login()">
-                <div>
-                    <label for="username">Username:</label>
-                    <input type="text" ng-model="user.username" />
-                </div>
-                <div>
-                    <label for="password">Password:</label>
-                    <input type="password" ng-model="user.password" />
-                </div>
-                <div>
-                    <button ng-click="login()">Log In</button>
-                    <a href="/register">Register</a>
-                </div>
-            </form>
-        </div>
+      <header ng-include="'/views/templates/header.html'"></header>
+
+      <main ng-view></main>
+
     </body>
 </html>

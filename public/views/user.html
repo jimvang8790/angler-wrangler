@@ -1,20 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Welcome!</title>
-
-    <link rel="stylesheet" href="/vendors/bootstrap.min.css">
-    <link rel="stylesheet" href="/assets/styles/style.css">
-
-    <script type="text/javascript" src="/vendors/angular.min.js"></script>
-    <script type="text/javascript" src="/assets/scripts/clientapp.js"></script>
-</head>
-<body ng-app="myApp">
-  <div class="instructions" ng-controller="UserController">
-      <div class="container">
-          <h1 id="welcome" class="lead">Welcome, {{userName}}!</h1>
-          <button class="btn btn-default" ng-click="logout()">Log Out</button>
-      </div>
-  </div>
-</body>
-</html>
+<div class="container">
+    <h1 id="welcome" class="lead">Welcome, {{userName}}!</h1>
+    <button class="btn btn-default" ng-click="logout()">Log Out</button>
+</div>
