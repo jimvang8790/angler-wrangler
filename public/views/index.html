@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="/assets/styles/style.css">
 
         <script type="text/javascript" src="/vendors/angular.min.js"></script>
-        <script type="text/javascript" src="/assets/scripts/app.js"></script>
+        <script type="text/javascript" src="/assets/scripts/clientapp.js"></script>
     </head>
 
     <body ng-app="myApp">
@@ -17,8 +17,7 @@
         </div>
         <div class="container" ng-controller="LoginController">
             <h2 ng-if="message != ''">{{message}}</h2>
-            <!-- Set form action and method -->
-            <form>
+            <form ng-submit="login()">
                 <div>
                     <label for="username">Username:</label>
                     <input type="text" ng-model="user.username" />
