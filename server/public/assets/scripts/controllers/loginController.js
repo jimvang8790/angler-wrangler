@@ -14,7 +14,7 @@ myApp.controller('LoginController', ['$scope', '$http', '$window', '$location', 
           if(response.data.username) {
             console.log('success: ', response.data);
             // location works with SPA (ng-route)
-            $location.path('/user');
+            $location.path('/myuser');
           } else {
             console.log('failure: ', response);
             $scope.message = "Wrong!!";
