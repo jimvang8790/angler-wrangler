@@ -1,4 +1,4 @@
-myApp.controller('LoginController', ['$scope', '$http', '$window', '$location', function($scope, $http, $window, $location) {
+myApp.controller('LoginController', ['$scope', '$http', '$location', function($scope, $http, $location) {
     $scope.user = {
       username: '',
       password: ''
