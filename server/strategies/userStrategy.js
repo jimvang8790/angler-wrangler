@@ -36,12 +36,14 @@ passport.use('local', new localStrategy({
         throw err;
       }
 
+      // user variable passed to us from Mongoose if it found a match to findOne() above
       if(!user) {
         // user not found
         console.log('userStrategy.js :: no user found');
         return done(null, false, {message: 'Incorrect credentials.'});
       } else {
         // found user! Now check their given password against the one stored in the DB
+        // comparePassword() is defined in the schema/model file!
         user.comparePassword(password, function(err, isMatch) {
           if(err) {
             throw err;

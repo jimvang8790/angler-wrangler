@@ -35,6 +35,7 @@ UserSchema.pre('save', function(next) {
 
 // Used by login methods to compare login form password to DB password
 UserSchema.methods.comparePassword = function(candidatePassword, callback) {
+    // 'this' here refers to this instance of the User model
     bcrypt.compare(candidatePassword, this.password, function(err, isMatch) {
         if(err) {
           return callback(err);
