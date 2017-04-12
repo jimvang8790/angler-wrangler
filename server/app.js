@@ -22,7 +22,7 @@ app.use(express.static(path.join(__dirname, './public')));
 // Passport Session Configuration //
 app.use(session({
    secret: 'secret',
-   key: 'user',
+   key: 'user', // this is the name of the req.variable. 'user' is convention, but not required
    resave: 'true',
    saveUninitialized: false,
    cookie: { maxage: 60000, secure: false }
