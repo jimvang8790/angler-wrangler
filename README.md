@@ -1,7 +1,7 @@
 # Express/Passport Lecture Starting File
 Download and run 'npm install' before the lecture as prep. In this lecture, we will build out a user registration page and allow our users to log into our application. Once they are logged in, we will see information returned to us, specific to the user.
 
-##Branches
+## Branches
 * `master`: Built using client-side routing with ngRoute instead of full HTML pages. Uses MongoDB.
 * `sql_strategy`: Replaces master branch MongoDB with PostGRES for storage of user data. Maintains bcrypt functionality.
 
