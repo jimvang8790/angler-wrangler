@@ -4,7 +4,7 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var path = require('path');
 
-var passport = require('./strategies/userStrategy');
+var passport = require('./strategies/user.strategy');
 var session = require('express-session');
 
 // Route includes
