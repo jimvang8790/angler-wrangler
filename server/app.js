@@ -35,7 +35,7 @@ app.use(passport.session());
 // Routes
 app.use('/register', register);
 app.use('/user', user);
-app.use('/*', index);
+app.use('/', index);
 
 // Mongo Connection //
 var mongoURI = '';
