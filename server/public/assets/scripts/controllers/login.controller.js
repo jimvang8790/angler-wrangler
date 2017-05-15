@@ -1,16 +1,20 @@
-myApp.controller('LoginController', ['$scope', '$http', '$location', function($scope, $http, $location) {
-    $scope.user = {
+myApp.controller('LoginController', ['$http', '$location', function($http, $location) {
+  console.log('LoginController loaded');
+    var vm = this;
+
+    vm.user = {
       username: '',
       password: ''
     };
-    $scope.message = '';
+    vm.message = '';
 
-    $scope.login = function() {
-      if($scope.user.username == '' || $scope.user.password == '') {
-        $scope.message = "Enter your username and password!";
+    vm.login = function() {
+      console.log('here', vm.user);
+      if(vm.user.username == '' || vm.user.password == '') {
+        vm.message = "Enter your username and password!";
       } else {
-        console.log('sending to server...', $scope.user);
-        $http.post('/', $scope.user).then(function(response) {
+        console.log('sending to server...', vm.user);
+        $http.post('/', vm.user).then(function(response) {
           if(response.data.username) {
             console.log('success: ', response.data);
             // location works with SPA (ng-route)
@@ -18,24 +22,24 @@ myApp.controller('LoginController', ['$scope', '$http', '$location', function($s
             $location.path('/user');
           } else {
             console.log('failure: ', response);
-            $scope.message = "Wrong!!";
+            vm.message = "Wrong!!";
           }
         });
       }
     }
 
-    $scope.registerUser = function() {
-      if($scope.user.username == '' || $scope.user.password == '') {
-        $scope.message = "Choose a username and password!";
+    vm.registerUser = function() {
+      if(vm.user.username == '' || vm.user.password == '') {
+        vm.message = "Choose a username and password!";
       } else {
-        console.log('sending to server...', $scope.user);
-        $http.post('/register', $scope.user).then(function(response) {
+        console.log('sending to server...', vm.user);
+        $http.post('/register', vm.user).then(function(response) {
           console.log('success');
           $location.path('/home');
         },
         function(response) {
           console.log('error');
-          $scope.message = "Please try again."
+          vm.message = "Please try again."
         });
       }
     }

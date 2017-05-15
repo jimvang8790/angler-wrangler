@@ -7,15 +7,15 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
   $routeProvider
     .when('/home', {
       templateUrl: '/views/home.html',
-      controller: "LoginController"
+      controller: "LoginController as lc"
     })
     .when('/register', {
       templateUrl: '/views/register.html',
-      controller: "LoginController"
+      controller: "LoginController as lc"
     })
     .when('/user', {
       templateUrl: '/views/user.html',
-      controller: "UserController"
+      controller: "UserController as uc"
     })
     .otherwise({
       redirectTo: 'home'
