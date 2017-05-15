@@ -1,7 +1,9 @@
 var myApp = angular.module('myApp', ['ngRoute']);
 /// Routes ///
 
-myApp.config(['$routeProvider', function($routeProvider) {
+myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
+  $locationProvider.hashPrefix('');
+  
   $routeProvider
     .when('/home', {
       templateUrl: '/views/home.html',
