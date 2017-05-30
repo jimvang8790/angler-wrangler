@@ -8,6 +8,7 @@ myApp.controller('UserController', ['$http', '$location', function($http, $locat
   $http.get('/user').then(function(response) {
       if(response.data.username) {
           // user has a curret session on the server
+          vm.profilePic = 'http://image.xahoi.com.vn/resize_580x1100/news/2015/01/19/my-nam-han-6-1421632217.jpg';
           vm.userName = response.data.username;
           console.log('User Data: ', vm.userName);
       } else {
@@ -21,5 +22,5 @@ myApp.controller('UserController', ['$http', '$location', function($http, $locat
       console.log('logged out');
       $location.path("/home");
     });
-  }
+  };
 }]);

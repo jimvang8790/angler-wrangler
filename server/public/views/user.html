@@ -1,5 +1,8 @@
 <div class="container">
     <h1 id="welcome" class="lead">Welcome, {{uc.userName}}!</h1>
-    <p>This is the user page!</p>
+    <img src="{{uc.profilePic}}" class="profilePic">
+    <button class="btn btn-default" type="button"><a href="#catch">New Catch</a></button>
     <button class="btn btn-default" ng-click="uc.logout()">Log Out</button>
+    <hr>
+    <p>This is where your fish logs will go!!!</p>
 </div>
