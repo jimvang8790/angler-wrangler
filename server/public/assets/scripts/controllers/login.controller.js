@@ -10,7 +10,7 @@ myApp.controller('LoginController', ['$http', '$location', function($http, $loca
 
     vm.login = function() {
       console.log('here', vm.user);
-      if(vm.user.username == '' || vm.user.password == '') {
+      if(vm.user.username === '' || vm.user.password === '') {
         vm.message = "Enter your username and password!";
       } else {
         console.log('sending to server...', vm.user);
@@ -26,10 +26,10 @@ myApp.controller('LoginController', ['$http', '$location', function($http, $loca
           }
         });
       }
-    }
+    };
 
     vm.registerUser = function() {
-      if(vm.user.username == '' || vm.user.password == '') {
+      if(vm.user.username === '' || vm.user.password === '') {
         vm.message = "Choose a username and password!";
       } else {
         console.log('sending to server...', vm.user);
@@ -39,8 +39,8 @@ myApp.controller('LoginController', ['$http', '$location', function($http, $loca
         },
         function(response) {
           console.log('error');
-          vm.message = "Please try again."
+          vm.message = "Please try again.";
         });
       }
-    }
+    };
 }]);
