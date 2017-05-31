@@ -6,11 +6,22 @@
     <input ng-model="cc.sizeIn" type="text" placeholder="Size">
     <input ng-model="cc.weightIn" type="text" placeholder="Weight">
     <input ng-model="cc.dateIn" type="text" placeholder="Date">
-    <input ng-model="cc.mapIn" type="text" placeholder="Google Map">
+    <!-- <input ng-model="cc.mapIn" type="text" placeholder="Google Map"> -->
     <input ng-model="cc.lakeIn" type="text" placeholder="Lake">
     <input ng-model="cc.locationIn" type="text" placeholder="Location">
     <input ng-model="cc.descriptionIn" placeholder="Description" width=80%>
     <button class="btn btn-default" ng-click="cc.addFish()">Add Fish</button>
     <button class="btn btn-default" type="button"><a href="#user">Cancel</a></button>
+    <div class="test">
+      <ng-map default-style="true" center="current-location" zoom="15">
+
+        <info-window position="current-location"
+          <span>Loation found using HTML5.</span>
+        </info-window>
+      <marker position="current-location" on-click="vm.showCustomMarker()"></marker>
+      <custom-marker id="foo" position="current-location" on-click="vm.closeCustomMarker()">
+      </custom-marker>
+      </ng-map>
+    </div>
   </div>
 </div>

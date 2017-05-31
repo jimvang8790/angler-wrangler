@@ -1,3 +1,4 @@
+// adding custom markers to google map
 angular.module('myapp', ['ngMap']);
      angular.module('myapp').controller('MyCtrl', function(NgMap){
        var vm = this;
