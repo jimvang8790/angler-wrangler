@@ -1,7 +1,20 @@
-myApp.controller('UserController', ['$http', '$location', function($http, $location) {
+myApp.controller('UserController', ['$http', '$location', 'NgMap', function($http, $location, NgMap) {
   // This happens after view/controller loads -- not ideal but it works for now.
   var vm = this;
   console.log('checking user');
+
+  console.log('checking user');
+    NgMap.getMap().then(function(map) {
+
+      vm.showCustomMarker = function(evt) {
+        map.customMarkers.foo.setVisible(true);
+        map.customMarkers.foo.setPosition(this.getPosition());
+      };
+
+      vm.closeCustomMarker= function(evt) {
+        this.style.display = 'none';
+      };
+    });
 
   // Upon load, check this user's session on the server
   $http.get('/user').then(function(response) {
