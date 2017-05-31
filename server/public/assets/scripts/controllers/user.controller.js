@@ -22,5 +22,20 @@ myApp.controller('UserController', ['$http', '$location', function($http, $locat
       console.log('logged out');
       $location.path("/home");
     });
-  };
-}]);
+  };// end logout
+
+  //get items from database
+  vm.getItems = function() {
+    console.log('getting items');
+    $http({
+      method: 'GET',
+      url: '/user/getItems',
+    }).then(function(response){
+      console.log('this is the response.data:', response.data);
+      vm.item = response.data;
+    });
+  };// end getItems
+
+  vm.getItems();
+
+}]);// end UserController

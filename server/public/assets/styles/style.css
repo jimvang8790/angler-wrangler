@@ -49,3 +49,12 @@ Users Profile
   width: 10em;
   border-radius: 50%;
 }
+
+/************
+Users Logs
+************/
+
+.images {
+  width: 20em;
+  height: 15em;
+}

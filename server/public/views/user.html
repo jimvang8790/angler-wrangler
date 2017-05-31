@@ -1,8 +1,28 @@
 <div class="container">
-    <h1 id="welcome" class="lead">Welcome, {{uc.userName}}!</h1>
-    <img src="{{uc.profilePic}}" class="profilePic">
-    <button class="btn btn-default" type="button"><a href="#catch">New Catch</a></button>
-    <button class="btn btn-default" ng-click="uc.logout()">Log Out</button>
-    <hr>
-    <p>This is where your fish logs will go!!!</p>
+  <h1 id="welcome" class="lead">Welcome, {{uc.userName}}!</h1>
+  <img src="{{uc.profilePic}}" class="profilePic">
+  <button class="btn btn-default" type="button"><a href="#catch">New Catch</a></button>
+  <button class="btn btn-default" ng-click="uc.logout()">Log Out</button>
+  <hr>
+  <div ng-repeat="log in uc.item">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-6">
+          <img ng-src="{{log.img}}" class="images">
+          <h3>Type: {{log.type}}</h3>
+          <h3>Size: {{log.size}} inches</h3>
+          <h3>Weight: {{log.weight}} lbs</h3>
+          <h3>Date: {{log.date}}</h3>
+        </div>
+        <div class=""col-xs-6"">
+          <img ng-src="{{log.map}}" class="images">
+          <!-- <h3>{{log.map}}</h3> -->
+          <h3>{{log.lake}}</h3>
+          <h3>{{log.location}}</h3>
+          <h3>{{log.description}}</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
 </div>
