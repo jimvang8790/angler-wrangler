@@ -32,8 +32,11 @@ router.get('/logout', function(req, res) {
 // get items from database
 router.get('/getItems', function(req, res) {
     console.log('is this get rounter working');
+
+    console.log('req.user is', req.user);
     // server side is grabing items from the database with the .find
-  Item.find().populate('userId').exec({}, function(err, results) {
+    // .find userId: req.user._id finding everyting that belong to the current user.
+  Item.find({'userId': req.user._id}, function(err, results) {
     if(err){
       console.log(err);
       res.sendStatus(500);
@@ -49,7 +52,7 @@ router.get('/getItems', function(req, res) {
 router.get('/getPictures', function(req, res) {
     console.log('is this get rounter for pictures working');
     // server side is grabing items from the database with the .find
-  Picture.find().populate('userId').exec({}, function(err, results) {
+  Picture.find({'userId': req.user._id}, function(err, results) {
     if(err){
       console.log(err);
       res.sendStatus(500);
