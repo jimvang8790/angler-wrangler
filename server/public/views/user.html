@@ -1,9 +1,6 @@
 <div class="container">
   <h1 id="welcome" class="lead">Welcome, {{uc.userName}}!</h1>
-  <!-- <img src="{{uc.profilePic}}" class="profilePic"> -->
-  <div ng-repeat="pic in uc.picture">
-    <img src="{{pic.picture}}" class="profilePic">
-  </div>
+  <img ng-src="{{uc.picture[0].picture}}" class="profilePic">
   <button class="btn btn-default" type="button"><a href="#profile">Edit Profile</a></button>
   <button class="btn btn-default" type="button"><a href="#catch">New Catch</a></button>
   <button class="btn btn-default" ng-click="uc.logout()">Log Out</button>

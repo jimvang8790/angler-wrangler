@@ -12,10 +12,9 @@ router.post('/', function (req, res){
   console.log('req.user is for picture', req.user);
 
   // collection structure
-  var picturesDB = new Item({
+  var picturesDB = new Picture({
     userId: req.user._id,
     picture: req.body.picture,
-
   });
 
   // saving pictures to the database

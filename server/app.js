@@ -35,7 +35,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // Routes
-app.use('/profile', profile);// NOTE profile
+app.use('/picture', profile);// NOTE profile
 app.use('/catch', catches);// NOTE catch
 app.use('/register', register);
 app.use('/user', user);
