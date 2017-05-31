@@ -22,8 +22,8 @@ myApp.controller('CatchController', ['$http', '$location', function($http, $loca
     };// end objectToSend
     console.log('objectToSend->', objectToSend);
 
-    // items to send to the mongoDB
-    console.log('items to send to the mongoDB');
+    // items to send to mongoDB
+    console.log('items to send to mongoDB');
     $http({
       method: 'POST',
       url: '/catch',

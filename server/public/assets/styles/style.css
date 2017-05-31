@@ -1,3 +1,6 @@
+/************
+General
+************/
 .instructions .container h1 {
     font-size: 24px;
     font-weight: 700;
@@ -58,3 +61,7 @@ Users Logs
   width: 20em;
   height: 15em;
 }
+
+/************
+Catch Page
+************/

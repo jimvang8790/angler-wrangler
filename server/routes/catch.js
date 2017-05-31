@@ -29,7 +29,7 @@ router.post('/', function (req, res){
   console.log('this is req.body:', req.user, req.body);
   itemsDB.save().then(function(){
     res.sendStatus(200);
-  });
-});
+  });// ends itemsDB
+}); // end rounter.post 
 
 module.exports = router;
