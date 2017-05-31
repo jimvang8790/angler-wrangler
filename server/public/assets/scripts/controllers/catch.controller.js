@@ -7,7 +7,9 @@ myApp.controller('CatchController', ['$http', '$location', function($http, $loca
   vm.addFish = function() {
     console.log('add fish button click');
 
+    // what is being sent to mongoDB and should mirror ItemSchema
     var objectToSend = {
+      username: vm.usernameIn,
       img: vm.imgIn,
       type: vm.typeIn,
       size: vm.sizeIn,
@@ -28,18 +30,20 @@ myApp.controller('CatchController', ['$http', '$location', function($http, $loca
       data: objectToSend
     }).then(function(response){
       console.log('back from the server with', response);
-      // vm.getFish();
+      // vm.getFish(); NOTE add this later
     });// end $http
 
-    // vm.imgIn='';
-    // vm.typeIn='';
-    // vm.sizeIn='';
-    // vm.weightIn='';
-    // vm.dateIn='';
-    // vm.mapIn='';
-    // vm.lakeIn='';
-    // vm.locationIn='';
-    // vm.descriptionIn='';
+    // clear the input field after entering info
+    vm.usernameIn='';
+    vm.imgIn='';
+    vm.typeIn='';
+    vm.sizeIn='';
+    vm.weightIn='';
+    vm.dateIn='';
+    vm.mapIn='';
+    vm.lakeIn='';
+    vm.locationIn='';
+    vm.descriptionIn='';
   };// end newCatch
 
 }]);// end controller

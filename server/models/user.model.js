@@ -9,7 +9,7 @@ var UserSchema = new Schema({
     password: {type: String, required: true}
 });
 
-// items schema
+// items Schema
 var ItemSchema = new Schema({
   userId : [{ type: Schema.Types.ObjectId, ref: 'User' }],
   img: {type: String, required: true},
@@ -59,6 +59,6 @@ UserSchema.methods.comparePassword = function(candidatePassword, callback) {
     });
 };
 
-
+// exporting
 module.exports = mongoose.model('User', UserSchema);
-module.exports.item = mongoose.model('Items', ItemSchema);
+module.exports.item = mongoose.model('Item', ItemSchema);
