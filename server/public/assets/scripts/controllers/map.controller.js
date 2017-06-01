@@ -1,5 +1,5 @@
 // adding custom markers to google map
-  myApp.controller('MyCtrl', ['$http', '$location', 'NgMap', function($http, $location, NgMap){
+  myApp.controller('MyCtrl', ['$http', '$location', 'NgMap', '$scope', function($http, $location, NgMap, $scope){
 
     var vm = this;
     // vm.demo='';
@@ -33,6 +33,7 @@
      vm.lng = position.coords.longitude;
      console.log('vm.lat', vm.lat);
      console.log('vm.lng', vm.lng);
+     $scope.$apply();// trigger the digest cycle 
    };// end showPosition
 
  }]);// end controller
