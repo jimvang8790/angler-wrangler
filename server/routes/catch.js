@@ -18,10 +18,10 @@ router.post('/', function (req, res){
     type: req.body.type,
     size: req.body.size,
     weight: req.body.weight,
-    date: req.body.date,
-    map: req.body.map,
+    // date: req.body.date,
+    // map: req.body.map,
     lake: req.body.lake,
-    location: req.body.location,
+    // location: req.body.location,
     description: req.body.description,
   });
 
@@ -30,6 +30,6 @@ router.post('/', function (req, res){
   itemsDB.save().then(function(){
     res.sendStatus(200);
   });// ends itemsDB
-}); // end rounter.post 
+}); // end rounter.post
 
 module.exports = router;

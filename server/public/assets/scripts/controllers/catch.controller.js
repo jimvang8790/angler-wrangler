@@ -14,8 +14,8 @@ myApp.controller('CatchController', ['$http', '$location', function($http, $loca
       type: vm.typeIn,
       size: vm.sizeIn,
       weight: vm.weightIn,
-      date: vm.dateIn,
-      map: vm.mapIn,
+      // date: vm.dateIn,
+      // map: vm.mapIn,
       lake: vm.lakeIn,
       location: vm.locationIn,
       description: vm.descriptionIn
@@ -39,10 +39,10 @@ myApp.controller('CatchController', ['$http', '$location', function($http, $loca
     vm.typeIn='';
     vm.sizeIn='';
     vm.weightIn='';
-    vm.dateIn='';
-    vm.mapIn='';
+    // vm.dateIn='';
+    // vm.mapIn='';
     vm.lakeIn='';
-    vm.locationIn='';
+    // vm.locationIn='';
     vm.descriptionIn='';
   };// end newCatch
 
