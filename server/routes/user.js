@@ -50,7 +50,7 @@ router.get('/getItems', function(req, res) {
 
 // get picture from database
 router.get('/getPictures', function(req, res) {
-    console.log('is this get rounter for pictures working');
+    console.log('this get router for pictures is working');
     // server side is grabing items from the database with the .find
   Picture.find({'userId': req.user._id}, function(err, results) {
     if(err){
@@ -63,6 +63,12 @@ router.get('/getPictures', function(req, res) {
     }// end else
   });// end Picture.find
 });// end router.get
+
+// //get position coordination
+// router.get('/showPosition', function(req, res) {
+//   console.log('this get router for picture is working');
+//   res.sendStatus(200);
+// });
 
 // exports
 module.exports = router;

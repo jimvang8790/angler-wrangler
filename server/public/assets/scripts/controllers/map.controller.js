@@ -1,7 +1,9 @@
 // adding custom markers to google map
-// angular.module('myapp', ['ngMap']);
-  myApp.controller('MyCtrl', function(NgMap){
+  myApp.controller('MyCtrl', ['$http', '$location', 'NgMap', function($http, $location, NgMap){
+
     var vm = this;
+    // vm.demo='';
+
     NgMap.getMap().then(function(map) {
       vm.showCustomMarker= function(evt) {
         map.customMarkers.foo.setVisible(true);
@@ -12,24 +14,25 @@
       };// end closeCustomMarker
 });// end getMap
 
-
-
    //NOTE to display latitude and longitude
   //  vm.x = document.getElementById('demo');
 
    vm.getLocation = function() {
-     console.log('get location button click:');
+     console.log('Getting location, please wait. Loading...:');
      if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(vm.showPosition);
     }// end if
     else {
-        vm.demo.innerHTML = 'Geolocation is not supported by this browser.';
+        // vm.demo.innerHTML = 'Geolocation is not supported by this browser.';
     }// end else
    };// end getLocation
 
    vm.showPosition = function(position) {
-     console.log('position', position);
-     
+     console.log('geolocation', position);
+     vm.lat = position.coords.latitude;
+     vm.lng = position.coords.longitude;
+     console.log('vm.lat', vm.lat);
+     console.log('vm.lng', vm.lng);
    };// end showPosition
 
- });// end controller
+ }]);// end controller
