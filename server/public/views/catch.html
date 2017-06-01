@@ -12,16 +12,22 @@
     <input ng-model="cc.descriptionIn" placeholder="Description" width=80%>
     <button class="btn btn-default" ng-click="cc.addFish()">Add Fish</button>
     <button class="btn btn-default" type="button"><a href="#user">Cancel</a></button>
-    <div class="test">
-      <ng-map default-style="true" center="current-location" zoom="15">
-
-        <info-window position="current-location"
-          <span>Loation found using HTML5.</span>
-        </info-window>
-      <marker position="current-location" on-click="vm.showCustomMarker()"></marker>
-      <custom-marker id="foo" position="current-location" on-click="vm.closeCustomMarker()">
-      </custom-marker>
-      </ng-map>
+    <!-- Google Map -->
+    <div ng-controller="MyCtrl as mc">
+      <!-- change vm. to mc. -->
+      <button class="btn btn-default" ng-click="mc.getLocation()">Location</button>
+      <p ng-model="mc.demo"></p>
+      <div class="googleMap">
+        <ng-map default-style="true" center="current-location" zoom="15">
+          <info-window position="current-location">
+            <span>Loation found using HTML5.</span>
+          </info-window>
+        <marker position="current-location" on-click="mc.showCustomMarker()"></marker>
+        <custom-marker id="foo" position="current-location" on-click="mc.closeCustomMarker()"></custom-marker>
+        </ng-map>
+      </div>
     </div>
+    {{}}
+
   </div>
 </div>

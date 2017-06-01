@@ -26,6 +26,10 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
       templateUrl: '/views/profile.html',
       controller: "ProfileController as pc"
     })
+    // .when('', {
+    //   templateUrl: '',
+    //   controller: "MapController as pc"
+    // })
     .otherwise({
       redirectTo: 'home'
     });
