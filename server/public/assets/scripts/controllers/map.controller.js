@@ -18,7 +18,7 @@
   //  vm.x = document.getElementById('demo');
 
    vm.getLocation = function() {
-     console.log('Getting location, please wait. Loading...:');
+     console.log('Getting location, please wait...:');
      if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(vm.showPosition);
     }// end if

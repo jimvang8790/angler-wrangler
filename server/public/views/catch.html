@@ -14,8 +14,8 @@
     <button class="btn btn-default" type="button"><a href="#user">Cancel</a></button>
     <!-- Google Map -->
     <div ng-controller="MyCtrl as mc">
-      <h4>Latitude: {{mc.lat}}</h4>
-      <h4>Longitude: {{mc.lng}}</h4>
+      <h4>Latitude: </h4><p>{{mc.lat}}</p>
+      <h4>Longitude: </h4><p>{{mc.lng}}</p>
       <!-- change vm. to mc. -->
       <button class="btn btn-default" ng-click="mc.getLocation()">Location</button>
       <div class="googleMap">
