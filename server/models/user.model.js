@@ -16,10 +16,9 @@ var ItemSchema = new Schema({
   type: {type: String, required: true},
   size: {type: Number, required: true},
   weight: {type: Number, required: true},
-  // date: {type: String, required: true},
-  // map: {type: String, required: true},
-  lake: {type: String, required: true},
-  // location: {type: String, required: true},
+  location: {type: String, required: true},
+  // latitude: Number,
+  // longitude: Number,
   description: {type: String, required: true}
 });
 

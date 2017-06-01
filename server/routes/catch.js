@@ -18,10 +18,7 @@ router.post('/', function (req, res){
     type: req.body.type,
     size: req.body.size,
     weight: req.body.weight,
-    // date: req.body.date,
-    // map: req.body.map,
-    lake: req.body.lake,
-    // location: req.body.location,
+    location: req.body.location,
     description: req.body.description,
   });
 

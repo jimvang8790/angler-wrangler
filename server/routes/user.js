@@ -64,11 +64,5 @@ router.get('/getPictures', function(req, res) {
   });// end Picture.find
 });// end router.get
 
-// //get position coordination
-// router.get('/showPosition', function(req, res) {
-//   console.log('this get router for picture is working');
-//   res.sendStatus(200);
-// });
-
 // exports
 module.exports = router;
