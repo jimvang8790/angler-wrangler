@@ -9,7 +9,6 @@ myApp.controller('CatchController', ['$http', '$location', 'NgMap', '$scope', fu
   // add a new catch to mongoDB
   vm.addFish = function() {
     console.log('add fish button click');
-
     // what is being sent to mongoDB and should mirror ItemSchema
     var objectToSend = {
       username: vm.usernameIn,
@@ -21,7 +20,6 @@ myApp.controller('CatchController', ['$http', '$location', 'NgMap', '$scope', fu
       description: vm.descriptionIn
     };// end objectToSend
     console.log('objectToSend->', objectToSend);
-
     // items to send to mongoDB
     console.log('items to send to mongoDB');
     $http({
@@ -32,10 +30,8 @@ myApp.controller('CatchController', ['$http', '$location', 'NgMap', '$scope', fu
       console.log('back from the server with', response);
       // vm.getLocation(); // NOTE add this later
     });// end $http
-
     // clear the input field after entering info
     vm.usernameIn='';
-    // vm.imgUrl='';
     vm.typeIn='';
     vm.sizeIn='';
     vm.weightIn='';
@@ -77,14 +73,12 @@ myApp.controller('CatchController', ['$http', '$location', 'NgMap', '$scope', fu
    //NOTE add latitude and longitude to mongoDB
    vm.addLocation = function() {
      console.log('add location button click');
-
      var locationToSend = {
        username: vm.usernameIn,
        latitude: vm.lat,
        longitude: vm.lng
     };// end locationToSend
     console.log('locationToSend->', locationToSend);
-
     // location to send to mongoDB
     console.log('location to send to mongoDB');
     $http({
