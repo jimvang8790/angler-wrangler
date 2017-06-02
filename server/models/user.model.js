@@ -12,7 +12,7 @@ var UserSchema = new Schema({
 // items Schema
 var ItemSchema = new Schema({
   userId : [{ type: Schema.Types.ObjectId, ref: 'User' }],
-  img: {type: String, required: true},
+  imgUrl: String,
   type: {type: String, required: true},
   size: {type: Number, required: true},
   weight: {type: Number, required: true},

@@ -13,7 +13,7 @@ myApp.controller('CatchController', ['$http', '$location', 'NgMap', '$scope', fu
     // what is being sent to mongoDB and should mirror ItemSchema
     var objectToSend = {
       username: vm.usernameIn,
-      img: vm.imgIn,
+      imgUrl: vm.img,
       type: vm.typeIn,
       size: vm.sizeIn,
       weight: vm.weightIn,
@@ -35,7 +35,7 @@ myApp.controller('CatchController', ['$http', '$location', 'NgMap', '$scope', fu
 
     // clear the input field after entering info
     vm.usernameIn='';
-    vm.imgIn='';
+    // vm.imgUrl='';
     vm.typeIn='';
     vm.sizeIn='';
     vm.weightIn='';
@@ -100,12 +100,12 @@ myApp.controller('CatchController', ['$http', '$location', 'NgMap', '$scope', fu
     vm.lng='';
    };// end addLocation
 
-   // uploading an image
+   // uploading an image to filestack
    vm.uploadImg = filestack.init('AHwdt1GnnReXiWuvTKZB7z');
    vm.showPicker = function() {
      vm.uploadImg.pick({
      }).then(function(response){
-       console.log(JSON.stringify(response.filesUploaded[0].url));
+       console.log('upload this img', (response.filesUploaded[0].url));
        vm.img=response.filesUploaded[0].url;
      });
    };// end showPicker

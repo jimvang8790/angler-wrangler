@@ -12,7 +12,7 @@ router.post('/', function (req, res){
   // collection structure
   var itemsDB = new Item({
     userId: req.user._id,
-    img: req.body.img,
+    imgUrl: req.body.imgUrl, 
     type: req.body.type,
     size: req.body.size,
     weight: req.body.weight,
