@@ -3,18 +3,18 @@ myApp.controller('UserController', ['$http', '$location', 'NgMap', function($htt
   var vm = this;
   console.log('checking user');
 
-  console.log('checking user');
-    NgMap.getMap().then(function(map) {
+  // Google Map API
+  NgMap.getMap().then(function(map) {
 
-      vm.showCustomMarker = function(evt) {
-        map.customMarkers.foo.setVisible(true);
-        map.customMarkers.foo.setPosition(this.getPosition());
-      };
+    vm.showCustomMarker = function(evt) {
+      map.customMarkers.foo.setVisible(true);
+      map.customMarkers.foo.setPosition(this.getPosition());
+    };
 
-      vm.closeCustomMarker= function(evt) {
-        this.style.display = 'none';
-      };
-    });
+    vm.closeCustomMarker= function(evt) {
+      this.style.display = 'none';
+    };
+  });
 
   // Upon load, check this user's session on the server
   $http.get('/user').then(function(response) {
@@ -43,12 +43,12 @@ myApp.controller('UserController', ['$http', '$location', 'NgMap', function($htt
       method: 'GET',
       url: '/user/getItems',
     }).then(function(response){
-      console.log('this is the response.data:', response.data);
+      console.log('this is the response for get items:', response.data);
       vm.item = response.data;
     });
   };// end getItems
 
-  vm.getItems();
+  vm.getItems();// call function inorder to see logs
 
   //get pictures from database
   vm.getPictures = function() {
@@ -57,12 +57,12 @@ myApp.controller('UserController', ['$http', '$location', 'NgMap', function($htt
       method: 'GET',
       url: '/user/getPictures',
     }).then(function(response) {
-      console.log('this is the response.data for picture', response.data);
+      console.log('this is the response for get picture:', response.data);
       vm.picture = response.data;
     });
   };// end getPictures
 
-  vm.getPictures();
+  vm.getPictures();// call function inorder to see logs
 
   //get location from database
   vm.getCoordLocation = function() {
@@ -71,7 +71,11 @@ myApp.controller('UserController', ['$http', '$location', 'NgMap', function($htt
       method: 'GET',
       url: '/user/getCoordLocation',
     }).then(function(response) {
-      console.log('this is the response for location', response.data);
+      console.log('this is the response for get location:', response.data);
+      vm.getPosition = response.data;
     });
   };// end getCoordLocation
+
+  vm.getCoordLocation();// call function inorder to see logs
+
 }]);// end UserController

@@ -4,7 +4,7 @@ var passport = require('passport');
 var path = require('path');
 var Item = require('../models/user.model').item;
 var Picture = require('../models/user.model').picture;
-var Coordlocation = require('../models/user.model').geolocation;
+var Coordlocation = require('../models/user.model').coordlocation;
 
 // Handles Ajax request for user information if user is authenticated
 router.get('/', function(req, res) {
@@ -67,7 +67,7 @@ router.get('/getPictures', function(req, res) {
 
 // get coordlocation from database
 router.get('/getCoordLocation', function(req, res) {
-    console.log('this get router for pictures is working');
+    console.log('this get router for coordlocation is working');
     // server side is grabing items from the database with the .find
   Coordlocation.find({'userId': req.user._id}, function(err, results) {
     if(err){
