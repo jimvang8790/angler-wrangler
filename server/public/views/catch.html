@@ -16,8 +16,8 @@
       </ng-map>
     </div>
     <br>
-    <h4>Latitude: </h4><p>{{cc.lat}}</p>
-    <h4>Longitude: </h4><p>{{cc.lng}}</p>
+    <h4>Latitude: </h4><p>{{cc.lat | number : 4}}</p>
+    <h4>Longitude: </h4><p>{{cc.lng | number : 4}}</p>
     <button class="btn btn-default" ng-click="cc.getLocation()">Find Location</button>
   </div>
   <div>

@@ -64,5 +64,19 @@ router.get('/getPictures', function(req, res) {
   });// end Picture.find
 });// end router.get
 
+// delete a catch/fish form database
+router.delete('/remove', function(req, res){
+  var fishIdToDelete = req.query.id;
+  Item.remove({ _id: fishIdToDelete }, function(err) {
+    if (err) {
+      console.log('Error removing from database', err);
+      res.sendStatus(500);
+    }
+    else {
+      res.sendStatus(200);
+    }
+  });
+});//end delete
+
 // exports
 module.exports = router;

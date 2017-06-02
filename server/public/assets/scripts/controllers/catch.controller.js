@@ -48,7 +48,6 @@ myApp.controller('CatchController', ['$http', '$location', 'NgMap', '$scope', fu
       size: vm.sizeIn,
       weight: vm.weightIn,
       location: vm.locationIn,
-      //NOTE adding lat lng
       latitude: vm.lat,
       longitude: vm.lng,
       description: vm.descriptionIn
@@ -70,37 +69,10 @@ myApp.controller('CatchController', ['$http', '$location', 'NgMap', '$scope', fu
     vm.sizeIn='';
     vm.weightIn='';
     vm.locationIn='';
-    //NOTE adding lat and lng
     vm.lat='';
     vm.lng='';
     vm.descriptionIn='';
   };// end addFish
-
-
-
-  //  //NOTE add latitude and longitude to mongoDB
-  //  vm.addLocation = function() {
-  //    console.log('add location button click');
-  //    var locationToSend = {
-  //      username: vm.usernameIn,
-  //      latitude: vm.lat,
-  //      longitude: vm.lng
-  //   };// end locationToSend
-  //   console.log('locationToSend->', locationToSend);
-  //   // location to send to mongoDB
-  //   console.log('location to send to mongoDB');
-  //   $http({
-  //     method: 'POST',
-  //     url: '/location',
-  //     data: locationToSend
-  //   }).then(function(response) {
-  //     console.log('back from the server with location response', response);
-  //   });// end $http
-  //   // clear the input field after entering info
-  //   vm.usernameIn='';
-  //   vm.lat='';
-  //   vm.lng='';
-  //  };// end addLocation
 
    // uploading an image to filestack
    vm.uploadImg = filestack.init('AHwdt1GnnReXiWuvTKZB7z');

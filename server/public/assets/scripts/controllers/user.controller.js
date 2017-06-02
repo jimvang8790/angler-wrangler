@@ -64,5 +64,19 @@ myApp.controller('UserController', ['$http', '$location', 'NgMap', function($htt
 
   vm.getPictures();// call function inorder to see logs
 
+  // removing a catch/fish from the database
+  vm.removeFish = function(itemsId) {
+   console.log('delete button click!');
+   console.log('Item id to remove is:', itemsId);
+   $http({
+     method: 'DELETE',
+     url: '/user/remove',
+     params: {id: itemsId}
+   }).then(function(response) {
+     console.log('delete response:', response);
+     vm.getItems();
+   });
+  };// end removeFish
+
 
 }]);// end UserController

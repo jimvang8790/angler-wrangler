@@ -23,19 +23,12 @@
             <marker position="[{{log.latitude}}, {{log.longitude}}]"></marker>
             <custom-marker id="foo" position="[{{log.latitude}}, {{log.longitude}}]"></custom-marker>
           </ng-map>
-          <h3>Latitude: {{log.latitude}}</h3>
-          <h3>Longitude: {{log.longitude}}</h3>
+          <h3>Latitude: {{log.latitude | number : 4}}</h3> <!-- {{value | number : fractionSize}} -->
+          <h3>Longitude: {{log.longitude | number : 4}}</h3> <!-- {{value | number : fractionSize}} -->
         </div>
+        <button class="btn btn-default" ng-click="uc.removeFish(log._id)">Delete</button>
       </div>
     </div>
-    <!-- <div ng-repeat="loc in uc.getPosition">
-      <ng-map center="[{{loc.latitude}}, {{loc.longitude}}]">
-        <marker position="[{{loc.latitude}}, {{loc.longitude}}]"></marker>
-        <custom-marker id="foo" position="[{{loc.latitude}}, {{loc.longitude}}]"></custom-marker>
-      </ng-map>
-      <h3>Latitude: {{loc.latitude}}</h3>
-      <h3>Longitude: {{loc.longitude}}</h3>
-    </div> -->
     <hr>
   </div>
   <hr>
