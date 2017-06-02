@@ -15,8 +15,6 @@ myApp.controller('CatchController', ['$http', '$location', 'NgMap', '$scope', fu
       size: vm.sizeIn,
       weight: vm.weightIn,
       location: vm.locationIn,
-      // latitude: position.coords.latitude,
-      // longitude: position.coords.longitude,
       description: vm.descriptionIn
     };// end objectToSend
     console.log('objectToSend->', objectToSend);
