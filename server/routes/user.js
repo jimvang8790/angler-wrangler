@@ -66,7 +66,20 @@ router.get('/getPictures', function(req, res) {
 });// end router.get
 
 // get coordlocation from database
-
+router.get('/getCoordLocation', function(req, res) {
+    console.log('this get router for pictures is working');
+    // server side is grabing items from the database with the .find
+  Coordlocation.find({'userId': req.user._id}, function(err, results) {
+    if(err){
+      console.log(err);
+      res.sendStatus(500);
+    }// end if
+    else{
+      console.log('successful get location ->', results);
+      res.status(200).send(results);
+    }// end else
+  });// end Picture.find
+});// end router.get
 
 // exports
 module.exports = router;

@@ -1,7 +1,10 @@
 myApp.controller('CatchController', ['$http', '$location', 'NgMap', '$scope', function($http, $location, NgMap, $scope){
   console.log('CatchController loaded');
 
+  // global variable
   var vm = this;
+  vm.lat = '';
+  vm.lng = '';
 
   // add a new catch to mongoDB
   vm.addFish = function() {
@@ -40,7 +43,7 @@ myApp.controller('CatchController', ['$http', '$location', 'NgMap', '$scope', fu
     vm.descriptionIn='';
   };// end addFish
 
-  // Goolge Map API call
+  // NOTE Goolge Map API call
   NgMap.getMap().then(function(map) {
     vm.showCustomMarker= function(evt) {
       map.customMarkers.foo.setVisible(true);
@@ -70,5 +73,27 @@ myApp.controller('CatchController', ['$http', '$location', 'NgMap', '$scope', fu
      console.log('vm.lng', vm.lng);
      $scope.$apply();// trigger the digest cycle or will have to
    };// end showPosition
+
+   //NOTE add latitude and longitude to mongoDB
+   vm.addLocation = function() {
+     console.log('add location button click');
+
+     var locationToSend = {
+       username: vm.usernameIn,
+       latitude: vm.lat,
+       longitude: vm.lng
+    };// end locationToSend
+    console.log('locationToSend->', locationToSend);
+
+    // location to send to mongoDB
+    console.log('location to send to mongoDB');
+    $http({
+      method: 'POST',
+      url: '/location',
+      data: locationToSend
+    }).then(function(response) {
+      console.log('back from the server with location response', response);
+    });
+   };// end addLocation
 
 }]);// end controller

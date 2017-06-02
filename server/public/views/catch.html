@@ -3,7 +3,7 @@
   <div class="inputDiv">
     <input ng-model="cc.imgIn" type="text" placeholder="Photo">
     <input ng-model="cc.typeIn" type="text" placeholder="Type">
-    <input ng-model="cc.sizeIn" type="text" placeholder="Size">
+    <input ng-model="cc.sizeIn" type="text" placeholder="Length">
     <input ng-model="cc.weightIn" type="text" placeholder="Weight">
     <input ng-model="cc.locationIn" type="text" placeholder="Location">
     <input ng-model="cc.descriptionIn" placeholder="Description">
@@ -21,6 +21,7 @@
     <button class="btn btn-default" ng-click="cc.getLocation()">Find Location</button>
   </div>
   <div>
+    <button class="btn btn-default" ng-click="cc.addLocation()">Add Location</button>
     <button class="btn btn-default" ng-click="cc.addFish()">Add Catch</button>
     <button class="btn btn-default" type="button"><a href="#user">Cancel</a></button>
   </div>

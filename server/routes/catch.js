@@ -7,9 +7,7 @@ var Item = require('../models/user.model').item;
 
 //sending data to the database
 router.post('/', function (req, res){
-  console.log('In post route');
-
-  console.log('req.user is', req.user);
+  console.log('In post route in items');
 
   // collection structure
   var itemsDB = new Item({

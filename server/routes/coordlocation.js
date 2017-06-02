@@ -7,7 +7,7 @@ var Coordlocation = require('../models/user.model').coordlocation;
 
 //sending data to the database
 router.post('/', function (req, res){
-  console.log('In post route');
+  console.log('In post route for location');
 
   // collection structure
   var coordlocationsDB = new Coordlocation({

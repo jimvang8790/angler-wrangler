@@ -64,4 +64,14 @@ myApp.controller('UserController', ['$http', '$location', 'NgMap', function($htt
 
   vm.getPictures();
 
+  //get location from database
+  vm.getCoordLocation = function() {
+    console.log('getting location');
+    $http({
+      method: 'GET',
+      url: '/user/getCoordLocation',
+    }).then(function(response) {
+      console.log('this is the response for location', response.data);
+    });
+  };// end getCoordLocation
 }]);// end UserController
