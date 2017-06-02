@@ -17,14 +17,9 @@ var ItemSchema = new Schema({
   size: {type: Number, required: true},
   weight: {type: Number, required: true},
   location: {type: String, required: true},
-  description: {type: String, required: true}
-});
-
-// geolocation Schema
-var CoordlocationSchema = new Schema({
-  userId : [{ type: Schema.Types.ObjectId, ref: 'User' }],
   latitude: {type: Number, required: false},
   longitude: {type: Number, required: false},
+  description: {type: String, required: true}
 });
 
 // profile Schema
@@ -72,5 +67,4 @@ UserSchema.methods.comparePassword = function(candidatePassword, callback) {
 // exporting
 module.exports = mongoose.model('User', UserSchema);
 module.exports.item = mongoose.model('Item', ItemSchema);
-module.exports.coordlocation = mongoose.model('Coordlocation', CoordlocationSchema);
 module.exports.picture = mongoose.model('Picture', ProfileSchema);

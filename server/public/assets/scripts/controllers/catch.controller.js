@@ -6,39 +6,6 @@ myApp.controller('CatchController', ['$http', '$location', 'NgMap', '$scope', fu
   vm.lat = '';
   vm.lng = '';
 
-  // add a new catch to mongoDB
-  vm.addFish = function() {
-    console.log('add fish button click');
-    // what is being sent to mongoDB and should mirror ItemSchema
-    var objectToSend = {
-      username: vm.usernameIn,
-      imgUrl: vm.img,
-      type: vm.typeIn,
-      size: vm.sizeIn,
-      weight: vm.weightIn,
-      location: vm.locationIn,
-      description: vm.descriptionIn
-    };// end objectToSend
-    console.log('objectToSend->', objectToSend);
-    // items to send to mongoDB
-    console.log('items to send to mongoDB');
-    $http({
-      method: 'POST',
-      url: '/catch',
-      data: objectToSend
-    }).then(function(response){
-      console.log('back from the server with', response);
-      // vm.getLocation(); // NOTE add this later
-    });// end $http
-    // clear the input field after entering info
-    vm.usernameIn='';
-    vm.typeIn='';
-    vm.sizeIn='';
-    vm.weightIn='';
-    vm.locationIn='';
-    vm.descriptionIn='';
-  };// end addFish
-
   // NOTE Goolge Map API call
   NgMap.getMap().then(function(map) {
     vm.showCustomMarker= function(evt) {
@@ -70,29 +37,70 @@ myApp.controller('CatchController', ['$http', '$location', 'NgMap', '$scope', fu
      $scope.$apply();// trigger the digest cycle or will have to
    };// end showPosition
 
-   //NOTE add latitude and longitude to mongoDB
-   vm.addLocation = function() {
-     console.log('add location button click');
-     var locationToSend = {
-       username: vm.usernameIn,
-       latitude: vm.lat,
-       longitude: vm.lng
-    };// end locationToSend
-    console.log('locationToSend->', locationToSend);
-    // location to send to mongoDB
-    console.log('location to send to mongoDB');
+  // add a new catch to mongoDB
+  vm.addFish = function() {
+    console.log('add fish button click');
+    // what is being sent to mongoDB and should mirror ItemSchema
+    var objectToSend = {
+      username: vm.usernameIn,
+      imgUrl: vm.img,
+      type: vm.typeIn,
+      size: vm.sizeIn,
+      weight: vm.weightIn,
+      location: vm.locationIn,
+      //NOTE adding lat lng
+      latitude: vm.lat,
+      longitude: vm.lng,
+      description: vm.descriptionIn
+    };// end objectToSend
+    console.log('objectToSend->', objectToSend);
+    // items to send to mongoDB
+    console.log('items to send to mongoDB');
     $http({
       method: 'POST',
-      url: '/location',
-      data: locationToSend
-    }).then(function(response) {
-      console.log('back from the server with location response', response);
+      url: '/catch',
+      data: objectToSend
+    }).then(function(response){
+      console.log('back from the server with', response);
+      // vm.getLocation(); // NOTE add this later
     });// end $http
     // clear the input field after entering info
     vm.usernameIn='';
+    vm.typeIn='';
+    vm.sizeIn='';
+    vm.weightIn='';
+    vm.locationIn='';
+    //NOTE adding lat and lng
     vm.lat='';
     vm.lng='';
-   };// end addLocation
+    vm.descriptionIn='';
+  };// end addFish
+
+
+
+  //  //NOTE add latitude and longitude to mongoDB
+  //  vm.addLocation = function() {
+  //    console.log('add location button click');
+  //    var locationToSend = {
+  //      username: vm.usernameIn,
+  //      latitude: vm.lat,
+  //      longitude: vm.lng
+  //   };// end locationToSend
+  //   console.log('locationToSend->', locationToSend);
+  //   // location to send to mongoDB
+  //   console.log('location to send to mongoDB');
+  //   $http({
+  //     method: 'POST',
+  //     url: '/location',
+  //     data: locationToSend
+  //   }).then(function(response) {
+  //     console.log('back from the server with location response', response);
+  //   });// end $http
+  //   // clear the input field after entering info
+  //   vm.usernameIn='';
+  //   vm.lat='';
+  //   vm.lng='';
+  //  };// end addLocation
 
    // uploading an image to filestack
    vm.uploadImg = filestack.init('AHwdt1GnnReXiWuvTKZB7z');

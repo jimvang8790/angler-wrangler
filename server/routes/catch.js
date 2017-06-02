@@ -12,11 +12,14 @@ router.post('/', function (req, res){
   // collection structure
   var itemsDB = new Item({
     userId: req.user._id,
-    imgUrl: req.body.imgUrl, 
+    imgUrl: req.body.imgUrl,
     type: req.body.type,
     size: req.body.size,
     weight: req.body.weight,
     location: req.body.location,
+    //NOTE adding lat and lng
+    latitude: req.body.latitude,
+    longitude: req.body.longitude,
     description: req.body.description,
   });
 
