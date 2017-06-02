@@ -93,7 +93,21 @@ myApp.controller('CatchController', ['$http', '$location', 'NgMap', '$scope', fu
       data: locationToSend
     }).then(function(response) {
       console.log('back from the server with location response', response);
-    });
+    });// end $http
+    // clear the input field after entering info
+    vm.usernameIn='';
+    vm.lat='';
+    vm.lng='';
    };// end addLocation
+
+   // uploading an image
+   vm.uploadImg = filestack.init('AHwdt1GnnReXiWuvTKZB7z');
+   vm.showPicker = function() {
+     vm.uploadImg.pick({
+     }).then(function(response){
+       console.log(JSON.stringify(response.filesUploaded[0].url));
+       vm.img=response.filesUploaded[0].url;
+     });
+   };// end showPicker
 
 }]);// end controller
