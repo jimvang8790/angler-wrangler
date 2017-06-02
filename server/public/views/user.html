@@ -17,14 +17,23 @@
           <h3>Type: {{log.type}}</h3>
           <h3>Length: {{log.size}} inches</h3>
           <h3>Weight: {{log.weight}} lbs</h3>
-        </div>
-        <div class="col-xs-6">
-          <h3>Location: {{log.location}}</h3>
           <h3>Details: {{log.description}}</h3>
+          <h3>Location: {{log.location}}</h3>
         </div>
       </div>
     </div>
     <div ng-repeat="loc in uc.getPosition">
+      <ng-map center="[{{loc.latitude}}, {{loc.longitude}}]">
+        <marker position="[{{loc.latitude}}, {{loc.longitude}}]"></marker>
+        <custom-marker id="foo" position="[{{loc.latitude}}, {{loc.longitude}}]"></custom-marker>
+      </ng-map>
+    <!-- <div>
+      <ng-map default-style="false" center="{{loc.latitude}}" zoom="15">
+        <info-window position="{{loc.latitude}}"></info-window>
+      <marker position="current-location" on-click="cc.showCustomMarker()"></marker>
+      <custom-marker id="foo" position="{{loc.latitude}}" on-click="cc.closeCustomMarker()"></custom-marker>
+      </ng-map>
+    </div> -->
       <h3>Latitude: {{loc.latitude}}</h3>
       <h3>Longitude: {{loc.longitude}}</h3>
     </div>
