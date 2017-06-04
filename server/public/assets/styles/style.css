@@ -45,21 +45,79 @@ General
 
 .lead {
   text-align: center;
+  font-family: 'Coiny', cursive;
 }
 
 /************
-Users Profile
+Login/Register Page
 ************/
 
-.profilePic {
-  height: 10em;
-  width: 10em;
-  border-radius: 25%;
+.passport{
+  margin-top : 14px;
+  text-align: center;
 }
 
+.btn-login {
+  background-color: #59B2E0;
+	color: #fff;
+	border-color: #59B2E6;
+}
+
+.btn-login:hover,
+.btn-login:focus {
+	color: #fff;
+	background-color: #53A3CD;
+	border-color: #53A3CD;
+}
+
+.btn-register {
+  background-color: #1CB94E;
+	color: #fff;
+	border-color: #1CB94A;
+}
+
+.btn-register:hover,
+.btn-register:focus {
+	color: #fff;
+	background-color: #1CA347;
+	border-color: #1CA347;
+}
+
+.btn-cancel {
+  background-color: #ff0000;
+	color: #fff;
+	border-color: #ff0000;
+}
+
+.btn-cancel:hover,
+.btn-cancel:focus {
+	color: #fff;
+	background-color: #cc0000;
+	border-color: #cc0000;
+}
+
+.btn-login,
+.btn-register,
+.btn-cancel {
+  outline: none;
+  font-size: 14px;
+  height: auto;
+  width: 8em;
+  font-weight: normal;
+	padding: 14px 0;
+	text-transform: uppercase;
+}
 /************
-Users Logs
+Users Fish Logs
 ************/
+
+.header {
+  font-family: 'El Messiri', sans-serif;
+}
+
+.welcome {
+  font-family: 'El Messiri', sans-serif;
+}
 
 .images {
   width: 20em;
@@ -67,7 +125,7 @@ Users Logs
 }
 
 /************
-Catch Page
+New Catch Page
 ************/
 
 ng-map {
