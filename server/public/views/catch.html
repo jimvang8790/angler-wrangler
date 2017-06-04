@@ -5,7 +5,12 @@
     <input ng-model="cc.sizeIn" type="text" placeholder="Length">
     <input ng-model="cc.weightIn" type="text" placeholder="Weight">
     <input ng-model="cc.locationIn" type="text" placeholder="Location">
-    <input ng-model="cc.descriptionIn" placeholder="Description">
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea ng-model="cc.descriptionIn" class="form-control" rows="3" id="description"></textarea>
+    </div>
+    <!-- <input ng-model="cc.descriptionIn" placeholder="Description"> -->
+    <input ng-model="cc.img" placeholder="Photo">
     <button class="btn btn-default" ng-click="cc.showPicker()">Upload Photo</button>
     <!-- Google Map -->
     <div>
@@ -16,8 +21,8 @@
       </ng-map>
     </div>
     <br>
-    <h4>Latitude: </h4><p>{{cc.lat | number : 4}}</p>
-    <h4>Longitude: </h4><p>{{cc.lng | number : 4}}</p>
+    <h4>Latitude: </h4><input ng-model="cc.lat | number : 4" type="text" placeholder="Latitude">
+    <h4>Longitude: </h4><input ng-model="cc.lng | number : 4" type="text" placeholder="Latitude">
     <button class="btn btn-default" ng-click="cc.getLocation()">Find Location</button>
   </div>
   <div>

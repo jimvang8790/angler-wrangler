@@ -43,6 +43,10 @@ General
     margin-left: 10px;
 }
 
+.lead {
+  text-align: center;
+}
+
 /************
 Users Profile
 ************/

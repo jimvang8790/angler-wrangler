@@ -34,7 +34,7 @@ myApp.controller('CatchController', ['$http', '$location', 'NgMap', '$scope', fu
      vm.lng = position.coords.longitude;
      console.log('vm.lat', vm.lat);
      console.log('vm.lng', vm.lng);
-     $scope.$apply();// trigger the digest cycle or will have to
+     $scope.$apply();// trigger the digest cycle or will have to click to show that it's populated
    };// end showPosition
 
   // add a new catch to mongoDB
@@ -80,7 +80,9 @@ myApp.controller('CatchController', ['$http', '$location', 'NgMap', '$scope', fu
      vm.uploadImg.pick({
      }).then(function(response){
        console.log('upload this img', (response.filesUploaded[0].url));
-       vm.img=response.filesUploaded[0].url;
+       vm.img = response.filesUploaded[0].url;
+       console.log('vm.img->', vm.img);
+       $scope.$apply();// trigger the digest cycle or will have to click to show that it's populated
      });
    };// end showPicker
 
