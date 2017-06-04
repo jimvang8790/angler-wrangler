@@ -1,17 +1,33 @@
 <div class="container">
-  <h1>Adding a new Catch</h1>
+  <h1>New Catch</h1>
   <div class="inputDiv">
-    <input ng-model="cc.typeIn" type="text" placeholder="Type">
-    <input ng-model="cc.sizeIn" type="text" placeholder="Length">
-    <input ng-model="cc.weightIn" type="text" placeholder="Weight">
-    <input ng-model="cc.locationIn" type="text" placeholder="Location">
     <div class="form-group">
-      <label for="description">Description</label>
+      <label for="type">Type:</label>
+      <input ng-model="cc.typeIn" type="text" placeholder="type">
+    </div>
+    <div class="form-group">
+      <label for="size">Length:</label>
+      <input ng-model="cc.sizeIn" type="text" placeholder="length">
+      <label for="size">in.</label>
+    </div>
+    <div class="form-group">
+      <label for="type">Weight:</label>
+      <input ng-model="cc.weightIn" type="text" placeholder="weight">
+      <label for="size">lbs.</label>
+    </div>
+    <div class="form-group">
+      <label for="type">Location:</label>
+      <input ng-model="cc.locationIn" type="text" placeholder="name">
+    </div>
+    <div class="form-group">
+      <label for="description">Description:</label>
       <textarea ng-model="cc.descriptionIn" class="form-control" rows="3" id="description"></textarea>
     </div>
-    <!-- <input ng-model="cc.descriptionIn" placeholder="Description"> -->
-    <input ng-model="cc.img" placeholder="Photo">
-    <button class="btn btn-default" ng-click="cc.showPicker()">Upload Photo</button>
+    <div class="form-group">
+      <label for="photo">Upload Photo:</label>
+      <input ng-model="cc.img" placeholder="photo">
+      <button class="btn btn-default" ng-click="cc.showPicker()">Upload Photo</button>
+    </div>
     <!-- Google Map -->
     <div>
       <ng-map default-style="false" center="current-location" zoom="15">
@@ -21,9 +37,18 @@
       </ng-map>
     </div>
     <br>
-    <h4>Latitude: </h4><input ng-model="cc.lat | number : 4" type="text" placeholder="Latitude">
-    <h4>Longitude: </h4><input ng-model="cc.lng | number : 4" type="text" placeholder="Latitude">
-    <button class="btn btn-default" ng-click="cc.getLocation()">Find Location</button>
+    <div>
+      <button class="btn btn-default" ng-click="cc.getLocation()">Get Coordination</button>
+    </div>
+    <br>
+    <div class="form-group">
+      <label for="type">Latitude:</label>
+      <input ng-model="cc.lat | number : 4" type="text">
+    </div>
+    <div class="form-group">
+      <label for="type">Longitude:</label>
+      <input ng-model="cc.lng | number : 4" type="text">
+    </div>
   </div>
   <div>
     <button class="btn btn-default" ng-click="cc.addFish()">Add Catch</button>

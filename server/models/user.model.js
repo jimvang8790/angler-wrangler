@@ -12,21 +12,21 @@ var UserSchema = new Schema({
 // items Schema
 var ItemSchema = new Schema({
   userId : [{ type: Schema.Types.ObjectId, ref: 'User' }],
-  imgUrl: String,
-  type: {type: String, required: true},
-  size: {type: Number, required: true},
-  weight: {type: Number, required: true},
-  location: {type: String, required: true},
+  imgUrl: {type: String, required: false},
+  type: {type: String, required: false},
+  size: {type: Number, required: false},
+  weight: {type: Number, required: false},
+  location: {type: String, required: false},
   latitude: {type: Number, required: false},
   longitude: {type: Number, required: false},
-  description: {type: String, required: true}
+  description: {type: String, required: false}
 });
 
-// profile Schema
-var ProfileSchema = new Schema({
-  userId : [{ type: Schema.Types.ObjectId, ref: 'User' }],
-  picture: {type: String, required: true},
-});
+// // profile Schema
+// var ProfileSchema = new Schema({
+//   userId : [{ type: Schema.Types.ObjectId, ref: 'User' }],
+//   picture: {type: String, required: true},
+// });
 
 // Called before adding a new user to the DB. Encrypts password.
 UserSchema.pre('save', function(next) {
@@ -67,4 +67,4 @@ UserSchema.methods.comparePassword = function(candidatePassword, callback) {
 // exporting
 module.exports = mongoose.model('User', UserSchema);
 module.exports.item = mongoose.model('Item', ItemSchema);
-module.exports.picture = mongoose.model('Picture', ProfileSchema);
+// module.exports.picture = mongoose.model('Picture', ProfileSchema);

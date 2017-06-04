@@ -17,7 +17,6 @@ router.post('/', function (req, res){
     size: req.body.size,
     weight: req.body.weight,
     location: req.body.location,
-    //NOTE adding lat and lng
     latitude: req.body.latitude,
     longitude: req.body.longitude,
     description: req.body.description,

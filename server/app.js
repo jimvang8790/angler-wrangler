@@ -12,7 +12,7 @@ var index = require('./routes/index');
 var user = require('./routes/user');
 var register = require('./routes/register');
 var catches = require('./routes/catch'); //NOTE catch
-var profile = require('./routes/profile'); //NOTE profile
+// var profile = require('./routes/profile'); //NOTE profile
 
 // Body parser middleware
 app.use(bodyParser.json());
@@ -35,7 +35,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // Routes
-app.use('/picture', profile);// NOTE profile
+// app.use('/picture', profile);// NOTE profile
 app.use('/catch', catches);// NOTE catch
 app.use('/register', register);
 app.use('/user', user);
