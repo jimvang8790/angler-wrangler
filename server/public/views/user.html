@@ -1,32 +1,29 @@
 <div class="userContainer">
-  <div>
+  <div class="userHeading">
     <h1 class="welcome">Welcome, {{uc.userName}}!<button class="btn btn-logout" ng-click="uc.logout()">Log Out</button></h1>
-  </div>
-  <hr>
-  <div>
+    <hr>
     <h2 class="fishlog">Your Fish Logs<a href="#catch" class="btn btn-newLog" role="button">New Catch</a></h2>
-    <!-- <hr> -->
   </div>
-  <!-- <div> -->
-    <div ng-repeat="log in uc.item" class="container">
-      <div class="row">
-        <!-- <div class="col-xs-6"> -->
-          <img ng-src="{{log.imgUrl}}" class="images">
-          <h3>Type: <small>{{log.type}}</small></h3>
-          <h3>Length: <small>{{log.size}} inches</small></h3>
-          <h3>Weight: <small>{{log.weight}} lbs</small></h3>
-          <h3>Details: <small>{{log.description}}</small></h3>
-          <ng-map center="[{{log.latitude}}, {{log.longitude}}]">
-            <marker position="[{{log.latitude}}, {{log.longitude}}]"></marker>
-            <custom-marker id="foo" position="[{{log.latitude}}, {{log.longitude}}]"></custom-marker>
-          </ng-map>
-          <h3>Location: <small>{{log.location}}</small></h3>
-          <h3>Latitude: <small>{{log.latitude | number : 4}}</small></h3><!-- {{value | number : fractionSize}} -->
-          <h3>Longitude: <small>{{log.longitude | number : 4}}</small></h3><!-- {{value | number : fractionSize}} -->
-          <button class="btn btn-cancel" ng-click="uc.removeFish(log._id)">Relese Fish</button>
-        <!-- </div> -->
+  <div ng-repeat="log in uc.item" class="container userInput">
+    <div class="row">
+      <div class="wrapperOne">
+        <img ng-src="{{log.imgUrl}}" class="images">
+        <h3>Type: <small>{{log.type}}</small></h3>
+        <h3>Length: <small>{{log.size}} inches</small></h3>
+        <h3>Weight: <small>{{log.weight}} lbs</small></h3>
+        <h3>Details: <small>{{log.description}}</small></h3>
+      </div>
+      <div class="wrapperTwo">
+        <ng-map center="[{{log.latitude}}, {{log.longitude}}]">
+          <marker position="[{{log.latitude}}, {{log.longitude}}]"></marker>
+          <custom-marker id="foo" position="[{{log.latitude}}, {{log.longitude}}]"></custom-marker>
+        </ng-map>
+        <h3>Location: <small>{{log.location}}</small></h3>
+        <h3>Latitude: <small>{{log.latitude | number : 4}}</small></h3><!-- {{value | number : fractionSize}} -->
+        <h3>Longitude: <small>{{log.longitude | number : 4}}</small></h3><!-- {{value | number : fractionSize}} -->
+        <button class="btn btn-cancel" ng-click="uc.removeFish(log._id)">Relese Fish</button>
       </div>
     </div>
-    <hr>
-  <!-- </div> -->
+  </div>
+  <hr>
 </div>

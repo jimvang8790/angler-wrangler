@@ -2,6 +2,7 @@
 General
 ********************************/
 
+
 .instructions .container h1 {
     font-size: 24px;
     font-weight: 700;
@@ -48,6 +49,7 @@ General
   text-align: center;
   font-family: 'Coiny', cursive;
 }
+
 
 /*******************************
 Login/Register/Cancel Buttons
@@ -141,20 +143,16 @@ Users Page
   font-family: 'Acme', sans-serif;
 }
 
-.welcome {
-  font-family: 'Acme', sans-serif;
-  text-align: center;
-}
-
-.fishlog {
-  text-align: center;
-}
-
 .userContainer {
   font-family: 'Acme', sans-serif;
 }
 
-.container {
+.userHeading {
+  font-family: 'Acme', sans-serif;
+  text-align: center;
+}
+
+.userInput {
   border: 2px solid black;
   border-radius: 8px;
   margin-top: 2em;
@@ -165,8 +163,6 @@ Users Page
   background-color: #ffd700;
 	color: #fff;
 	border-color: #ffd700;
-  text-transform: uppercase;
-  float: right;
 }
 
 .btn-logout:hover,
@@ -180,8 +176,6 @@ Users Page
   background-color: #1CB94E;
 	color: #fff;
 	border-color: #1CB94A;
-  text-transform: uppercase;
-  float: right;
 }
 
 .btn-newLog:hover,
@@ -191,9 +185,28 @@ Users Page
 	border-color: #1CA347;
 }
 
+.btn-logout,
+.btn-newLog {
+  text-transform: uppercase;
+  float: right;
+  margin-right: 10%;
+  width: 100px;
+}
+
+.wrapperOne{
+  float: left;
+  left: 50%;
+  padding-left: 10em;
+}
+.wrapperTwo{
+  float: right;
+  right: 50%;
+  padding-right: 10em;
+}
+
 .images {
-  width: 20em;
-  height: 15em;
+  width: 25em;
+  height: 20em;
 }
 
 /*******************************
@@ -201,8 +214,8 @@ New Catch Page
 ********************************/
 
 ng-map {
-  width: 30em;
-  height: 30em;
+  width: 25em;
+  height: 20em;
 }
 
 .btn-upload,
@@ -212,6 +225,7 @@ ng-map {
 	border-color: #59B2E6;
   text-transform: uppercase;
   float: center;
+  width: 150px;
 }
 
 .btn-upload:hover,
