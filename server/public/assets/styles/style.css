@@ -53,10 +53,13 @@ General
 Login/Register/Cancel Buttons
 ************/
 
-.passport{
-  margin-top : 14px;
-  text-align: center;
-  font-family: 'El Messiri', sans-serif
+.container{
+  /*margin-top : 14px;*/
+  /*text-align: center;*/
+  font-family: 'El Messiri', sans-serif;
+  padding: 25px;
+  position: inherit;
+
 }
 
 .btn-login {
@@ -109,6 +112,29 @@ Login/Register/Cancel Buttons
 	padding: 14px 0;
 	text-transform: uppercase;
 }
+
+.form-login,
+.form-register {
+    background-color: #EDEDED;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 15px;
+    border-color:#d2d2d2;
+    border-width: 5px;
+    box-shadow:0 1px 0 #cfcfcf;
+}
+
+.form-control {
+    border-radius: 10px;
+}
+
+.wrapper {
+    text-align: center;
+    padding: 10px 10px;
+}
+
 /************
 Users Fish Logs
 ************/
