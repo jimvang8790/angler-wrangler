@@ -1,6 +1,7 @@
 /************
 General
 ************/
+
 .instructions .container h1 {
     font-size: 24px;
     font-weight: 700;
@@ -49,12 +50,13 @@ General
 }
 
 /************
-Login/Register Page
+Login/Register/Cancel Buttons
 ************/
 
 .passport{
   margin-top : 14px;
   text-align: center;
+  font-family: 'El Messiri', sans-serif
 }
 
 .btn-login {
