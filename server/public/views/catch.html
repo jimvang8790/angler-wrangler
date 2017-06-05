@@ -26,7 +26,7 @@
     <div class="form-group">
       <label for="photo">Upload Photo:</label>
       <input ng-model="cc.img" placeholder="photo">
-      <button class="btn btn-default" ng-click="cc.showPicker()">Upload Photo</button>
+      <button class="btn btn-upload" ng-click="cc.showPicker()">Upload Photo</button>
     </div>
     <!-- Google Map -->
     <div>
@@ -38,7 +38,7 @@
     </div>
     <br>
     <div>
-      <button class="btn btn-default" ng-click="cc.getLocation()">Get Coordination</button>
+      <button class="btn btn-location" ng-click="cc.getLocation()">Get Coordination</button>
     </div>
     <br>
     <div class="form-group">
@@ -51,7 +51,7 @@
     </div>
   </div>
   <div>
-    <button class="btn btn-default" ng-click="cc.addFish()">Add Catch</button>
-    <button class="btn btn-default" type="button"><a href="#user">Cancel</a></button>
+    <button class="btn btn-register" ng-click="cc.addFish()">Add Catch</button>
+    <a href="#user" class="btn btn-cancel" role="button">Cancel</a>
   </div>
 </div>

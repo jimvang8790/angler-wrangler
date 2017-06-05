@@ -1,15 +1,11 @@
-<div class="container">
-  <h1 id="welcome" class="welcome">Welcome, {{uc.userName}}!</h1>
-  <!-- <img ng-src="{{uc.picture[0].picture}}" class="profilePic"> -->
-  <!-- <button class="btn btn-default" type="button"><a href="#profile">Edit Profile</a></button> -->
-<div class="newLog">
-  <!-- <button class="btn btn-default" type="button"><a href="#catch">New Catch</a></button> -->
-  <button class="btn btn-default" ng-click="uc.logout()">Log Out</button>
-</div>
+<div class="userContainer">
+  <div class="welog">
+    <h1 id="welcome" class="welcome" >Welcome, {{uc.userName}}!<button class="btn btn-logout" ng-click="uc.logout()">Log Out</button></h1>
+  </div>
   <hr>
   <div class="header">
-    <h2>{{uc.userName}}: Fish Logs</h2>
-    <button class="btn btn-default" type="button"><a href="#catch">New Catch</a></button>
+    <h2>Fish Logs<a href="#catch" class="btn btn-newLog" role="button">New Catch</a></h2>
+
     <hr>
   </div>
   <div class="container">
@@ -17,22 +13,21 @@
       <div class="row">
         <div class="col-xs-6">
           <img ng-src="{{log.imgUrl}}" class="images">
-          <h3>Type: {{log.type}}</h3>
-          <h3>Length: {{log.size}} inches</h3>
-          <h3>Weight: {{log.weight}} lbs</h3>
-          <h3>Details: {{log.description}}</h3>
-          <h3>Location: {{log.location}}</h3>
+          <h3>Type: <small>{{log.type}}</small></h3>
+          <h3>Length: <small>{{log.size}} inches</small></h3>
+          <h3>Weight: <small>{{log.weight}} lbs</small></h3>
+          <h3>Details: <small>{{log.description}}</small></h3>
+          <h3>Location: <small>{{log.location}}</small></h3>
           <ng-map center="[{{log.latitude}}, {{log.longitude}}]">
             <marker position="[{{log.latitude}}, {{log.longitude}}]"></marker>
             <custom-marker id="foo" position="[{{log.latitude}}, {{log.longitude}}]"></custom-marker>
           </ng-map>
-          <h3>Latitude: {{log.latitude | number : 4}}</h3> <!-- {{value | number : fractionSize}} -->
-          <h3>Longitude: {{log.longitude | number : 4}}</h3> <!-- {{value | number : fractionSize}} -->
+          <h3>Latitude: <small>{{log.latitude | number : 4}}</small></h3><!-- {{value | number : fractionSize}} -->
+          <h3>Longitude: <small>{{log.longitude | number : 4}}</small></h3><!-- {{value | number : fractionSize}} -->
+          <button class="btn btn-cancel" ng-click="uc.removeFish(log._id)">Relese Fish</button>
         </div>
-        <button class="btn btn-default" ng-click="uc.removeFish(log._id)">Delete</button>
       </div>
     </div>
     <hr>
   </div>
-  <hr>
 </div>
