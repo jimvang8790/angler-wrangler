@@ -11,7 +11,11 @@
         <h3>Type: <small>{{log.type}}</small></h3>
         <h3>Length: <small>{{log.size}} inches</small></h3>
         <h3>Weight: <small>{{log.weight}} lbs</small></h3>
-        <h3>Details: <small>{{log.description}}</small></h3>
+        <div class="form-group">
+          <label for="description"><h3>Description:</h3></label>
+          <textarea class="form-control" rows="3" id="description">{{log.description}}</textarea>
+        </div>
+        <!-- <h3>Details: <small>{{log.description}}</small></h3> -->
       </div>
       <div class="wrapperTwo">
         <ng-map center="[{{log.latitude}}, {{log.longitude}}]">
@@ -21,7 +25,11 @@
         <h3>Location: <small>{{log.location}}</small></h3>
         <h3>Latitude: <small>{{log.latitude | number : 4}}</small></h3><!-- {{value | number : fractionSize}} -->
         <h3>Longitude: <small>{{log.longitude | number : 4}}</small></h3><!-- {{value | number : fractionSize}} -->
-        <button class="btn btn-cancel" ng-click="uc.removeFish(log._id)">Relese Fish</button>
+        <div class="uprel">
+          <a href="#update" class="btn btn-update" role="button">Update Catch</a>
+          <!-- <button class="btn btn-update" ng-click="uc.updateFish(log._id)">Update Catch</button> -->
+          <button class="btn btn-delete" ng-click="uc.removeFish(log._id)">Relese Fish</button>
+        </div>
       </div>
     </div>
   </div>

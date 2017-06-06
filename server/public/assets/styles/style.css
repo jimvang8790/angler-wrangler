@@ -204,9 +204,61 @@ Users Page
   padding-right: 10em;
 }
 
+.btn-delete,
+.btn-update {
+  outline: none;
+  font-size: 14px;
+  height: auto;
+  width: 8em;
+  font-weight: normal;
+	padding: 14px 0;
+	text-transform: uppercase;
+  width: 150px;
+}
+
+.btn-delete {
+  background-color: #ff0000;
+	color: #fff;
+	border-color: #ff0000;
+}
+
+.btn-delete:hover,
+.btn-delete:focus {
+	color: #fff;
+	background-color: #cc0000;
+	border-color: #cc0000;
+}
+
+.btn-update {
+  background-color: #59B2E0;
+	color: #fff;
+	border-color: #59B2E6;
+  text-transform: uppercase;
+  float: center;
+  width: 150px;
+  margin: 2px;
+}
+
+.btn-update:hover,
+.btn-update:focus {
+	color: #fff;
+	background-color: #53A3CD;
+	border-color: #53A3CD;
+}
+
+.uprel {
+  float: right;
+  margin-right: 5em;
+  margin-top: 5em;
+}
+
 .images {
-  width: 25em;
-  height: 20em;
+  width: 30em;
+  height: 25em;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 5px;
+  image-resolution: 300dpi;
 }
 
 /*******************************
@@ -214,8 +266,10 @@ New Catch Page
 ********************************/
 
 ng-map {
-  width: 25em;
-  height: 20em;
+  width: 30em;
+  height: 25em;
+  border: 2px solid black;
+  border-radius: 8px;
 }
 
 .btn-upload,

@@ -22,12 +22,6 @@ var ItemSchema = new Schema({
   description: {type: String, required: false}
 });
 
-// // profile Schema
-// var ProfileSchema = new Schema({
-//   userId : [{ type: Schema.Types.ObjectId, ref: 'User' }],
-//   picture: {type: String, required: true},
-// });
-
 // Called before adding a new user to the DB. Encrypts password.
 UserSchema.pre('save', function(next) {
     var user = this;
@@ -67,4 +61,3 @@ UserSchema.methods.comparePassword = function(candidatePassword, callback) {
 // exporting
 module.exports = mongoose.model('User', UserSchema);
 module.exports.item = mongoose.model('Item', ItemSchema);
-// module.exports.picture = mongoose.model('Picture', ProfileSchema);

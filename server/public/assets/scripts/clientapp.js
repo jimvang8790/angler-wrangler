@@ -22,9 +22,9 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
       templateUrl: '/views/catch.html',
       controller: "CatchController as cc"
     })
-    // .when('/profile', {
-    //   templateUrl: '/views/profile.html',
-    //   controller: "ProfileController as pc"
+    // .when('/update', {
+    //   templateUrl: '/views/update.html',
+    //   controller: "UpdateController as ac"
     // })
     .otherwise({
       redirectTo: 'home'

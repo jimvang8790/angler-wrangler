@@ -3,7 +3,6 @@ var router = express.Router();
 var passport = require('passport');
 var path = require('path');
 var Item = require('../models/user.model').item;
-// var Picture = require('../models/user.model').picture;
 
 // Handles Ajax request for user information if user is authenticated
 router.get('/', function(req, res) {
@@ -48,24 +47,8 @@ router.get('/getItems', function(req, res) {
   });// end Item.find
 });// end router.get
 
-// // get picture from database
-// router.get('/getPictures', function(req, res) {
-//     console.log('this get router for pictures is working');
-//     // server side is grabing items from the database with the .find
-//   Picture.find({'userId': req.user._id}, function(err, results) {
-//     if(err){
-//       console.log(err);
-//       res.sendStatus(500);
-//     }// end if
-//     else{
-//       console.log('successful get pictures ->', results);
-//       res.status(200).send(results);
-//     }// end else
-//   });// end Picture.find
-// });// end router.get
-
 // delete a catch/fish form database
-router.delete('/remove', function(req, res){
+router.delete('/remove', function(req, res) {
   var fishIdToDelete = req.query.id;
   Item.remove({ _id: fishIdToDelete }, function(err) {
     if (err) {
@@ -77,6 +60,20 @@ router.delete('/remove', function(req, res){
     }
   });
 });//end delete
+
+// // update a catch/fish form database
+// router.put('/update', function(req, res) {
+//   var fishIdToUpdate = req.query.id;
+//   Item.update({_id: fishIdToUpdate}, function(err){
+//     if (err) {
+//       console.log('Error removing from database', err);
+//       res.sendStatus(500);
+//     }
+//     else {
+//       res.sendStatus(200);
+//     }
+//   });
+// });
 
 // exports
 module.exports = router;

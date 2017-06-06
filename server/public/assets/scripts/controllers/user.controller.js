@@ -50,20 +50,6 @@ myApp.controller('UserController', ['$http', '$location', 'NgMap', function($htt
 
   vm.getItems();// call function inorder to see logs
 
-  // //get pictures from database
-  // vm.getPictures = function() {
-  //   console.log('getting pictures');
-  //   $http({
-  //     method: 'GET',
-  //     url: '/user/getPictures',
-  //   }).then(function(response) {
-  //     console.log('this is the response for get picture:', response.data);
-  //     vm.picture = response.data;
-  //   });
-  // };// end getPictures
-
-  // vm.getPictures();// call function inorder to see logs
-
   // removing a catch/fish from the database
   vm.removeFish = function(itemsId) {
    console.log('delete button click!');
@@ -78,5 +64,17 @@ myApp.controller('UserController', ['$http', '$location', 'NgMap', function($htt
    });
   };// end removeFish
 
+  // // updating a catch/fish from the database
+  // vm.updateFish = function(itemsId) {
+  //   console.log('update button click!');
+  //   $http({
+  //     method: 'PUT',
+  //     url: '/user/update',
+  //     params: {id: '@itemsId'}
+  //   }).then(function(response) {
+  //     console.log('update response', response);
+  //     vm.getItems();
+  //   });
+  // };
 
 }]);// end UserController
