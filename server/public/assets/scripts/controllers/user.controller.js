@@ -1,4 +1,4 @@
-myApp.controller('UserController', ['$http', '$location', 'NgMap', function($http, $location, NgMap) {
+myApp.controller('UserController', ['$http', '$location', 'NgMap', '$scope',  function($http, $location, NgMap, $scope) {
   // This happens after view/controller loads -- not ideal but it works for now.
   var vm = this;
   console.log('checking user');
@@ -25,7 +25,7 @@ myApp.controller('UserController', ['$http', '$location', 'NgMap', function($htt
       }// end if
       else {
           // user has no session, bounce them back to the login page
-          $location.path("/home");
+          $location.path('/home');
       }// end else
   });// end $http.get
 
@@ -63,18 +63,5 @@ myApp.controller('UserController', ['$http', '$location', 'NgMap', function($htt
      vm.getItems();
    });
   };// end removeFish
-
-  // // updating a catch/fish from the database
-  // vm.updateFish = function(itemsId) {
-  //   console.log('update button click!');
-  //   $http({
-  //     method: 'PUT',
-  //     url: '/user/update',
-  //     params: {id: '@itemsId'}
-  //   }).then(function(response) {
-  //     console.log('update response', response);
-  //     vm.getItems();
-  //   });
-  // };
 
 }]);// end UserController

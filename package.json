@@ -12,6 +12,7 @@
   "dependencies": {
     "angular": "^1.6.4",
     "angular-route": "^1.6.4",
+    "angular-xeditable": "^0.8.0",
     "bcrypt": "^1.0.2",
     "body-parser": "^1.13.3",
     "bootstrap": "^3.3.5",

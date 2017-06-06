@@ -1,4 +1,4 @@
-var myApp = angular.module('myApp', ['ngRoute', 'ngMap']);
+var myApp = angular.module('myApp', ['ngRoute', 'ngMap', 'xeditable']);
 
 /// Routes ///
 myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
@@ -22,12 +22,8 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
       templateUrl: '/views/catch.html',
       controller: "CatchController as cc"
     })
-    // .when('/update', {
-    //   templateUrl: '/views/update.html',
-    //   controller: "UpdateController as ac"
-    // })
     .otherwise({
       redirectTo: 'home'
     });
 
-}]);
+}]);// end config

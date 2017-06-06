@@ -61,19 +61,5 @@ router.delete('/remove', function(req, res) {
   });
 });//end delete
 
-// // update a catch/fish form database
-// router.put('/update', function(req, res) {
-//   var fishIdToUpdate = req.query.id;
-//   Item.update({_id: fishIdToUpdate}, function(err){
-//     if (err) {
-//       console.log('Error removing from database', err);
-//       res.sendStatus(500);
-//     }
-//     else {
-//       res.sendStatus(200);
-//     }
-//   });
-// });
-
 // exports
 module.exports = router;
