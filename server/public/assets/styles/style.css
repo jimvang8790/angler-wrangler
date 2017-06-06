@@ -4,13 +4,24 @@ General
 
 
 .instructions .container h1 {
-    font-size: 24px;
+    font-size: 54px;
     font-weight: 700;
+    color: #fff;
 }
 
 .instructions {
     background-color: #333333;
     color: #DDDDDD;
+    background-image: url('http://allswalls.com/images/sunset-landscapes-nature-lakes-wallpaper-1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.guyfishing {
+  background-image: url('http://www.animatedimages.org/data/media/157/animated-fishing-image-0138.gif');
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 #entryForm {
@@ -153,6 +164,7 @@ Users Page
 }
 
 .userInput {
+  background-color: #ecf9f1;
   border: 2px solid black;
   border-radius: 8px;
   margin-top: 2em;
@@ -259,17 +271,26 @@ Users Page
   border-radius: 8px;
   padding: 5px;
   image-resolution: 300dpi;
+  background-color: #595959;
 }
 
 /*******************************
 New Catch Page
 ********************************/
+.catchInput {
+  background-color: #ecf9f1;
+  border-radius: 8px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 4px solid black;
+}
 
 ng-map {
   width: 30em;
   height: 25em;
-  border: 2px solid black;
+  border: 4px solid black;
   border-radius: 8px;
+  background-color: #0d0d0d;
 }
 
 .btn-upload,
@@ -289,4 +310,8 @@ ng-map {
 	color: #fff;
 	background-color: #53A3CD;
 	border-color: #53A3CD;
+}
+
+.addcan {
+  text-align: center;
 }
