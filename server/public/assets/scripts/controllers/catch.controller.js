@@ -47,6 +47,7 @@ myApp.controller('CatchController', ['$http', '$location', 'NgMap', '$scope', fu
       type: vm.typeIn,
       size: vm.sizeIn,
       weight: vm.weightIn,
+      date: vm.dateIn,
       location: vm.locationIn,
       latitude: vm.lat,
       longitude: vm.lng,
@@ -68,6 +69,7 @@ myApp.controller('CatchController', ['$http', '$location', 'NgMap', '$scope', fu
     vm.typeIn='';
     vm.sizeIn='';
     vm.weightIn='';
+    vm.dateIn='';
     vm.locationIn='';
     vm.lat='';
     vm.lng='';

@@ -16,6 +16,7 @@ router.post('/', function (req, res){
     type: req.body.type,
     size: req.body.size,
     weight: req.body.weight,
+    date: req.body.date,
     location: req.body.location,
     latitude: req.body.latitude,
     longitude: req.body.longitude,

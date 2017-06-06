@@ -11,6 +11,7 @@
         <h3>Type: <small>{{log.type}}</small></h3>
         <h3>Length: <small>{{log.size}} inches</small></h3>
         <h3>Weight: <small>{{log.weight}} lbs</small></h3>
+        <h3>Date: <small>{{log.date | date: 'M-dd-yyyy'}}</small></h3>
         <div class="form-group">
           <label for="description"><h3>Description:</h3></label>
           <textarea class="form-control" rows="3" id="description">{{log.description}}</textarea>

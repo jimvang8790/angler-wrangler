@@ -16,11 +16,14 @@ var ItemSchema = new Schema({
   type: {type: String, required: false},
   size: {type: Number, required: false},
   weight: {type: Number, required: false},
+  date: {type: Date, required: false},
   location: {type: String, required: false},
   latitude: {type: Number, required: false},
   longitude: {type: Number, required: false},
   description: {type: String, required: false}
 });
+
+
 
 // Called before adding a new user to the DB. Encrypts password.
 UserSchema.pre('save', function(next) {
