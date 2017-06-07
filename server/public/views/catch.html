@@ -1,36 +1,35 @@
 <div class="container catchInput">
-  <h1>New Catch</h1>
+  <h1 class="newCatch">New Catch</h1>
+  <br>
   <div class="inputDiv">
     <div class="form-group">
       <label for="type">Type:</label>
-      <input ng-model="cc.typeIn" type="text" placeholder="type">
+      <input class="form-control" ng-model="cc.typeIn" type="text" placeholder="type">
     </div>
     <div class="form-group">
       <label for="size">Length:</label>
-      <input ng-model="cc.sizeIn" type="text" placeholder="length">
-      <label for="size">in.</label>
+      <input class="form-control" ng-model="cc.sizeIn" type="number" placeholder="length">
+      <!-- <label for="size">in.</label> -->
     </div>
     <div class="form-group">
       <label for="type">Weight:</label>
-      <input ng-model="cc.weightIn" type="text" placeholder="weight">
-      <label for="size">lbs.</label>
+      <input class="form-control" ng-model="cc.weightIn" type="number" placeholder="weight">
+      <!-- <label for="size">lbs.</label> -->
     </div>
     <div class="form-group">
       <label for="type">Date:</label>
-      <input ng-model="cc.dateIn" type="date" placeholder="date">
-    </div>
-    <div class="form-group">
-      <label for="type">Location:</label>
-      <input ng-model="cc.locationIn" type="text" placeholder="name">
+      <input class="form-control" ng-model="cc.dateIn" type="date" placeholder="date">
     </div>
     <div class="form-group">
       <label for="description">Description:</label>
       <textarea ng-model="cc.descriptionIn" class="form-control" rows="3" id="description"></textarea>
     </div>
-    <div class="form-group">
       <label for="photo">Upload Photo:</label>
       <input ng-model="cc.img" placeholder="photo">
       <button class="btn btn-upload" ng-click="cc.showPicker()">Upload Photo</button>
+      <br>
+      <label for="type">Location:</label>
+      <input ng-model="cc.locationIn" type="text" placeholder="name">
     </div>
     <!-- Google Map -->
     <div>
@@ -48,8 +47,7 @@
     <div class="form-group">
       <label for="type">Latitude:</label>
       <input ng-model="cc.lat | number : 4" type="text">
-    </div>
-    <div class="form-group">
+      <br>
       <label for="type">Longitude:</label>
       <input ng-model="cc.lng | number : 4" type="text">
     </div>

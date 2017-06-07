@@ -50,7 +50,7 @@ myApp.controller('UserController', ['$http', '$location', 'NgMap', '$scope',  fu
 
   vm.getItems();// call function inorder to see logs
 
-  // removing a catch/fish from the database
+  // removing a catch/fish in the database
   vm.removeFish = function(itemsId) {
    console.log('delete button click!');
    console.log('Item id to remove is:', itemsId);
@@ -63,5 +63,18 @@ myApp.controller('UserController', ['$http', '$location', 'NgMap', '$scope',  fu
      vm.getItems();
    });
   };// end removeFish
+
+  // updating a catch/fish in the database
+  vm.updateFish = function(logs) {
+    console.log('update button click');
+    $http({
+      method: 'PUT',
+      url: '/user/update',
+      data: logs
+    }).then(function(response) {
+      console.log('update logs:', response.data);
+      vm.getItems();
+    });
+  };// end updateFish
 
 }]);// end UserController

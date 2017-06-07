@@ -26,6 +26,7 @@
         <h3>Latitude: <small>{{log.latitude | number : 4}}</small></h3><!-- {{value | number : fractionSize}} -->
         <h3>Longitude: <small>{{log.longitude | number : 4}}</small></h3><!-- {{value | number : fractionSize}} -->
         <div class="uprel">
+          <a href="#update" class="btn btn-update" role="button" ng-click="uc.updateFish()">Update Catch</a>
           <button class="btn btn-delete" ng-click="uc.removeFish(log._id)">Relese Fish</button>
         </div>
       </div>

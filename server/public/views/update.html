@@ -1,0 +1,29 @@
+<h1 class="upcat">Update Catch</h1>
+<div ng-repeat="log in uc.item" class="container userInput">
+  <div class="row">
+    <div class="wrapperOne">
+      <img ng-src="{{log.imgUrl}}" class="images">
+      <h3>Type: <small><input ng-model="uc.typeIn" type="text" placeholder="{{log.type}}"></small></h3>
+      <h3>Length: <small><input ng-model="uc.size" type="text" placeholder="{{log.size}}"> inches</small></h3>
+      <h3>Weight: <small><input ng-model="uc.weight" type="text" placeholder="{{log.weight}}"> lbs</small></h3>
+      <h3>Date: <small><input ng-model="uc.dateIn" type="date" placeholder="{{log.date | date: 'M-dd-yyyy'}}"></small></h3>
+      <div class="form-group">
+        <label for="description"><h3>Description:</h3></label>
+        <textarea class="form-control" rows="3" id="description">{{log.description}}</textarea>
+      </div>
+    </div>
+    <div class="wrapperTwo">
+      <ng-map center="[{{log.latitude}}, {{log.longitude}}]">
+        <marker position="[{{log.latitude}}, {{log.longitude}}]"></marker>
+        <custom-marker id="foo" position="[{{log.latitude}}, {{log.longitude}}]"></custom-marker>
+      </ng-map>
+      <h3>Location: <small><input ng-model="uc.locationIn" type="text" placeholder="{{log.location}}"></small></h3>
+      <h3>Latitude: <small><input ng-model="uc.lat" type="text" placeholder="{{log.latitude | number : 4}}"></small></h3><!-- {{value | number : fractionSize}} -->
+      <h3>Longitude: <small><input ng-model="uc.lng" type="text" placeholder="{{log.longitude | number : 4}}"></small></h3><!-- {{value | number : fractionSize}} -->
+    </div>
+    <div class="uprel">
+      <button class="btn btn-update" ng-click="uc.updateFish(log._id)">Update</button>
+      <a href="#user" class="btn btn-cancel" role="button">Cancel</a>
+    </div>
+  </div>
+</div>

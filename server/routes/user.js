@@ -47,7 +47,7 @@ router.get('/getItems', function(req, res) {
   });// end Item.find
 });// end router.get
 
-// delete a catch/fish form database
+// delete a catch/fish from database
 router.delete('/remove', function(req, res) {
   var fishIdToDelete = req.query.id;
   Item.remove({ _id: fishIdToDelete }, function(err) {
@@ -60,6 +60,34 @@ router.delete('/remove', function(req, res) {
     }
   });
 });//end delete
+
+// update a catch/fish from database
+router.put('/update', function(req, res) {
+  console.log('updating logs', req.body);
+  var fishToBeUpdate = Item(req.body);
+  console.log('this is Item to be update->', Item);
+  Item.findByIdAndUpdate(
+    req.body._id,
+    {$set:
+      {imgUrl: req.body.imgUrl,
+      type: req.body.type,
+      size: req.body.size,
+      weight: req.body.weight,
+      date: req.body.date,
+      location: req.body.location,
+      latitude: req.body.latitude,
+      longitude: req.body.longitude,
+      description: req.body.description}
+    }, function(err) {
+      if (err) {
+        console.log('Error removing from database', err);
+        res.sendStatus(500);
+      }
+      else {
+        res.sendStatus(200);
+      }
+    });
+});// end router.put
 
 // exports
 module.exports = router;

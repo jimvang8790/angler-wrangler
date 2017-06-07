@@ -2,7 +2,6 @@
 General
 ********************************/
 
-
 .instructions .container h1 {
     font-size: 54px;
     font-weight: 700;
@@ -20,8 +19,15 @@ General
 
 .guyfishing {
   background-image: url('http://www.animatedimages.org/data/media/157/animated-fishing-image-0138.gif');
+  /*background-image: url('http://www.picgifs.com/graphics/a/angling/graphics-angling-691537.gif');*/
   background-repeat: no-repeat;
   background-size: contain;
+}
+
+.fishjumping {
+  background-image: url('http://www.gifs.net/Animation11/Animals/Fish/Fish_jumps_4.gif');
+  background-repeat: no-repeat;
+  float: right;
 }
 
 #entryForm {
@@ -60,7 +66,6 @@ General
   text-align: center;
   font-family: 'Coiny', cursive;
 }
-
 
 /*******************************
 Login/Register/Cancel Buttons
@@ -293,6 +298,10 @@ ng-map {
   background-color: #0d0d0d;
 }
 
+.newCatch {
+  text-decoration: underline;
+}
+
 .btn-upload,
 .btn-location{
   background-color: #59B2E0;
@@ -302,6 +311,7 @@ ng-map {
   float: center;
   width: 150px;
 }
+
 
 .btn-upload:hover,
 .btn-location:hover,
@@ -314,4 +324,14 @@ ng-map {
 
 .addcan {
   text-align: center;
+}
+
+/*******************************
+Update Catch Page
+********************************/
+
+.upcat {
+  font-family: 'Acme', sans-serif;
+  text-align: center;
+  text-decoration: underline;
 }
