@@ -300,6 +300,14 @@ ng-map {
 
 .newCatch {
   text-decoration: underline;
+  text-align: center;
+  font-size: 3em;
+}
+
+.btn-upload {
+  float: left;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .btn-upload,
@@ -312,7 +320,6 @@ ng-map {
   width: 150px;
 }
 
-
 .btn-upload:hover,
 .btn-location:hover,
 .btn-upload:focus,
@@ -324,6 +331,17 @@ ng-map {
 
 .addcan {
   text-align: center;
+  margin-bottom: 20px;
+}
+
+.googleMap {
+  height: 8em;
+}
+
+.angler {
+  float: right;
+  margin-right: 35em;
+  margin-top: 22em;
 }
 
 /*******************************

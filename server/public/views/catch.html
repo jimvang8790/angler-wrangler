@@ -22,17 +22,23 @@
     </div>
     <div class="form-group">
       <label for="description">Description:</label>
-      <textarea ng-model="cc.descriptionIn" class="form-control" rows="3" id="description"></textarea>
+      <textarea ng-model="cc.descriptionIn" class="form-control" rows="3" id="description" placeholder="enter text"></textarea>
     </div>
-      <label for="photo">Upload Photo:</label>
-      <input ng-model="cc.img" placeholder="photo">
+    <div class="form-group">
       <button class="btn btn-upload" ng-click="cc.showPicker()">Upload Photo</button>
-      <br>
+      <input ng-model="cc.img" placeholder="photo" class="form-control">
+    </div>
+    <br>
+    <div class="form-group">
       <label for="type">Location:</label>
-      <input ng-model="cc.locationIn" type="text" placeholder="name">
+      <input ng-model="cc.locationIn" type="text" placeholder="name" class="form-control">
+    </div>
+
     </div>
     <!-- Google Map -->
     <div>
+      <img src="https://tctechcrunch2011.files.wordpress.com/2014/06/googlemaps_topic.png?fit=1%2C1" class="googleMap">
+      <img src="http://www.picgifs.com/graphics/a/angling/graphics-angling-691537.gif" class="angler">
       <ng-map default-style="false" center="current-location" zoom="15">
         <info-window position="current-location"></info-window>
       <marker position="current-location" on-click="cc.showCustomMarker()"></marker>
@@ -46,10 +52,10 @@
     <br>
     <div class="form-group">
       <label for="type">Latitude:</label>
-      <input ng-model="cc.lat | number : 4" type="text">
+      <input class="form-control" ng-model="cc.lat | number : 4" type="text">
       <br>
       <label for="type">Longitude:</label>
-      <input ng-model="cc.lng | number : 4" type="text">
+      <input class="form-control" ng-model="cc.lng | number : 4" type="text">
     </div>
   </div>
   <div class="addcan">
