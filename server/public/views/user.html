@@ -7,14 +7,30 @@
   <div ng-repeat="log in uc.item" class="container userInput">
     <div class="row">
       <div class="wrapperOne">
-        <img ng-src="{{log.imgUrl}}" class="images">
-        <h3>Type: <small>{{log.type}}</small></h3>
-        <h3>Length: <small>{{log.size}} inches</small></h3>
-        <h3>Weight: <small>{{log.weight}} lbs</small></h3>
-        <h3>Date: <small>{{log.date | date: 'M-dd-yyyy'}}</small></h3>
+          <img ng-src="{{log.imgUrl}}" class="images">
+        <h3>Type: <small>
+          <span ng-show="log.editMode"><input ng-model="uc.typeIn" type="text" ng-value="log.type"></span>
+          <span ng-hide="log.editMode">{{log.type}}</span>
+        </small></h3>
+        <h3>Size: <small>
+          <span ng-show="log.editMode"><input ng-model="uc.sizeIn" type="number" ng-value="log.size"></span>
+          <span ng-hide="log.editMode">{{log.size}} inches</span>
+        </small></h3>
+        <h3>Weight: <small>
+          <span ng-show="log.editMode"><input ng-model="uc.weightIn" type="number" ng-value="log.weight"></span>
+          <span ng-hide="log.editMode">{{log.weight}} lbs</span>
+        </small></h3>
+        <h3>Date: <small>
+          <span ng-show="log.editMode"><input ng-model="uc.dateIn" type="date" ng-value="log.date | date: 'M-dd-yyyy'"></span>
+          <span ng-hide="log.editMode">{{log.date | date: 'M-dd-yyyy'}}</span>
+        </small></h3>
         <div class="form-group">
-          <label for="description"><h3>Description:</h3></label>
-          <textarea class="form-control" rows="3" id="description">{{log.description}}</textarea>
+          <!-- <label for="description"><h3>Description: </h3></label> -->
+          <!-- <textarea class="form-control" rows="3" id="description">{{log.description}}</textarea> -->
+          <h3>Description: <small>
+            <span ng-show="log.editMode"><input ng-model="uc.descriptionIn" type="text" ng-value="log.description"></span>
+            <span ng-hide="log.editMode"><textarea class="form-control" rows="3" id="description">{{log.description}}</textarea></span>
+          </small></h3>
         </div>
       </div>
       <div class="wrapperTwo">
@@ -22,12 +38,23 @@
           <marker position="[{{log.latitude}}, {{log.longitude}}]"></marker>
           <custom-marker id="foo" position="[{{log.latitude}}, {{log.longitude}}]"></custom-marker>
         </ng-map>
-        <h3>Location: <small>{{log.location}}</small></h3>
-        <h3>Latitude: <small>{{log.latitude | number : 4}}</small></h3><!-- {{value | number : fractionSize}} -->
-        <h3>Longitude: <small>{{log.longitude | number : 4}}</small></h3><!-- {{value | number : fractionSize}} -->
+        <h3>Location: <small>
+          <span ng-show="log.editMode"><input ng-model="uc.locationIn" type="text" ng-value="log.location"></span>
+          <span ng-hide="log.editMode">{{log.location}}</span>
+        </small></h3>
+        <h3>Latitude: <small>
+          <span ng-show="log.editMode"><input ng-model="uc.lat" type="number" ng-value="{{log.latitude | number : 4}}"></span>
+          <span ng-hide="log.editMode">{{log.latitude | number : 4}}</span><!-- {{value | number : fractionSize}} -->
+        </small></h3>
+        <h3>Longitude: <small>
+          <span ng-show="log.editMode"><input ng-model="uc.lng" type="number" ng-value="{{log.longitude | number : 4}}"></span>
+          <span ng-hide="log.editMode">{{log.longitude | number : 4}}</span><!-- {{value | number : fractionSize}} -->
+        </small></h3>
         <div class="uprel">
-          <a href="#update" class="btn btn-update" role="button" ng-click="uc.updateFish()">Update Catch</a>
-          <button class="btn btn-delete" ng-click="uc.removeFish(log._id)">Relese Fish</button>
+          <span ng-show="log.editMode"><button class="btn btn-save" ng-click="uc.updateFish(log._id)">Save Edit</button></span>
+          <span ng-hide="log.editMode"><button class="btn btn-edit" ng-click="log.editMode = !log.editMode">Edit Catch</button></span>
+          <span ng-show="log.editMode"><button class="btn btn-cancelEdit" ng-click="log.editMode = !log.editMode">Cancel Edit</button></span>
+          <span ng-hide="log.editMode"><button class="btn btn-delete" ng-click="uc.removeFish(log._id)">Relese Fish</button></span>
         </div>
       </div>
     </div>

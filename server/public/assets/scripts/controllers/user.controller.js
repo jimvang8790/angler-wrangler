@@ -65,12 +65,26 @@ myApp.controller('UserController', ['$http', '$location', 'NgMap', '$scope',  fu
   };// end removeFish
 
   // updating a catch/fish in the database
-  vm.updateFish = function(logs) {
-    console.log('update button click');
+  vm.updateFish = function(fish) {
+    console.log('update button click', fish);
+    var objectToSend = {
+      _id: fish,
+      username: vm.usernameIn,
+      imgUrl: vm.img,
+      type: vm.typeIn,
+      size: vm.sizeIn,
+      weight: vm.weightIn,
+      date: vm.dateIn,
+      location: vm.locationIn,
+      latitude: vm.lat,
+      longitude: vm.lng,
+      description: vm.descriptionIn
+    };// end objectToSend
+    console.log('update objectToSend', objectToSend);
     $http({
       method: 'PUT',
       url: '/user/update',
-      data: logs
+      data: objectToSend
     }).then(function(response) {
       console.log('update logs:', response.data);
       vm.getItems();

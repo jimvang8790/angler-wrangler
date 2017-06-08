@@ -11,15 +11,16 @@ General
 .instructions {
     background-color: #333333;
     color: #DDDDDD;
-    background-image: url('http://allswalls.com/images/sunset-landscapes-nature-lakes-wallpaper-1.jpg');
+    /*background-image: url('http://allswalls.com/images/sunset-landscapes-nature-lakes-wallpaper-1.jpg');*/
+    background-image: url('http://img02.deviantart.net/a041/i/2011/101/3/f/lake_background_2_by_indigodeep-d3drde0.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 
 .guyfishing {
-  background-image: url('http://www.animatedimages.org/data/media/157/animated-fishing-image-0138.gif');
-  /*background-image: url('http://www.picgifs.com/graphics/a/angling/graphics-angling-691537.gif');*/
+  /*background-image: url('http://www.animatedimages.org/data/media/157/animated-fishing-image-0138.gif');*/
+  background-image: url('http://www.ontario-fishing-cottage-rental.com/images/fly_fishing_animated.gif');
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -245,7 +246,6 @@ Users Page
 	background-color: #cc0000;
 	border-color: #cc0000;
 }
-
 .btn-update {
   background-color: #59B2E0;
 	color: #fff;
@@ -332,16 +332,19 @@ ng-map {
 .addcan {
   text-align: center;
   margin-bottom: 20px;
+  font-family: 'Acme', sans-serif;
 }
 
 .googleMap {
   height: 8em;
 }
 
-.angler {
+.compass {
+  height: 6em;
+  width: 6em;
   float: right;
-  margin-right: 35em;
-  margin-top: 22em;
+  margin-right: 80px;
+  margin-top: 12px;
 }
 
 /*******************************
@@ -352,4 +355,95 @@ Update Catch Page
   font-family: 'Acme', sans-serif;
   text-align: center;
   text-decoration: underline;
+}
+
+.btn-save,
+.btn-edit,
+.btn-cancelEdit {
+  outline: none;
+  font-size: 14px;
+  height: auto;
+  width: 8em;
+  font-weight: normal;
+	padding: 14px 0;
+	text-transform: uppercase;
+  width: 150px;
+}
+
+.btn-edit {
+  background-color: #59B2E0;
+	color: #fff;
+	border-color: #59B2E6;
+}
+
+.btn-edit:hover,
+.btn-edit:focus {
+	color: #fff;
+	background-color: #53A3CD;
+	border-color: #53A3CD;
+}
+
+.btn-save {
+  background-color: #1CB94E;
+	color: #fff;
+	border-color: #1CB94A;
+}
+
+.btn-save:hover,
+.btn-save:focus {
+	color: #fff;
+	background-color: #1CA347;
+	border-color: #1CA347;
+}
+
+.btn-cancelEdit {
+  background-color: #ff0000;
+	color: #fff;
+	border-color: #ff0000;
+}
+
+.btn-cancelEdit:hover,
+.btn-cancelEdit:focus {
+	color: #fff;
+	background-color: #cc0000;
+	border-color: #cc0000;
+}
+
+.angler {
+  float: right;
+  margin-right: 30em;
+  margin-top: 22em;
+}
+
+.jumpingFish {
+  float: right;
+  margin-right: 20em;
+  margin-top: 20em;
+}
+
+.jumpingFish2 {
+  float: right;
+  margin-right: 30em;
+  margin-top: 20em;
+}
+
+.jumpingFish3 {
+  float: right;
+  margin-right: 20em;
+  margin-top: 10em;
+}
+
+.whale {
+  float: left;
+  margin-left: 20em;
+}
+
+.dolfin {
+  float: left;
+  margin-left: 20em;
+}
+
+.jumpingFish4 {
+  float: left;
+  margin-left: 10em;
 }

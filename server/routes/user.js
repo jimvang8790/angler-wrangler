@@ -64,21 +64,8 @@ router.delete('/remove', function(req, res) {
 // update a catch/fish from database
 router.put('/update', function(req, res) {
   console.log('updating logs', req.body);
-  var fishToBeUpdate = Item(req.body);
   console.log('this is Item to be update->', Item);
-  Item.findByIdAndUpdate(
-    req.body._id,
-    {$set:
-      {imgUrl: req.body.imgUrl,
-      type: req.body.type,
-      size: req.body.size,
-      weight: req.body.weight,
-      date: req.body.date,
-      location: req.body.location,
-      latitude: req.body.latitude,
-      longitude: req.body.longitude,
-      description: req.body.description}
-    }, function(err) {
+  Item.update({_id: req.body._id}, req.body, function(err) {
       if (err) {
         console.log('Error removing from database', err);
         res.sendStatus(500);
