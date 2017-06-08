@@ -91,12 +91,4 @@ myApp.controller('UserController', ['$http', '$location', 'NgMap', '$scope', fun
     });
   };// end updateFish
 
-// function triggerAnimation() {
-//   $('.catchDiv').animate({
-//       'background-position':'+=22px'
-//   }, 600, 'linear', triggerAnimation );
-// }
-//
-// triggerAnimation();
-
 }]);// end UserController
