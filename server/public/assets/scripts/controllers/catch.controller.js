@@ -66,6 +66,7 @@ myApp.controller('CatchController', ['$http', '$location', 'NgMap', '$scope', fu
     });// end $http
     // clear the input field after entering info
     vm.usernameIn='';
+    vm.img='';
     vm.typeIn='';
     vm.sizeIn='';
     vm.weightIn='';

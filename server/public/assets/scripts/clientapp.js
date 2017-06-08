@@ -1,4 +1,4 @@
-var myApp = angular.module('myApp', ['ngRoute', 'ngMap', 'xeditable']);
+var myApp = angular.module('myApp', ['ngRoute', 'ngMap', 'ngConfirm']); //, 'ngConfirm'
 
 /// Routes ///
 myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {

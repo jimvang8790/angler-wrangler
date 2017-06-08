@@ -1,4 +1,4 @@
-myApp.controller('UserController', ['$http', '$location', 'NgMap', '$scope',  function($http, $location, NgMap, $scope) {
+myApp.controller('UserController', ['$http', '$location', 'NgMap', '$scope', function($http, $location, NgMap, $scope) {
   // This happens after view/controller loads -- not ideal but it works for now.
   var vm = this;
   console.log('checking user');
