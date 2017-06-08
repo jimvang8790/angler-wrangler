@@ -29,12 +29,12 @@
           <!-- <textarea class="form-control" rows="3" id="description">{{log.description}}</textarea> -->
           <h3>Description: <small>
             <span ng-show="log.editMode"><input ng-model="uc.descriptionIn" type="text" ng-value="log.description"></span>
-            <span ng-hide="log.editMode"><textarea class="form-control" rows="3" id="description">{{log.description}}</textarea></span>
+            <span ng-hide="log.editMode"><textarea class="form-control" rows="3" id="description" ng-readOnly="true">{{log.description}}</textarea></span>
           </small></h3>
         </div>
       </div>
       <div class="wrapperTwo">
-        <ng-map center="[{{log.latitude}}, {{log.longitude}}]">
+        <ng-map center="[{{log.latitude}}, {{log.longitude}}]" zoom="12">
           <marker position="[{{log.latitude}}, {{log.longitude}}]"></marker>
           <custom-marker id="foo" position="[{{log.latitude}}, {{log.longitude}}]"></custom-marker>
         </ng-map>

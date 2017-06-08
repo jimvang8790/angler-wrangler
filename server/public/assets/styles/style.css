@@ -343,7 +343,7 @@ ng-map {
   height: 6em;
   width: 6em;
   float: right;
-  margin-right: 80px;
+  margin-right: 52em;
   margin-top: 12px;
 }
 
@@ -409,7 +409,7 @@ Update Catch Page
 	border-color: #cc0000;
 }
 
-.angler {
+/*.angler {
   float: right;
   margin-right: 30em;
   margin-top: 22em;
@@ -446,4 +446,4 @@ Update Catch Page
 .jumpingFish4 {
   float: left;
   margin-left: 10em;
-}
+}*/
