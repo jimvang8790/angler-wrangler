@@ -410,41 +410,124 @@ Update Catch Page
 	border-color: #cc0000;
 }
 
-/*.angler {
-  float: right;
-  margin-right: 30em;
-  margin-top: 22em;
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
+/*.catchDiv {
+  margin: 120px auto 0;
+  width: 150%;
+  height: 72px;
+  background-image: url('http://files.braadmartin.com/fish.png');
+  background-repeat: repeat-x;
+  text-align: center;
+  font-family: 'Lato';
 }
 
-.jumpingFish {
-  float: right;
-  margin-right: 20em;
-  margin-top: 20em;
-}
-
-.jumpingFish2 {
-  float: right;
-  margin-right: 30em;
-  margin-top: 20em;
-}
-
-.jumpingFish3 {
-  float: right;
-  margin-right: 20em;
-  margin-top: 10em;
-}
-
-.whale {
-  float: left;
-  margin-left: 20em;
-}
-
-.dolfin {
-  float: left;
-  margin-left: 20em;
-}
-
-.jumpingFish4 {
-  float: left;
-  margin-left: 10em;
+.catchSpan {
+  display: inline-block;
+  background-color: white;
+  font-size: 35px;
+  margin: -4px auto 0;
+  padding: 0 2px;
+  box-shadow: 0px 0px 16px 16px white;
+  text-align: center;
 }*/
+
+.arrow-left {
+  width: 0;
+  height: 0;
+  border-top: 40px solid transparent;
+  border-bottom: 40px solid transparent;
+  border-right:100px solid black;
+}
+.arrow-left1 {
+  width: 0;
+  height: 0;
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+  margin-top:-70px;
+  margin-left:70px;
+  border-right:70px solid black;
+  z-index:2;
+
+}
+.arrow-left2 {
+  width: 0;
+  height: 0;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  margin-top:-45px;
+  margin-left:140px;
+  border-right:25px solid black;
+  z-index:-3;
+}
+.arrow-right {
+  width: 10px;
+  height:10px;
+  border-radius:100%;
+  background:#F5F2E9;
+  margin-left:35px;
+  margin-top:-10px;
+  animation: blink 3s linear infinite;
+}
+.arrow-right1 {
+  width: 0;
+  margin-top:10px;
+  margin-left:80px;  height: 0;
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 1;
+  border-left: 55px solid #F5F2E9;
+}
+
+.center-div
+{
+  position: absolute;
+  margin: auto;
+  top: 25em;
+  right: 5em;
+  bottom: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  transform: perspective(100px) rotateY(45deg);
+  z-index: 1;
+
+animation: brow-turn 10s ease infinite;
+  animation-duration: 3s;
+  animation-name: move;
+  animation-iteration-count: infinite;
+  border-radius: 3px;
+}
+
+@keyframes move {
+  0% {
+    transform: perspective(100px) rotateY(20deg);
+  }
+  50% {
+    transform: perspective(100px) rotateY(-15deg);
+  }
+  100% {
+    transform: perspective(100px) rotateY(20deg);
+  }
+}
+
+@keyframes blink {
+  0% {
+    box-shadow: inset 0 0 0 black, inset -3px 3px 0 5px white, inset 0 -5px 0 25px black;
+  }
+  5% {
+    box-shadow: inset 0 25px 0 black, inset 0 0px 0 5px white, inset 0 -5px 0 25px black;
+  }
+  10% {
+    box-shadow: inset 0 0 0 black, inset 0 3px 0 5px white, inset 0 -5px 0 25px black;
+  }
+  75% {
+    box-shadow: inset 0 0 0 black, inset 3px 3px 0 5px white, inset 0 -5px 0 25px black;
+  }
+  100% {
+    box-shadow: inset 0 0 0 black, inset -3px 3px 0 5px white, inset 0 -5px 0 25px black;
+  }
+}

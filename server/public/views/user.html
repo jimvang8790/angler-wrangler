@@ -28,7 +28,7 @@
           <!-- <label for="description"><h3>Description: </h3></label> -->
           <!-- <textarea class="form-control" rows="3" id="description">{{log.description}}</textarea> -->
           <h3>Description: <small>
-            <span ng-show="log.editMode"><input ng-model="uc.descriptionIn" type="text" ng-value="log.description"></span>
+            <span ng-show="log.editMode"><textarea class="form-control" ng-model="uc.descriptionIn" type="text" ng-value="log.description"></textarea></span>
             <span ng-hide="log.editMode"><textarea class="form-control" rows="3" id="description" ng-readOnly="true">{{log.description}}</textarea></span>
           </small></h3>
         </div>
@@ -61,5 +61,3 @@
   </div>
   <hr>
 </div>
-
-<!-- ng-confirm="Are you sure?" -->
