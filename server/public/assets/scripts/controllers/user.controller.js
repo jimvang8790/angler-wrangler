@@ -57,7 +57,7 @@ myApp.controller('UserController', ['$http', '$location', 'NgMap', '$scope', fun
   // begin swal
    swal({
     title: "Are you sure?",
-    text: "You will not be able to re-catch this fish!",
+    text: "You will not be able to catch this fish again!",
     type: "warning",
     showCancelButton: true,
     confirmButtonColor: "#DD6B55",
