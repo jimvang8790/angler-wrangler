@@ -270,13 +270,20 @@ Users Page
   margin-top: 5em;
 }
 
-.images {
+/*.imgDiv {
+  width: 30em;
+  height: 25em;
+  overflow: hidden;
+  margin: 10px;
+  position: relative;
+}*/
+
+.img-thumbnail {
   width: 30em;
   height: 25em;
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 5px;
-  image-resolution: 300dpi;
   background-color: #595959;
 }
 

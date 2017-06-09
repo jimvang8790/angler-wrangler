@@ -7,7 +7,10 @@
   <div ng-repeat="log in uc.item" class="container userInput">
     <div class="row">
       <div class="wrapperOne">
-          <img ng-src="{{log.imgUrl}}" class="images">
+        <div class="imgDiv">
+          <img ng-src="{{log.imgUrl}}" class="img-thumbnail">
+        </div>
+
         <h3>Type: <small>
           <span ng-show="log.editMode"><input ng-model="uc.typeIn" type="text" ng-value="log.type"></span>
           <span ng-hide="log.editMode">{{log.type}}</span>
@@ -25,8 +28,6 @@
           <span ng-hide="log.editMode">{{log.date | date: 'M-dd-yyyy'}}</span>
         </small></h3>
         <div class="form-group">
-          <!-- <label for="description"><h3>Description: </h3></label> -->
-          <!-- <textarea class="form-control" rows="3" id="description">{{log.description}}</textarea> -->
           <h3>Description: <small>
             <span ng-show="log.editMode"><textarea class="form-control" ng-model="uc.descriptionIn" type="text" ng-value="log.description"></textarea></span>
             <span ng-hide="log.editMode"><textarea class="form-control" rows="3" id="description" ng-readOnly="true">{{log.description}}</textarea></span>
