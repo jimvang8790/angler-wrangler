@@ -55,10 +55,12 @@
           <span ng-show="log.editMode"><button class="btn btn-save" ng-click="uc.updateFish(log._id)">Save Edit</button></span>
           <span ng-hide="log.editMode"><button class="btn btn-edit" ng-click="log.editMode = !log.editMode">Edit Catch</button></span>
           <span ng-show="log.editMode"><button class="btn btn-cancelEdit" ng-click="log.editMode = !log.editMode">Cancel Edit</button></span>
-          <span ng-hide="log.editMode"><button class="btn btn-delete" ng-click="uc.removeFish(log._id)" ng-confirm="Tap Again to Release">Release Fish</button></span>
+          <span ng-hide="log.editMode"><button class="btn btn-delete" ng-click="uc.removeFish(log._id)" >Release Fish</button></span>
         </div>
       </div>
     </div>
   </div>
   <hr>
 </div>
+
+<!-- ng-confirm="Tap Again to Release" -->

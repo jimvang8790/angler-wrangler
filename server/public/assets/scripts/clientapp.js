@@ -1,5 +1,4 @@
-var myApp = angular.module('myApp', ['ngRoute', 'ngMap', 'ngConfirm']); 
-
+var myApp = angular.module('myApp', ['ngRoute', 'ngMap']); // , 'ngConfirm'
 /// Routes ///
 myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
   // get rid of 1.6.4 #!

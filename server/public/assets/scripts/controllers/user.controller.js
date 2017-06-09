@@ -54,14 +54,29 @@ myApp.controller('UserController', ['$http', '$location', 'NgMap', '$scope', fun
   vm.removeFish = function(itemsId) {
    console.log('delete button click!');
    console.log('Item id to remove is:', itemsId);
-   $http({
-     method: 'DELETE',
-     url: '/user/remove',
-     params: {id: itemsId}
-   }).then(function(response) {
-     console.log('delete response:', response);
-     vm.getItems();
-   });
+  // begin swal
+   swal({
+    title: "Are you sure?",
+    text: "You will not be able to re-catch this fish!",
+    type: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "#DD6B55",
+    confirmButtonText: "Yes, release it!",
+    closeOnConfirm: false
+   },
+   function(){
+     swal("Released!", "You have released this fish.", "success");
+     // put $http call in here so when cancel btn click it will not delete the fish
+     $http({
+       method: 'DELETE',
+       url: '/user/remove',
+       params: {id: itemsId}
+     }).then(function(response) {
+       console.log('delete response:', response);
+       vm.getItems();
+     });// end $http
+   });// end function for cancel, and end swal
+
   };// end removeFish
 
   // updating a catch/fish in the database
