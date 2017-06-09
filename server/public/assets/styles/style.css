@@ -212,6 +212,23 @@ Users Page
   width: 100px;
 }
 
+.btn-tips {
+  background-color: #c18ff0;
+	color: #fff;
+	border-color: #c18ff0;
+  text-transform: uppercase;
+  float: right;
+  margin-right: 2%;
+  width: 100px;
+}
+
+.btn-tips:hover,
+.btn-tips:focus {
+	color: #fff;
+	background-color: #b478ed;
+	border-color: #b478ed;
+}
+
 .wrapperOne{
   float: left;
   left: 50%;
