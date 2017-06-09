@@ -11,7 +11,6 @@ General
 .instructions {
     background-color: #333333;
     color: #DDDDDD;
-    /*background-image: url('http://allswalls.com/images/sunset-landscapes-nature-lakes-wallpaper-1.jpg');*/
     background-image: url('http://img02.deviantart.net/a041/i/2011/101/3/f/lake_background_2_by_indigodeep-d3drde0.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -19,9 +18,7 @@ General
 }
 
 .guyfishing {
-  /*background-image: url('http://www.animatedimages.org/data/media/157/animated-fishing-image-0138.gif');*/
   background-image: url('http://www.ontario-fishing-cottage-rental.com/images/fly_fishing_animated.gif');
-  /*background-image: url('http://s3.e-monsite.com/2010/08/14/22725904image-gif.gif');*/
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -287,14 +284,6 @@ Users Page
   margin-top: 5em;
 }
 
-/*.imgDiv {
-  width: 30em;
-  height: 25em;
-  overflow: hidden;
-  margin: 10px;
-  position: relative;
-}*/
-
 .img-thumbnail {
   width: 30em;
   height: 25em;
@@ -312,13 +301,13 @@ New Catch Page
   border-radius: 8px;
   margin-top: 10px;
   margin-bottom: 10px;
-  border: 4px solid black;
+  border: 2px solid black;
 }
 
 ng-map {
   width: 30em;
   height: 25em;
-  border: 4px solid black;
+  border: 2px solid black;
   border-radius: 8px;
   background-color: #0d0d0d;
 }
@@ -433,108 +422,3 @@ Update Catch Page
 	background-color: #cc0000;
 	border-color: #cc0000;
 }
-
-/*.pictureDiv {
-  background-image: url('http://files.braadmartin.com/fish.png');
-  background-repeat: repeat-x;
-}
-
-.arrow-left {
-  width: 0;
-  height: 0;
-  border-top: 40px solid transparent;
-  border-bottom: 40px solid transparent;
-  border-right:100px solid black;
-}
-.arrow-left1 {
-  width: 0;
-  height: 0;
-  border-top: 30px solid transparent;
-  border-bottom: 30px solid transparent;
-  margin-top:-70px;
-  margin-left:70px;
-  border-right:70px solid black;
-  z-index:2;
-
-}
-.arrow-left2 {
-  width: 0;
-  height: 0;
-  border-top: 15px solid transparent;
-  border-bottom: 15px solid transparent;
-  margin-top:-45px;
-  margin-left:140px;
-  border-right:25px solid black;
-  z-index:-3;
-}
-.arrow-right {
-  width: 10px;
-  height:10px;
-  border-radius:100%;
-  background:#F5F2E9;
-  margin-left:35px;
-  margin-top:-10px;
-  animation: blink 3s linear infinite;
-}
-.arrow-right1 {
-  width: 0;
-  margin-top:10px;
-  margin-left:80px;  height: 0;
-  border-top: 30px solid transparent;
-  border-bottom: 30px solid transparent;
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  z-index: 1;
-  border-left: 55px solid #F5F2E9;
-}
-
-.center-div
-{
-  position: absolute;
-  margin: auto;
-  top: 25em;
-  right: 5em;
-  bottom: 0;
-  left: 0;
-  width: 100px;
-  height: 100px;
-  transform: perspective(100px) rotateY(45deg);
-  z-index: 1;
-
-animation: brow-turn 10s ease infinite;
-  animation-duration: 3s;
-  animation-name: move;
-  animation-iteration-count: infinite;
-  border-radius: 3px;
-}
-
-@keyframes move {
-  0% {
-    transform: perspective(100px) rotateY(10deg);
-  }
-  50% {
-    transform: perspective(100px) rotateY(-15deg);
-  }
-  100% {
-    transform: perspective(100px) rotateY(15deg);
-  }
-}
-
-@keyframes blink {
-  0% {
-    box-shadow: inset 0 0 0 black, inset -3px 3px 0 5px white, inset 0 -5px 0 25px black;
-  }
-  5% {
-    box-shadow: inset 0 25px 0 black, inset 0 0px 0 5px white, inset 0 -5px 0 25px black;
-  }
-  10% {
-    box-shadow: inset 0 0 0 black, inset 0 3px 0 5px white, inset 0 -5px 0 25px black;
-  }
-  75% {
-    box-shadow: inset 0 0 0 black, inset 3px 3px 0 5px white, inset 0 -5px 0 25px black;
-  }
-  100% {
-    box-shadow: inset 0 0 0 black, inset -3px 3px 0 5px white, inset 0 -5px 0 25px black;
-  }
-}*/
