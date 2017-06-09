@@ -75,6 +75,8 @@ myApp.controller('CatchController', ['$http', '$location', 'NgMap', '$scope', fu
     vm.lat='';
     vm.lng='';
     vm.descriptionIn='';
+    //  begin swal
+    swal("New Catch Added!", "A new was fish added to your log!", "success");
   };// end addFish
 
    // uploading an image to filestack

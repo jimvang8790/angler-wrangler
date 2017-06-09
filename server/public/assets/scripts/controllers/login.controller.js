@@ -42,5 +42,6 @@ myApp.controller('LoginController', ['$http', '$location', function($http, $loca
           vm.message = "Please try again.";
         });
       }
+      swal("Account Created!", "Login in to access Angler Wrangler!", "success");
     };
 }]);
