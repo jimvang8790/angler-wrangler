@@ -10,29 +10,28 @@
         <div class="imgDiv">
           <img ng-src="{{log.imgUrl}}" class="img-thumbnail">
         </div>
-
-        <h3>Type: <small>
-          <span ng-show="log.editMode"><input ng-model="uc.typeIn" type="text" ng-value="log.type"></span>
-          <span ng-hide="log.editMode">{{log.type}}</span>
-        </small></h3>
-        <h3>Size: <small>
-          <span ng-show="log.editMode"><input ng-model="uc.sizeIn" type="number" ng-value="log.size"></span>
-          <span ng-hide="log.editMode">{{log.size}} inches</span>
-        </small></h3>
-        <h3>Weight: <small>
-          <span ng-show="log.editMode"><input ng-model="uc.weightIn" type="number" ng-value="log.weight"></span>
-          <span ng-hide="log.editMode">{{log.weight}} lbs</span>
-        </small></h3>
-        <h3>Date: <small>
-          <span ng-show="log.editMode"><input ng-model="uc.dateIn" type="date" ng-value="log.date | date: 'M-dd-yyyy'"></span>
-          <span ng-hide="log.editMode">{{log.date | date: 'M-dd-yyyy'}}</span>
-        </small></h3>
-        <div class="form-group">
-          <h3>Description: <small>
-            <span ng-show="log.editMode"><textarea class="form-control" ng-model="uc.descriptionIn" type="text" ng-value="log.description"></textarea></span>
-            <span ng-hide="log.editMode"><textarea class="form-control" rows="3" id="description" ng-readOnly="true">{{log.description}}</textarea></span>
+          <h3>Type: <small>
+            <span ng-show="log.editMode"><input ng-model="uc.typeIn" type="text" ng-value="log.type"></span>
+            <span ng-hide="log.editMode">{{log.type}}</span>
           </small></h3>
-        </div>
+          <h3>Size: <small>
+            <span ng-show="log.editMode"><input ng-model="uc.sizeIn" type="number" ng-value="log.size"></span>
+            <span ng-hide="log.editMode">{{log.size}} inches</span>
+          </small></h3>
+          <h3>Weight: <small>
+            <span ng-show="log.editMode"><input ng-model="uc.weightIn" type="number" ng-value="log.weight"></span>
+            <span ng-hide="log.editMode">{{log.weight}} lbs</span>
+          </small></h3>
+          <h3>Date: <small>
+            <span ng-show="log.editMode"><input ng-model="uc.dateIn" type="date" ng-value="log.date | date: 'M-dd-yyyy'"></span>
+            <span ng-hide="log.editMode">{{log.date | date: 'M-dd-yyyy'}}</span>
+          </small></h3>
+          <div class="form-group">
+            <h3>Description: <small>
+              <span ng-show="log.editMode"><textarea class="form-control" ng-model="uc.descriptionIn" type="text" ng-value="log.description"></textarea></span>
+              <span ng-hide="log.editMode"><textarea class="form-control" rows="3" id="description" ng-readOnly="true">{{log.description}}</textarea></span>
+            </small></h3>
+          </div>
       </div>
       <div class="wrapperTwo">
         <ng-map center="[{{log.latitude}}, {{log.longitude}}]" zoom="14">

@@ -229,12 +229,12 @@ Users Page
 .wrapperOne{
   float: left;
   left: 50%;
-  padding-left: 10em;
+  padding-left: 5vw;
 }
 .wrapperTwo{
   float: right;
   right: 50%;
-  padding-right: 10em;
+  padding-right: 5vw;
 }
 
 .btn-delete,
@@ -285,8 +285,8 @@ Users Page
 }
 
 .img-thumbnail {
-  width: 30em;
-  height: 25em;
+  width: 30vw;
+  height: 25vw;
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 5px;
@@ -305,8 +305,8 @@ New Catch Page
 }
 
 ng-map {
-  width: 30em;
-  height: 25em;
+  width: 30vw;
+  height: 25vw;
   border: 2px solid black;
   border-radius: 8px;
   background-color: #0d0d0d;
