@@ -102,6 +102,8 @@ myApp.controller('UserController', ['$http', '$location', 'NgMap', '$scope', fun
       data: objectToSend
     }).then(function(response) {
       console.log('update logs:', response.data);
+      // begin swal
+      swal("Fish Updated!");
       vm.getItems();
     });
   };// end updateFish
