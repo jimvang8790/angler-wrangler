@@ -66,6 +66,12 @@ General
   font-family: 'Coiny', cursive;
 }
 
+footer {
+  font-family: 'Acme', sans-serif;
+  float: right;
+  margin-right: 10%;
+}
+
 /*******************************
 Login/Register/Cancel Buttons
 ********************************/

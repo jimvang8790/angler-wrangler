@@ -6,29 +6,32 @@ By: Jim Vang
 
 Application Overview
 --------------------
-Angler Wrangler is a MEAN full-stack web application allowing anglers to track what type of fish they caught and where they caught it.. This application allows users to register an account and set-up a profile to log their catches. The application will utilize a Google Map API allowing anglers to mark where they caught their prize fish on the lake.  
+Angler Wrangler is a MEAN full-stack web application allowing users to track what type of fish they caught and where they caught it. This application allows users to register for an account/login to an existing account and begin to keep track their catches. The application will utilize a Google Map API allowing anglers to mark the exact location where they caught their prize fish. User can also upload a photo of their catch along with some detail information about that catch.  
 
-On page load the DOM will have a username and password input fields. If they haven’t register they can by clicking a register link to create an account. Once logged in users can add a new catch and enter the type of fish, size of the fish, weight of the fish, a photo of the fish, the lake they caught it at, and able to place a marker on the lake signifying the location of where they caught the fish.
-
-Why?
-----
-
+Why create this app?
+--------------------
+This app was created for anglers who want to log all of their prizes fish whenever they're on the lake. Anglers will use this app to keep track of the exact location where they caught the "BIG" one. Angler Wrangler uses Google Map to grab users geolocation and store their exact coordinates into a database. Anglers will be able to upload a photo of their fish along with some general information about it. Anglers now know when and where they caught that prize fish by looking at their past logs and try to replicate their pass success.     
 
 Technologies
 ------------
 - HTML
 - CSS
+- JavaScript
 - Bootstrap
 - MongoDB
-- ExpressJS
 - AngularJS
-- Node.JS
+- Express.js
+- Node.js
 - Google Map API
-- File Stack
-- jQuery
-- JavaScript
+- Filestack
+- Heroku
+- World Fishing Network
 
 Stretch Goals
 -------------
 - Social Media Application
-- Mobile App
+- Mobile App for IOS and Android
+
+Application URL
+---------------
+Angler Wrangler launch on: https://angler-wrangler.herokuapp.com/#/home

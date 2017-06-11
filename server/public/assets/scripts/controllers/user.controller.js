@@ -54,7 +54,7 @@ myApp.controller('UserController', ['$http', '$location', 'NgMap', '$scope', fun
   vm.removeFish = function(itemsId) {
    console.log('delete button click!');
    console.log('Item id to remove is:', itemsId);
-  // begin swal
+  // begin swal(pop-up message)
    swal({
     title: "Are you sure?",
     text: "You will not be able to catch this fish again!",
@@ -73,7 +73,7 @@ myApp.controller('UserController', ['$http', '$location', 'NgMap', '$scope', fun
        params: {id: itemsId}
      }).then(function(response) {
        console.log('delete response:', response);
-       vm.getItems();
+       vm.getItems(); // call getItems here so DOM update immediately
      });// end $http
    });// end function for cancel, and end swal
 
