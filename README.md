@@ -10,7 +10,7 @@ Angler Wrangler is a MEAN full-stack web application allowing users to track wha
 
 Why create this app?
 --------------------
-This app was created for anglers who want to log all of their prizes fish whenever they're on the lake. Anglers will use this app to keep track of the exact location where they caught the "BIG" one. Angler Wrangler uses Google Map to grab users geolocation and store their exact coordinates into a database. Anglers will be able to upload a photo of their fish along with some general information about it. Anglers now know when and where they caught that prize fish by looking at their past logs and try to replicate their pass success.     
+This app was created for anglers who want to log all their prizes fish whenever they're on the lake. Anglers will use this app to keep track of the exact location where they caught the "BIG" one. Angler Wrangler uses Google Map to grab user's geolocation and store their exact coordinates into a database. Anglers will be able to upload a photo of their fish along with some general information about the fish. Anglers now know when and where they caught that prize fish by looking at their past logs and try to replicate their pass success.     
 
 Technologies
 ------------
