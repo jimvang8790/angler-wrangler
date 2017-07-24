@@ -232,7 +232,7 @@ Users Page
 	border-color: #b478ed;
 }
 
-.wrapperOne{
+/*.wrapperOne{
   float: left;
   left: 50%;
   padding-left: 5vw;
@@ -241,7 +241,7 @@ Users Page
   float: right;
   right: 50%;
   padding-right: 5vw;
-}
+}*/
 
 .btn-delete,
 .btn-update {
@@ -291,12 +291,15 @@ Users Page
 }
 
 .img-thumbnail {
-  width: 30vw;
+  /*width: 30vw;
   height: 25vw;
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 5px;
-  background-color: #595959;
+  background-color: #595959;*/
+  height: 400px;
+  width: 700px;
+  border: 2px solid #f2f2f2;
 }
 
 /*******************************
@@ -311,11 +314,14 @@ New Catch Page
 }
 
 ng-map {
-  width: 30vw;
+  /*width: 30vw;
   height: 25vw;
   border: 2px solid black;
   border-radius: 8px;
-  background-color: #0d0d0d;
+  background-color: #0d0d0d;*/
+  height: 400px;
+  width: 700px;
+  border: 2px solid #f2f2f2;
 }
 
 .newCatch {

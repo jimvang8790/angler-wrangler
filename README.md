@@ -34,4 +34,4 @@ Stretch Goals
 
 Application URL
 ---------------
-Angler Wrangler launch on: https://angler-wrangler.herokuapp.com/#/home
+Angler Wrangler https://angler-wrangler.herokuapp.com/#/home
