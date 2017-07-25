@@ -313,16 +313,16 @@ New Catch Page
   border: 2px solid black;
 }
 
-ng-map {
-  /*width: 30vw;
+/*ng-map {
+  width: 30vw;
   height: 25vw;
   border: 2px solid black;
   border-radius: 8px;
-  background-color: #0d0d0d;*/
+  background-color: #0d0d0d;
   height: 400px;
-  width: 700px;
+  width: 500px;
   border: 2px solid #f2f2f2;
-}
+}*/
 
 .newCatch {
   text-decoration: underline;
