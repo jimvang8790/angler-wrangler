@@ -7,7 +7,7 @@
     "test": "nodemon server/app.js",
     "start": "node server/app.js"
   },
-  "author": "Scott Bromander, Kris Szafranski",
+  "author": "Jim Vang",
   "license": "ISC",
   "dependencies": {
     "angular": "^1.6.5",
