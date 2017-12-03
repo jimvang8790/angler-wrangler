@@ -5,8 +5,8 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
   $locationProvider.hashPrefix('');
 
   $routeProvider
-    .when('/home', {
-      templateUrl: '/views/home.html',
+    .when('/login', {
+      templateUrl: '/views/login.html',
       controller: "LoginController as lc"
     })
     .when('/register', {
@@ -26,7 +26,7 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
       controller: "UserController as uc"
     })
     .otherwise({
-      redirectTo: 'home'
+      redirectTo: 'index'
     });
 
 }]);// end config

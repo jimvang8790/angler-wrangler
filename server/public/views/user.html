@@ -1,8 +1,16 @@
 <!-- <div class="userContainer"></div> -->
   <div class="userHeading">
-    <h1 class="welcome">Welcome, {{uc.userName}}!<button class="btn btn-logout" ng-click="uc.logout()">Log Out</button></h1>
-    <hr>
-    <h2 class="fishlog">Your Fish Logs<a href="#catch" class="btn btn-newLog" role="button">New Catch</a><a target="_blank" href="http://www.worldfishingnetwork.com/tips/fishinghacks" class="btn btn-tips" role="button">WFN Tips</a></h2>
+    <div class="row">
+      <div class="col-md-4">
+        <h1 class="welcome">Welcome, {{uc.userName}}!</h1>
+      </div>
+      <div class="col-md-4">
+        <a href="#catch" class="btn btn-newLog" role="button">New Catch</a>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-logout" ng-click="uc.logout()">Log Out</button>
+      </div>
+    </div>
   </div>
   <div ng-repeat="log in uc.item" class="container userInput">
     <div class="row">

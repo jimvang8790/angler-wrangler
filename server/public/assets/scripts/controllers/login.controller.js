@@ -35,7 +35,7 @@ myApp.controller('LoginController', ['$http', '$location', function($http, $loca
         console.log('sending to server...', vm.user);
         $http.post('/register', vm.user).then(function(response) {
           console.log('success');
-          $location.path('/home');
+          $location.path('/login');
         },
         function(response) {
           console.log('error');
