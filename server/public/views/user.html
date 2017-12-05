@@ -1,15 +1,21 @@
-<div class="userContainer">
+<!-- <div class="userContainer"></div> -->
   <div class="userHeading">
-    <h1 class="welcome">Welcome, {{uc.userName}}!<button class="btn btn-logout" ng-click="uc.logout()">Log Out</button></h1>
-    <hr>
-    <h2 class="fishlog">Your Fish Logs<a href="#catch" class="btn btn-newLog" role="button">New Catch</a><a target="_blank" href="http://www.worldfishingnetwork.com/tips/fishinghacks" class="btn btn-tips" role="button">WFN Tips</a></h2>
+    <div class="row">
+      <div class="col-md-4">
+        <h1 class="welcome">Welcome, {{uc.userName}}!</h1>
+      </div>
+      <div class="col-md-4">
+        <a href="#catch" class="btn btn-newLog" role="button">New Catch</a>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-logout" ng-click="uc.logout()">Log Out</button>
+      </div>
+    </div>
   </div>
   <div ng-repeat="log in uc.item" class="container userInput">
     <div class="row">
-      <div class="wrapperOne">
-        <div class="imgDiv">
+      <div class="col-md-6">
           <img ng-src="{{log.imgUrl}}" class="img-thumbnail">
-        </div>
           <h3>Type: <small>
             <span ng-show="log.editMode"><input ng-model="uc.typeIn" type="text" ng-value="log.type"></span>
             <span ng-hide="log.editMode">{{log.type}}</span>
@@ -33,8 +39,8 @@
             </small></h3>
           </div>
       </div>
-      <div class="wrapperTwo">
-        <ng-map center="[{{log.latitude}}, {{log.longitude}}]" zoom="14">
+      <div class="col-md-6">
+        <ng-map center="[{{log.latitude}}, {{log.longitude}}]" zoom="14" >
           <marker position="[{{log.latitude}}, {{log.longitude}}]"></marker>
           <custom-marker id="foo" position="[{{log.latitude}}, {{log.longitude}}]"></custom-marker>
         </ng-map>
@@ -60,6 +66,3 @@
     </div>
   </div>
   <hr>
-</div>
-
-<!-- ng-confirm="Tap Again to Release" -->
