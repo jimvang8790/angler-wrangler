@@ -6,14 +6,14 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Angler Wrangler</title>
         <!-- Favicon -->
-        <link rel="icon" href="http://nellieanna.com/fishingrod.gif" type="image/png">
+        <link rel="icon" href="/images/favicon.png" type="image/png">
         <!-- CSS -->
         <link rel="stylesheet" href="/vendors/bootstrap.min.css">
         <!-- Swal -->
         <link rel="stylesheet" href="/vendors/sweetalert.css">
         <link rel="stylesheet" href="/assets/styles/style.css">
         <!-- Google Font -->
-        <link href="https://fonts.googleapis.com/css?family=Coiny|Acme" rel="stylesheet">
+        <!--<link href="https://fonts.googleapis.com/css?family=Coiny|Acme" rel="stylesheet">-->
         <!-- javascript -->
         <script src="/vendors/jquery.min.js" charset="utf-8"></script><!-- soruce this inorder to use ng-confirm b/c ng-confirm uses jQuery -->
         <script type="text/javascript" src="/vendors/angular.min.js"></script>
@@ -37,7 +37,30 @@
     <body ng-app="myApp">
       <!--<header ng-include="'/views/templates/header.html'"></header>-->
       <!--<main ng-view></main>-->
-      <h1>Hello world!!!</h1>
+        <nav class="nav navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <i class="material-icons">&#xE5D2;</i>
+                    </button>
+                    <div class="hover11">
+                        <a href="#main-section" class="home">
+                            <figure><img src="/images/logo.png" class="main-logo"></figure>
+                        </a>
+                    </div>
+                    <div class="main-tab">
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav navbar-right">
+                                <a href="#about">About</a>
+                                <a href="#features">Features</a>
+                                <a href="#tips">Tips</a>
+                                <a href="#news">News</a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
     <header>
 
     </header>
