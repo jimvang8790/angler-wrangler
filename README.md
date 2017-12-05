@@ -4,7 +4,7 @@ Angler Wrangler Solo Project
 By: Jim Vang
 ------------
 
-Version 2.0
+Version 2.0 (New landing page and Application UI/UX)
 
 Application Overview
 --------------------
