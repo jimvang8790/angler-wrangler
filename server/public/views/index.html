@@ -34,7 +34,7 @@
         <!-- was commented out, WHY? -->
         <base href="/" />
     </head>
-    <body ng-app="myApp">
+    <body>
       <!--<header ng-include="'/views/templates/header.html'"></header>-->
       <!--<main ng-view></main>-->
         <nav class="nav navbar-default navbar-fixed-top" role="navigation">
@@ -48,15 +48,17 @@
                             <figure><img src="/images/logo.png" class="main-logo"></figure>
                         </a>
                     </div>
-                    <div class="main-tab">
-                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                            <ul class="nav navbar-nav navbar-right">
-                                <a href="#about">About</a>
-                                <a href="#features">Features</a>
-                                <a href="#tips">Tips</a>
-                                <a href="#news">News</a>
-                            </ul>
-                        </div>
+                </div>
+                <div class="main-tab">
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right">
+                            <a href="#about" class="tabs">About</a>
+                            <a href="#features" class="tabs">Features</a>
+                            <a href="#tips" class="tabs">Tips</a>
+                            <a href="#news" class="tabs">News</a>
+                            <a class="btn btn-primary" href="/register">Sign Up</a>
+                            <a class="btn btn-primary" href="/login">Sign In</a>
+                        </ul>
                     </div>
                 </div>
             </div>

@@ -1,436 +1,522 @@
-/*******************************
+/********************************************************
 General
-********************************/
+*********************************************************/
 
-.instructions .container h1 {
-    font-size: 54px;
-    font-weight: 700;
-    color: #fff;
+body {
+    /*font-family: 'Roboto Condensed', sans-serif;*/
+    font-size: 2em;
 }
 
-.instructions {
-    background-color: #333333;
-    color: #DDDDDD;
-    background-image: url('http://img02.deviantart.net/a041/i/2011/101/3/f/lake_background_2_by_indigodeep-d3drde0.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+/*h2 {*/
+    /*font-weight: bold;*/
+/*}*/
+
+/*section {*/
+    /*position: relative;*/
+    /*padding: 45px 0;*/
+/*}*/
+
+/*section::before, section::after {*/
+    /*pointer-events: none;*/
+    /*overflow: hidden;*/
+    /*display: block;*/
+    /*content: " ";*/
+    /*margin-top: -10px;*/
+    /*height: 15px;*/
+    /*visibility: hidden;*/
+/*}*/
+
+/*.divider {*/
+    /*width: 100%;*/
+    /*padding-bottom: 25px;*/
+/*}*/
+
+/*.divider:after {*/
+    /*content: "";*/
+    /*background: #337ab7;*/
+    /*position: relative;*/
+    /*height: 4px;*/
+    /*width: 300px;*/
+    /*display: block;*/
+    /*text-align: center;*/
+    /*margin: 13px auto;*/
+    /*-webkit-border-radius: 5em;*/
+    /*-moz-border-radius: 5em;*/
+    /*-ms-border-radius: 5em;*/
+    /*-o-border-radius: 5em;*/
+    /*border-radius: 5em;*/
+/*}*/
+
+/*.section-heading {*/
+    /*margin-top: 100px;*/
+/*}*/
+
+/*.overlay {*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+    /*top: 0;*/
+    /*left: 0;*/
+    /*right: 0;*/
+    /*bottom: 0;*/
+    /*position: absolute;*/
+    /*opacity: 0.5;*/
+    /*background: #262626;*/
+/*}*/
+
+/*OLD STYLE*/
+
+/*.instructions .container h1 {*/
+    /*font-size: 54px;*/
+    /*font-weight: 700;*/
+    /*color: #fff;*/
+/*}*/
+
+/*.instructions {*/
+    /*background-color: #333333;*/
+    /*color: #DDDDDD;*/
+    /*background-image: url('http://img02.deviantart.net/a041/i/2011/101/3/f/lake_background_2_by_indigodeep-d3drde0.jpg');*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: cover;*/
+    /*background-position: center;*/
+/*}*/
+
+/*#entryForm {*/
+    /*margin-top: 14px;*/
+/*}*/
+
+/*#container {*/
+    /*margin-top: 10px;*/
+/*}*/
+
+/*.container p{*/
+    /*margin-top : 14px;*/
+/*}*/
+
+/*.message {*/
+    /*padding: 10px 0;*/
+/*}*/
+
+/*.message p {*/
+    /*margin-left: 10px;*/
+/*}*/
+
+/*.message:nth-child(odd) {*/
+     /*background-color: #eeeeee;*/
+/*}*/
+
+/*.message:nth-child(even) {*/
+    /*background-color: #f8f8f8;*/
+/*}*/
+
+/*.btn-danger{*/
+    /*margin-left: 10px;*/
+/*}*/
+
+/*.lead {*/
+  /*text-align: center;*/
+  /*font-family: 'Coiny', cursive;*/
+/*}*/
+
+/*footer {*/
+  /*font-family: 'Acme', sans-serif;*/
+  /*float: right;*/
+  /*margin-right: 10%;*/
+/*}*/
+
+/********************************************************
+Nav
+*********************************************************/
+.nav {
+    /*background-color: white;*/
 }
 
-.guyfishing {
-  background-image: url('http://www.ontario-fishing-cottage-rental.com/images/fly_fishing_animated.gif');
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-.fishjumping {
-  background-image: url('http://www.gifs.net/Animation11/Animals/Fish/Fish_jumps_4.gif');
-  background-repeat: no-repeat;
-  float: right;
-}
-
-#entryForm {
-    margin-top: 14px;
-}
-
-#container {
-    margin-top: 10px;
-}
-
-.container p{
-    margin-top : 14px;
-}
-
-.message {
+header .navbar-default {
+    background: #ffffff;
+    border: none;
     padding: 10px 0;
+    -webkit-box-shadow: 0px 1px 1px #4d4d4d;
+    -moz-box-shadow: 0px 1px 1px #4d4d4d;
+    box-shadow: 0px 1px 1px #4d4d4d;
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -ms-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
 }
 
-.message p {
-    margin-left: 10px;
+.main-logo {
+    float: left;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
-.message:nth-child(odd) {
-     background-color: #eeeeee;
+.main-tab {
+    text-align: right;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
-.message:nth-child(even) {
-    background-color: #f8f8f8;
-}
-
-.btn-danger{
-    margin-left: 10px;
-}
-
-.lead {
-  text-align: center;
-  font-family: 'Coiny', cursive;
-}
-
-footer {
-  font-family: 'Acme', sans-serif;
-  float: right;
-  margin-right: 10%;
-}
-
-/*******************************
-Login/Register/Cancel Buttons
-********************************/
-
-.container{
-  font-family: 'Acme', sans-serif;
-  padding: 25px;
-  position: inherit;
-
-}
-
-.btn-login {
-  background-color: #59B2E0;
-	color: #fff;
-	border-color: #59B2E6;
-}
-
-.btn-login:hover,
-.btn-login:focus {
-	color: #fff;
-	background-color: #53A3CD;
-	border-color: #53A3CD;
-}
-
-.btn-register {
-  background-color: #1CB94E;
-	color: #fff;
-	border-color: #1CB94A;
-}
-
-.btn-register:hover,
-.btn-register:focus {
-	color: #fff;
-	background-color: #1CA347;
-	border-color: #1CA347;
-}
-
-.btn-cancel {
-  background-color: #ff0000;
-	color: #fff;
-	border-color: #ff0000;
-}
-
-.btn-cancel:hover,
-.btn-cancel:focus {
-	color: #fff;
-	background-color: #cc0000;
-	border-color: #cc0000;
-}
-
-.btn-login,
-.btn-register,
-.btn-cancel {
-  outline: none;
-  font-size: 14px;
-  height: auto;
-  width: 8em;
-  font-weight: normal;
-	padding: 14px 0;
-	text-transform: uppercase;
-}
-
-.form-login,
-.form-register {
-    background-color: #EDEDED;
-    padding-top: 10px;
-    padding-bottom: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-    border-radius: 15px;
-    border-color:#d2d2d2;
-    border-width: 5px;
-    box-shadow:0 1px 0 #cfcfcf;
-}
-
-.form-control {
-    border-radius: 10px;
-}
-
-.wrapper {
-    text-align: center;
+.tabs {
     padding: 10px 10px;
 }
+
+.hover11 figure img {
+    opacity: 1;
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.hover11 figure:hover img {
+    opacity: .5;
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+}
+
+/********************************************************
+Login/Register/Cancel Buttons
+*********************************************************/
+
+/*.container{*/
+  /*font-family: 'Acme', sans-serif;*/
+  /*padding: 25px;*/
+  /*position: inherit;*/
+
+/*}*/
+
+/*.btn-login {*/
+  /*background-color: #59B2E0;*/
+	/*color: #fff;*/
+	/*border-color: #59B2E6;*/
+/*}*/
+
+/*.btn-login:hover,*/
+/*.btn-login:focus {*/
+	/*color: #fff;*/
+	/*background-color: #53A3CD;*/
+	/*border-color: #53A3CD;*/
+/*}*/
+
+/*.btn-register {*/
+  /*background-color: #1CB94E;*/
+	/*color: #fff;*/
+	/*border-color: #1CB94A;*/
+/*}*/
+
+/*.btn-register:hover,*/
+/*.btn-register:focus {*/
+	/*color: #fff;*/
+	/*background-color: #1CA347;*/
+	/*border-color: #1CA347;*/
+/*}*/
+
+/*.btn-cancel {*/
+  /*background-color: #ff0000;*/
+	/*color: #fff;*/
+	/*border-color: #ff0000;*/
+/*}*/
+
+/*.btn-cancel:hover,*/
+/*.btn-cancel:focus {*/
+	/*color: #fff;*/
+	/*background-color: #cc0000;*/
+	/*border-color: #cc0000;*/
+/*}*/
+
+/*.btn-login,*/
+/*.btn-register,*/
+/*.btn-cancel {*/
+  /*outline: none;*/
+  /*font-size: 14px;*/
+  /*height: auto;*/
+  /*width: 8em;*/
+  /*font-weight: normal;*/
+	/*padding: 14px 0;*/
+	/*text-transform: uppercase;*/
+/*}*/
+
+/*.form-login,*/
+/*.form-register {*/
+    /*background-color: #EDEDED;*/
+    /*padding-top: 10px;*/
+    /*padding-bottom: 20px;*/
+    /*padding-left: 20px;*/
+    /*padding-right: 20px;*/
+    /*border-radius: 15px;*/
+    /*border-color:#d2d2d2;*/
+    /*border-width: 5px;*/
+    /*box-shadow:0 1px 0 #cfcfcf;*/
+/*}*/
+
+/*.form-control {*/
+    /*border-radius: 10px;*/
+/*}*/
+
+/*.wrapper {*/
+    /*text-align: center;*/
+    /*padding: 10px 10px;*/
+/*}*/
 
 /*******************************
 Users Page
 ********************************/
 
-.header {
-  font-family: 'Acme', sans-serif;
-}
+/*.header {*/
+  /*font-family: 'Acme', sans-serif;*/
+/*}*/
 
-.userContainer {
-  font-family: 'Acme', sans-serif;
-}
+/*.userContainer {*/
+  /*font-family: 'Acme', sans-serif;*/
+/*}*/
 
-.userHeading {
-  font-family: 'Acme', sans-serif;
-  text-align: center;
-}
+/*.userHeading {*/
+  /*font-family: 'Acme', sans-serif;*/
+  /*text-align: center;*/
+/*}*/
 
-.userInput {
-  background-color: #ecf9f1;
-  border: 2px solid black;
-  border-radius: 8px;
-  margin-top: 2em;
-  margin-bottom: 4em;
-}
+/*.userInput {*/
+  /*background-color: #ecf9f1;*/
+  /*border: 2px solid black;*/
+  /*border-radius: 8px;*/
+  /*margin-top: 2em;*/
+  /*margin-bottom: 4em;*/
+/*}*/
 
-.btn-logout {
-  background-color: #ffd700;
-	color: #fff;
-	border-color: #ffd700;
-}
+/*.btn-logout {*/
+  /*background-color: #ffd700;*/
+	/*color: #fff;*/
+	/*border-color: #ffd700;*/
+/*}*/
 
-.btn-logout:hover,
-.btn-logout:focus {
-	color: #fff;
-	background-color: #e6c300;
-	border-color: #e6c300;
-}
+/*.btn-logout:hover,*/
+/*.btn-logout:focus {*/
+	/*color: #fff;*/
+	/*background-color: #e6c300;*/
+	/*border-color: #e6c300;*/
+/*}*/
 
-.btn-newLog {
-  background-color: #1CB94E;
-	color: #fff;
-	border-color: #1CB94A;
-}
+/*.btn-newLog {*/
+  /*background-color: #1CB94E;*/
+	/*color: #fff;*/
+	/*border-color: #1CB94A;*/
+/*}*/
 
-.btn-newLog:hover,
-.btn-newLog:focus {
-	color: #fff;
-	background-color: #1CA347;
-	border-color: #1CA347;
-}
+/*.btn-newLog:hover,*/
+/*.btn-newLog:focus {*/
+	/*color: #fff;*/
+	/*background-color: #1CA347;*/
+	/*border-color: #1CA347;*/
+/*}*/
 
-.btn-logout,
-.btn-newLog {
-  text-transform: uppercase;
-  float: right;
-  margin-right: 10%;
-  width: 100px;
-}
+/*.btn-logout,*/
+/*.btn-newLog {*/
+  /*text-transform: uppercase;*/
+  /*float: right;*/
+  /*margin-right: 10%;*/
+  /*width: 100px;*/
+/*}*/
 
-.btn-tips {
-  background-color: #c18ff0;
-	color: #fff;
-	border-color: #c18ff0;
-  text-transform: uppercase;
-  float: right;
-  margin-right: 2%;
-  width: 100px;
-}
+/*.btn-tips {*/
+  /*background-color: #c18ff0;*/
+	/*color: #fff;*/
+	/*border-color: #c18ff0;*/
+  /*text-transform: uppercase;*/
+  /*float: right;*/
+  /*margin-right: 2%;*/
+  /*width: 100px;*/
+/*}*/
 
-.btn-tips:hover,
-.btn-tips:focus {
-	color: #fff;
-	background-color: #b478ed;
-	border-color: #b478ed;
-}
+/*.btn-tips:hover,*/
+/*.btn-tips:focus {*/
+	/*color: #fff;*/
+	/*background-color: #b478ed;*/
+	/*border-color: #b478ed;*/
+/*}*/
 
-/*.wrapperOne{
-  float: left;
-  left: 50%;
-  padding-left: 5vw;
-}
-.wrapperTwo{
-  float: right;
-  right: 50%;
-  padding-right: 5vw;
-}*/
+/*.btn-delete,*/
+/*.btn-update {*/
+  /*outline: none;*/
+  /*font-size: 14px;*/
+  /*height: auto;*/
+  /*width: 8em;*/
+  /*font-weight: normal;*/
+	/*padding: 14px 0;*/
+	/*text-transform: uppercase;*/
+  /*width: 150px;*/
+/*}*/
 
-.btn-delete,
-.btn-update {
-  outline: none;
-  font-size: 14px;
-  height: auto;
-  width: 8em;
-  font-weight: normal;
-	padding: 14px 0;
-	text-transform: uppercase;
-  width: 150px;
-}
+/*.btn-delete {*/
+  /*background-color: #ff0000;*/
+	/*color: #fff;*/
+	/*border-color: #ff0000;*/
+/*}*/
 
-.btn-delete {
-  background-color: #ff0000;
-	color: #fff;
-	border-color: #ff0000;
-}
+/*.btn-delete:hover,*/
+/*.btn-delete:focus {*/
+	/*color: #fff;*/
+	/*background-color: #cc0000;*/
+	/*border-color: #cc0000;*/
+/*}*/
+/*.btn-update {*/
+  /*background-color: #59B2E0;*/
+	/*color: #fff;*/
+	/*border-color: #59B2E6;*/
+  /*text-transform: uppercase;*/
+  /*float: center;*/
+  /*width: 150px;*/
+  /*margin: 2px;*/
+/*}*/
 
-.btn-delete:hover,
-.btn-delete:focus {
-	color: #fff;
-	background-color: #cc0000;
-	border-color: #cc0000;
-}
-.btn-update {
-  background-color: #59B2E0;
-	color: #fff;
-	border-color: #59B2E6;
-  text-transform: uppercase;
-  float: center;
-  width: 150px;
-  margin: 2px;
-}
+/*.btn-update:hover,*/
+/*.btn-update:focus {*/
+	/*color: #fff;*/
+	/*background-color: #53A3CD;*/
+	/*border-color: #53A3CD;*/
+/*}*/
 
-.btn-update:hover,
-.btn-update:focus {
-	color: #fff;
-	background-color: #53A3CD;
-	border-color: #53A3CD;
-}
+/*.uprel {*/
+  /*float: right;*/
+  /*margin-right: 5em;*/
+  /*margin-top: 5em;*/
+/*}*/
 
-.uprel {
-  float: right;
-  margin-right: 5em;
-  margin-top: 5em;
-}
-
-.img-thumbnail {
-  /*width: 30vw;
-  height: 25vw;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 5px;
-  background-color: #595959;*/
-  height: 400px;
-  width: 700px;
-  border: 2px solid #f2f2f2;
-}
+/*.img-thumbnail {*/
+  /*height: 400px;*/
+  /*width: 700px;*/
+  /*border: 2px solid #f2f2f2;*/
+/*}*/
 
 /*******************************
 New Catch Page
 ********************************/
-.catchInput {
-  background-color: #ecf9f1;
-  border-radius: 8px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  border: 2px solid black;
-}
+/*.catchInput {*/
+  /*background-color: #ecf9f1;*/
+  /*border-radius: 8px;*/
+  /*margin-top: 10px;*/
+  /*margin-bottom: 10px;*/
+  /*border: 2px solid black;*/
+/*}*/
 
-/*ng-map {
-  width: 30vw;
-  height: 25vw;
-  border: 2px solid black;
-  border-radius: 8px;
-  background-color: #0d0d0d;
-  height: 400px;
-  width: 500px;
-  border: 2px solid #f2f2f2;
-}*/
+/*.newCatch {*/
+  /*text-decoration: underline;*/
+  /*text-align: center;*/
+  /*font-size: 3em;*/
+/*}*/
 
-.newCatch {
-  text-decoration: underline;
-  text-align: center;
-  font-size: 3em;
-}
+/*.btn-upload {*/
+  /*float: left;*/
+  /*margin-top: 10px;*/
+  /*margin-bottom: 10px;*/
+/*}*/
 
-.btn-upload {
-  float: left;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
+/*.btn-upload,*/
+/*.btn-location{*/
+  /*background-color: #59B2E0;*/
+	/*color: #fff;*/
+	/*border-color: #59B2E6;*/
+  /*text-transform: uppercase;*/
+  /*float: center;*/
+  /*width: 150px;*/
+/*}*/
 
-.btn-upload,
-.btn-location{
-  background-color: #59B2E0;
-	color: #fff;
-	border-color: #59B2E6;
-  text-transform: uppercase;
-  float: center;
-  width: 150px;
-}
+/*.btn-upload:hover,*/
+/*.btn-location:hover,*/
+/*.btn-upload:focus,*/
+/*.btn-location:focus {*/
+	/*color: #fff;*/
+	/*background-color: #53A3CD;*/
+	/*border-color: #53A3CD;*/
+/*}*/
 
-.btn-upload:hover,
-.btn-location:hover,
-.btn-upload:focus,
-.btn-location:focus {
-	color: #fff;
-	background-color: #53A3CD;
-	border-color: #53A3CD;
-}
+/*.addcan {*/
+  /*text-align: center;*/
+  /*margin-bottom: 20px;*/
+  /*font-family: 'Acme', sans-serif;*/
+/*}*/
 
-.addcan {
-  text-align: center;
-  margin-bottom: 20px;
-  font-family: 'Acme', sans-serif;
-}
+/*.googleMap {*/
+  /*height: 8em;*/
+/*}*/
 
-.googleMap {
-  height: 8em;
-}
-
-.compass {
-  height: 6em;
-  width: 6em;
-  float: right;
-  margin-right: 52em;
-  margin-top: 12px;
-}
+/*.compass {*/
+  /*height: 6em;*/
+  /*width: 6em;*/
+  /*float: right;*/
+  /*margin-right: 52em;*/
+  /*margin-top: 12px;*/
+/*}*/
 
 /*******************************
 Update Catch Page
 ********************************/
 
-.upcat {
-  font-family: 'Acme', sans-serif;
-  text-align: center;
-  text-decoration: underline;
-}
+/*.upcat {*/
+  /*font-family: 'Acme', sans-serif;*/
+  /*text-align: center;*/
+  /*text-decoration: underline;*/
+/*}*/
 
-.btn-save,
-.btn-edit,
-.btn-cancelEdit {
-  outline: none;
-  font-size: 14px;
-  height: auto;
-  width: 8em;
-  font-weight: normal;
-	padding: 14px 0;
-	text-transform: uppercase;
-  width: 150px;
-}
+/*.btn-save,*/
+/*.btn-edit,*/
+/*.btn-cancelEdit {*/
+  /*outline: none;*/
+  /*font-size: 14px;*/
+  /*height: auto;*/
+  /*width: 8em;*/
+  /*font-weight: normal;*/
+	/*padding: 14px 0;*/
+	/*text-transform: uppercase;*/
+  /*width: 150px;*/
+/*}*/
 
-.btn-edit {
-  background-color: #59B2E0;
-	color: #fff;
-	border-color: #59B2E6;
-}
+/*.btn-edit {*/
+  /*background-color: #59B2E0;*/
+	/*color: #fff;*/
+	/*border-color: #59B2E6;*/
+/*}*/
 
-.btn-edit:hover,
-.btn-edit:focus {
-	color: #fff;
-	background-color: #53A3CD;
-	border-color: #53A3CD;
-}
+/*.btn-edit:hover,*/
+/*.btn-edit:focus {*/
+	/*color: #fff;*/
+	/*background-color: #53A3CD;*/
+	/*border-color: #53A3CD;*/
+/*}*/
 
-.btn-save {
-  background-color: #1CB94E;
-	color: #fff;
-	border-color: #1CB94A;
-}
+/*.btn-save {*/
+  /*background-color: #1CB94E;*/
+	/*color: #fff;*/
+	/*border-color: #1CB94A;*/
+/*}*/
 
-.btn-save:hover,
-.btn-save:focus {
-	color: #fff;
-	background-color: #1CA347;
-	border-color: #1CA347;
-}
+/*.btn-save:hover,*/
+/*.btn-save:focus {*/
+	/*color: #fff;*/
+	/*background-color: #1CA347;*/
+	/*border-color: #1CA347;*/
+/*}*/
 
-.btn-cancelEdit {
-  background-color: #ff0000;
-	color: #fff;
-	border-color: #ff0000;
-}
+/*.btn-cancelEdit {*/
+  /*background-color: #ff0000;*/
+	/*color: #fff;*/
+	/*border-color: #ff0000;*/
+/*}*/
 
-.btn-cancelEdit:hover,
-.btn-cancelEdit:focus {
-	color: #fff;
-	background-color: #cc0000;
-	border-color: #cc0000;
-}
+/*.btn-cancelEdit:hover,*/
+/*.btn-cancelEdit:focus {*/
+	/*color: #fff;*/
+	/*background-color: #cc0000;*/
+	/*border-color: #cc0000;*/
+/*}*/
