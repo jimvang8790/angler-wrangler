@@ -129,6 +129,15 @@ Nav
 
 nav {
     background-color: white;
+    height: 90px;
+}
+
+.nav-content .brand-title {
+    margin-top: 500px;
+}
+
+.nav-content .btn {
+    margin-top: 20px;
 }
 
 .brand-title {
@@ -138,6 +147,7 @@ nav {
 
 .nav-content a {
     color: black;
+    margin-top: 12px;
 }
 
 .btn-sign-up {
@@ -247,53 +257,70 @@ nav {
 Main Section of landing page
 *********************************************************/
 
-#bkg-1 {
-    background: white url("https://lorempixel.com/800/400/food/1") no-repeat fixed 100%;
-    /*position: relative;*/
-    height: 100%;
-    min-height: 700px;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    background-position: center;
+ul .indicators {
+    margin-top: -10px;
 }
 
-#bkg-2 {
-    background: white url("https://lorempixel.com/800/400/food/2") no-repeat fixed 100%;
-    /*position: relative;*/
-    height: 100%;
-    min-height: 700px;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    background-position: center;
+.slider .indicators .indicator-item.active {
+    background-color: #2f6421;
+    opacity: 0.4;
 }
 
-#bkg-3 {
-    background: white url("https://lorempixel.com/800/400/food/3") no-repeat fixed 100%;
-    /*position: relative;*/
-    height: 100%;
-    min-height: 700px;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    background-position: center;
+.slider .indicators .indicator-item{
+    opacity: 0.4;
 }
 
-#bkg-4 {
-    background: white url("https://lorempixel.com/800/400/food/4") no-repeat fixed 100%;
-    /*position: relative;*/
-    height: 100%;
-    min-height: 700px;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    background-position: center;
+.caption .right-align h3 {
+    color: #000;
 }
+
+/*#bkg-1 {*/
+    /*background: white url("/images/bkg-img.jpg") no-repeat fixed 100%;*/
+    /*!*position: relative;*!*/
+    /*height: 100%;*/
+    /*min-height: 700px;*/
+    /*-webkit-background-size: cover;*/
+    /*-moz-background-size: cover;*/
+    /*-o-background-size: cover;*/
+    /*background-size: cover;*/
+    /*background-position: center;*/
+/*}*/
+
+/*#bkg-2 {*/
+    /*background: white url("/images/bkg-img-2.jpg") no-repeat fixed 100%;*/
+    /*!*position: relative;*!*/
+    /*height: 100%;*/
+    /*min-height: 700px;*/
+    /*-webkit-background-size: cover;*/
+    /*-moz-background-size: cover;*/
+    /*-o-background-size: cover;*/
+    /*background-size: cover;*/
+    /*background-position: center;*/
+/*}*/
+
+/*#bkg-3 {*/
+    /*background: white url("/images/bkg-img-3.jpg") no-repeat fixed 100%;*/
+    /*!*position: relative;*!*/
+    /*height: 100%;*/
+    /*min-height: 700px;*/
+    /*-webkit-background-size: cover;*/
+    /*-moz-background-size: cover;*/
+    /*-o-background-size: cover;*/
+    /*background-size: cover;*/
+    /*background-position: center;*/
+/*}*/
+
+/*#bkg-4 {*/
+    /*background: white url("/images/bkg-img-4.jpg") no-repeat fixed 100%;*/
+    /*!*position: relative;*!*/
+    /*height: 100%;*/
+    /*min-height: 700px;*/
+    /*-webkit-background-size: cover;*/
+    /*-moz-background-size: cover;*/
+    /*-o-background-size: cover;*/
+    /*background-size: cover;*/
+    /*background-position: center;*/
+/*}*/
 
 
 /********************************************************
