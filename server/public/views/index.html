@@ -8,14 +8,16 @@
         <!-- Favicon -->
         <link rel="icon" href="/images/favicon.png" type="image/png">
         <!-- CSS -->
-        <link rel="stylesheet" href="/vendors/bootstrap.min.css">
+        <!--<link rel="stylesheet" href="/vendors/bootstrap.min.css">-->
+        <link rel="stylesheet" href="/vendors/materialize.min.css">
         <!-- Swal -->
         <link rel="stylesheet" href="/vendors/sweetalert.css">
         <link rel="stylesheet" href="/assets/styles/style.css">
-        <!-- Google Font -->
-        <!--<link href="https://fonts.googleapis.com/css?family=Coiny|Acme" rel="stylesheet">-->
+        <!-- Google Font and Icons -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!-- javascript -->
         <script src="/vendors/jquery.min.js" charset="utf-8"></script><!-- soruce this inorder to use ng-confirm b/c ng-confirm uses jQuery -->
+        <script type="text/javascript" src="/vendors/materialize.min.js"></script>
         <script type="text/javascript" src="/vendors/angular.min.js"></script>
         <script type="text/javascript" src="/vendors/angular-route.min.js"></script>
         <script type="text/javascript" src="/assets/scripts/script.js"></script>
@@ -37,35 +39,86 @@
     <body>
       <!--<header ng-include="'/views/templates/header.html'"></header>-->
       <!--<main ng-view></main>-->
-        <nav class="nav navbar-default navbar-fixed-top" role="navigation">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <i class="material-icons">&#xE5D2;</i>
-                    </button>
-                    <div class="hover11">
-                        <a href="#main-section" class="home">
-                            <figure><img src="/images/logo.png" class="main-logo"></figure>
-                        </a>
-                    </div>
-                </div>
-                <div class="main-tab">
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                        <ul class="nav navbar-nav navbar-right">
-                            <a href="#about" class="tabs">About</a>
-                            <a href="#features" class="tabs">Features</a>
-                            <a href="#tips" class="tabs">Tips</a>
-                            <a href="#news" class="tabs">News</a>
-                            <a class="btn btn-primary" href="/register">Sign Up</a>
-                            <a class="btn btn-primary" href="/login">Sign In</a>
+    <header>
+        <!--<nav class="nav navbar-default navbar-fixed-top navbar-toggleable-md" role="navigation">-->
+            <!--<div class="container">-->
+                <!--<div class="navbar-header">-->
+                    <!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">-->
+                        <!--<i class="material-icons">&#xE5D2;</i>-->
+                    <!--</button>-->
+                    <!--<div class="hover11">-->
+                        <!--<a href="#main-section" class="home">-->
+                            <!--<figure><img src="/images/logo.png" class="main-logo"></figure>-->
+                        <!--</a>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="main-tab">-->
+                    <!--<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">-->
+                        <!--<ul class="nav navbar-nav navbar-right">-->
+                            <!--<a href="#about" class="tabs">About</a>-->
+                            <!--<a href="#features" class="tabs">Features</a>-->
+                            <!--<a href="#tips" class="tabs">Tips</a>-->
+                            <!--<a href="#news" class="tabs">News</a>-->
+                            <!--<a class="btn btn-primary btn-signUp" href="/register">Sign Up</a>-->
+                            <!--<a class="btn btn-primary btn-login" href="/login">Login</a>-->
+                        <!--</ul>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</nav>-->
+        <nav>
+            <!--<div class="container">-->
+                <nav>
+                    <div class="nav-content">
+                        <a href="#!" class="brand-title">Angler Wrangler</a>
+                        <a href="#" data-activates="mobile-demo" class="button-collapse right"><i class="material-icons">menu</i></a>
+                        <ul class="right hide-on-med-and-down">
+                            <li><a href="">About</a></li>
+                            <li><a href="">Features</a></li>
+                            <li><a href="">Tips</a></li>
+                            <li><a href="">News</a></li>
+                            <a class="waves-effect waves-light btn btn-sign-up">Sign Up</a>
+                            <a class="waves-effect waves-light btn btn-sign-in">Sign In</a>
+                        </ul>
+                        <ul class="side-nav" id="mobile-demo">
+                            <li><a href="">About</a></li>
+                            <li><a href="">Features</a></li>
+                            <li><a href="">Tips</a></li>
+                            <li><a href="">News</a></li>
+                            <a class="waves-effect waves-light btn btn-sign-up">Sign Up</a>
+                            <a class="waves-effect waves-light btn btn-sign-in">Sign In</a>
                         </ul>
                     </div>
+                </nav>
+            <!--</div>-->
+
+        </nav>
+    </header>
+    <div class="wrapper">
+        <section class="main-section">
+            <div class="carousel carousel-slider center" data-indicators="true">
+                <!--<div class="carousel-fixed-item center">-->
+                    <!--<a class="btn waves-effect white grey-text darken-text-2">button</a>-->
+                <!--</div>-->
+                <div class="carousel-item white-text" id="bkg-1" href="#one!">
+                    <h2>First Panel</h2>
+                    <p class="white-text">This is your first panel</p>
+                </div>
+                <div class="carousel-item amber white-text" id="bkg-2" href="#two!">
+                    <h2>Second Panel</h2>
+                    <p class="white-text">This is your second panel</p>
+                </div>
+                <div class="carousel-item green white-text" id="bkg-3" href="#three!">
+                    <h2>Third Panel</h2>
+                    <p class="white-text">This is your third panel</p>
+                </div>
+                <div class="carousel-item blue white-text" id="bkg-4" href="#four!">
+                    <h2>Fourth Panel</h2>
+                    <p class="white-text">This is your fourth panel</p>
                 </div>
             </div>
-        </nav>
-    <header>
-
-    </header>
+        </section>
+    </div>
     </body>
     <footer>
     </footer>

@@ -2,10 +2,10 @@
 General
 *********************************************************/
 
-body {
+/*body {*/
     /*font-family: 'Roboto Condensed', sans-serif;*/
-    font-size: 2em;
-}
+    /*font-size: 2em;*/
+/*}*/
 
 /*h2 {*/
     /*font-weight: bold;*/
@@ -126,65 +126,175 @@ body {
 /********************************************************
 Nav
 *********************************************************/
-.nav {
-    /*background-color: white;*/
+
+nav {
+    background-color: white;
 }
 
-header .navbar-default {
-    background: #ffffff;
-    border: none;
-    padding: 10px 0;
-    -webkit-box-shadow: 0px 1px 1px #4d4d4d;
-    -moz-box-shadow: 0px 1px 1px #4d4d4d;
-    box-shadow: 0px 1px 1px #4d4d4d;
-    -webkit-transition: all 0.25s ease-in-out;
-    -moz-transition: all 0.25s ease-in-out;
-    -ms-transition: all 0.25s ease-in-out;
-    -o-transition: all 0.25s ease-in-out;
-    transition: all 0.25s ease-in-out;
+.brand-title {
+    margin-left: 50px;
+    font-size: 30px;
 }
 
-.main-logo {
-    float: left;
-    margin-top: 5px;
-    margin-bottom: 5px;
+.nav-content a {
+    color: black;
 }
 
-.main-tab {
-    text-align: right;
-    margin-top: 20px;
-    margin-bottom: 10px;
+.btn-sign-up {
+    background-color: #f5ac5e;
 }
 
-.tabs {
-    padding: 10px 10px;
+.btn-sign-up:hover {
+    background-color: #f4cb73;
 }
 
-.hover11 figure img {
-    opacity: 1;
-    -webkit-transition: .3s ease-in-out;
-    transition: .3s ease-in-out;
+.btn-sign-in {
+    background-color: #2f6421;;
 }
 
-.hover11 figure:hover img {
-    opacity: .5;
+.btn-sign-in:hover {
+    background-color: #5daf44;
 }
 
-.material-icons {
-    font-family: 'Material Icons';
-    font-weight: normal;
-    font-style: normal;
-    font-size: 24px;
-    line-height: 1;
-    letter-spacing: normal;
-    text-transform: none;
-    display: inline-block;
-    white-space: nowrap;
-    word-wrap: normal;
-    direction: ltr;
-    -webkit-font-feature-settings: 'liga';
-    -webkit-font-smoothing: antialiased;
+/*header .navbar-default {*/
+    /*background: #ffffff;*/
+    /*border: none;*/
+    /*padding: 10px 0;*/
+    /*-webkit-box-shadow: 0px 1px 1px #4d4d4d;*/
+    /*-moz-box-shadow: 0px 1px 1px #4d4d4d;*/
+    /*box-shadow: 0px 1px 1px #4d4d4d;*/
+    /*-webkit-transition: all 0.25s ease-in-out;*/
+    /*-moz-transition: all 0.25s ease-in-out;*/
+    /*-ms-transition: all 0.25s ease-in-out;*/
+    /*-o-transition: all 0.25s ease-in-out;*/
+    /*transition: all 0.25s ease-in-out;*/
+/*}*/
+
+/*.hover11 figure img {*/
+    /*opacity: 1;*/
+    /*-webkit-transition: .3s ease-in-out;*/
+    /*transition: .3s ease-in-out;*/
+/*}*/
+
+/*.hover11 figure:hover img {*/
+    /*opacity: .5;*/
+/*}*/
+
+/*.material-icons {*/
+    /*font-family: 'Material Icons';*/
+    /*font-weight: normal;*/
+    /*font-style: normal;*/
+    /*font-size: 24px;*/
+    /*line-height: 1;*/
+    /*letter-spacing: normal;*/
+    /*text-transform: none;*/
+    /*display: inline-block;*/
+    /*white-space: nowrap;*/
+    /*word-wrap: normal;*/
+    /*direction: ltr;*/
+    /*-webkit-font-feature-settings: 'liga';*/
+    /*-webkit-font-smoothing: antialiased;*/
+/*}*/
+
+/*.nav a {*/
+    /*text-decoration: none; */
+/*}*/
+
+/*.main-logo {*/
+    /*float: left;*/
+    /*margin-top: 5px;*/
+    /*margin-bottom: 5px;*/
+/*}*/
+
+/*.main-tab {*/
+    /*margin-top: 20px;*/
+    /*margin-bottom: 10px;*/
+/*}*/
+
+/*.tabs {*/
+    /*padding: 10px 10px;*/
+    /*color: #2f6421;*/
+/*}*/
+/*.tabs:hover {*/
+    /*color: #5daf44;*/
+/*}*/
+
+/*.btn-login {*/
+    /*background-color: #2f6421;*/
+    /*border-color: #2f6421;*/
+/*}*/
+
+/*.btn-login:hover {*/
+    /*background-color: #5daf44;*/
+    /*border-color: #5daf44;*/
+/*}*/
+
+/*.btn-signUp {*/
+    /*background-color: #f5ac5e;*/
+    /*border-color: #f5ac5e;*/
+/*}*/
+
+/*.btn-signUp:hover {*/
+    /*background-color: #f4cb73;*/
+    /*border-color: #f4cb73;*/
+/*}*/
+
+/*.btn-primary {*/
+    /*width: 80px;*/
+/*}*/
+
+/********************************************************
+Main Section of landing page
+*********************************************************/
+
+#bkg-1 {
+    background: white url("https://lorempixel.com/800/400/food/1") no-repeat fixed 100%;
+    /*position: relative;*/
+    height: 100%;
+    min-height: 700px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center;
 }
+
+#bkg-2 {
+    background: white url("https://lorempixel.com/800/400/food/2") no-repeat fixed 100%;
+    /*position: relative;*/
+    height: 100%;
+    min-height: 700px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center;
+}
+
+#bkg-3 {
+    background: white url("https://lorempixel.com/800/400/food/3") no-repeat fixed 100%;
+    /*position: relative;*/
+    height: 100%;
+    min-height: 700px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center;
+}
+
+#bkg-4 {
+    background: white url("https://lorempixel.com/800/400/food/4") no-repeat fixed 100%;
+    /*position: relative;*/
+    height: 100%;
+    min-height: 700px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center;
+}
+
 
 /********************************************************
 Login/Register/Cancel Buttons
