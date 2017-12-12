@@ -257,10 +257,6 @@ nav {
 Main Section of landing page
 *********************************************************/
 
-ul .indicators {
-    margin-top: -10px;
-}
-
 .slider .indicators .indicator-item.active {
     background-color: #2f6421;
     opacity: 0.4;
