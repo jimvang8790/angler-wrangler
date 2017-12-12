@@ -318,6 +318,18 @@ Main Section of landing page
     /*background-position: center;*/
 /*}*/
 
+/********************************************************
+About Section
+*********************************************************/
+
+#about h4 {
+    text-align: center;
+}
+
+#about img {
+    width: 25%;
+    margin-left: 38%;
+}
 
 /********************************************************
 Login/Register/Cancel Buttons

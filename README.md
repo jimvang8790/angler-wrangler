@@ -4,8 +4,6 @@ Angler Wrangler Solo Project
 By: Jim Vang
 ------------
 
-Version 2.0 (New landing page and Application UI/UX)
-
 Application Overview
 --------------------
 Angler Wrangler is a MEAN full-stack web application allowing users to track what type of fish they caught and where they caught it. This application allows users to register for an account/login to an existing account and begin to keep track their catches. The application will utilize a Google Map API allowing anglers to mark the exact location where they caught their prize fish. User can also upload a photo of their catch along with some detail information about that catch.  
