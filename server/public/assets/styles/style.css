@@ -331,6 +331,17 @@ About Section
     margin-left: 38%;
 }
 
+.row {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.row p {
+    /*text-align: left;*/
+    text-align: justify;
+    font-size: 20px;
+}
+
 /********************************************************
 Login/Register/Cancel Buttons
 *********************************************************/
