@@ -123,6 +123,27 @@ General
   /*margin-right: 10%;*/
 /*}*/
 
+/*.divider {*/
+    /*width: 100%;*/
+    /*padding-bottom: 25px;*/
+/*}*/
+
+/*.divider:after {*/
+    /*content: "";*/
+    /*background: #2f6421;*/
+    /*position: relative;*/
+    /*height: 4px;*/
+    /*width: 300px;*/
+    /*display: block;*/
+    /*text-align: center;*/
+    /*margin: 13px auto;*/
+    /*-webkit-border-radius: 5em;*/
+    /*-moz-border-radius: 5em;*/
+    /*-ms-border-radius: 5em;*/
+    /*-o-border-radius: 5em;*/
+    /*border-radius: 5em;*/
+/*}*/
+
 /********************************************************
 Nav
 *********************************************************/
@@ -323,12 +344,13 @@ About Section
 *********************************************************/
 
 #about h4 {
+    padding-top: 40px;
     text-align: center;
 }
 
 #about img {
-    width: 25%;
-    margin-left: 38%;
+    width: 30%;
+    margin-left: 35%;
 }
 
 .row {
@@ -340,6 +362,29 @@ About Section
     /*text-align: left;*/
     text-align: justify;
     font-size: 20px;
+}
+
+/********************************************************
+Features Section
+*********************************************************/
+
+#features {
+    background: white url("/images/wood-bkg.jpeg") no-repeat fixed 100%;
+    position: relative;
+    height: 100%;
+    /*min-height: 700px;*/
+    min-height: 600px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+.section-heading h4 {
+    padding-top: 40px;
+    text-align: center;
 }
 
 /********************************************************
